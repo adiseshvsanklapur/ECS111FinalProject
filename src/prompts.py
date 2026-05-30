@@ -37,11 +37,13 @@ def build_cot_prompt(example: dict, style: str = "plain", n_shots: int = 6) -> s
     """
     shots = get_exemplars(style)[:n_shots]
     blocks = [format_exemplar(ex, style) for ex in shots]
+    # Put the question right before "Reasoning:" so it survives left-truncation
+    # of long prompts (the table can be big; the question must not be cut).
     query = "\n".join(
         [
-            f"Question: {example['question']}",
             "Table:",
             serialize_table(example["table"]),
+            f"Question: {example['question']}",
             "Reasoning:",
         ]
     )

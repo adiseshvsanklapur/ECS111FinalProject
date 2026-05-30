@@ -133,9 +133,19 @@ def generate(
     sources: list[str],
     device: str | None = None,
     batch_size: int = 16,
+    max_source_len: int | None = None,
+    truncation_side: str = "right",
 ) -> tuple[list[str], float]:
-    """Greedy-decode predictions for `sources`. Returns (predictions, seconds_per_example)."""
+    """Greedy-decode predictions for `sources`. Returns (predictions, seconds_per_example).
+
+    truncation_side='left' keeps the END of the prompt. CoT prompts put the real
+    question after the exemplars, so they must truncate from the left to avoid
+    cutting the question off.
+    """
     device = device or config.get_device()
+    max_source_len = max_source_len or config.MAX_SOURCE_LEN
+    saved_side = tokenizer.truncation_side
+    tokenizer.truncation_side = truncation_side
     model.eval()
     preds: list[str] = []
     start = time.perf_counter()
@@ -143,7 +153,7 @@ def generate(
         chunk = sources[i : i + batch_size]
         inputs = tokenizer(
             chunk,
-            max_length=config.MAX_SOURCE_LEN,
+            max_length=max_source_len,
             truncation=True,
             padding=True,
             return_tensors="pt",
@@ -157,6 +167,7 @@ def generate(
         preds.extend(tokenizer.batch_decode(out, skip_special_tokens=True))
     elapsed = time.perf_counter() - start
     per_example = elapsed / max(len(sources), 1)
+    tokenizer.truncation_side = saved_side  # restore
     return preds, per_example
 
 

@@ -60,7 +60,8 @@ GRAD_ACCUM_STEPS = 4          # effective batch size = 8 * 4 = 32
 EPOCHS = 3
 TRAIN_N = 8000               # cap on fine-tune training examples (keeps a run < 2 hr on a T4)
 N_SHOTS = 6                  # CoT exemplars prepended per prompt (proposal: 6-8)
-MAX_SOURCE_LEN = 512          # serialized table + question
+MAX_SOURCE_LEN = 512          # baseline + fine-tune source (table + question)
+MAX_SOURCE_LEN_PROMPT = 1024  # CoT prompts are long (6 exemplars); give the encoder more room
 MAX_TARGET_LEN = 128          # answer, or reasoning chain + answer
 GEN_MAX_NEW_TOKENS = 128
 

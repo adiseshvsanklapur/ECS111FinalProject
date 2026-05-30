@@ -1,8 +1,6 @@
 torch>=2.2
 transformers>=4.40
 datasets>=2.18
-evaluate>=0.4
-accelerate>=0.30
 sentencepiece>=0.2
 scipy>=1.11
 scikit-learn>=1.3

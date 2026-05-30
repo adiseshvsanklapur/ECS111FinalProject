@@ -84,23 +84,32 @@ def predict_and_evaluate(
     task: "wtq" (EM + token-F1) or "tabfact" (classification accuracy).
     """
     device = device or config.get_device()
+    is_cot = condition.startswith("cot")
+    # CoT prompts are long and put the question last -> truncate from the left.
+    max_source_len = config.MAX_SOURCE_LEN_PROMPT if is_cot else config.MAX_SOURCE_LEN
+    truncation_side = "left" if is_cot else "right"
+
     sources = [prompt_fn(ex) for ex in examples]
-    raw_preds, seconds_per_example = generate(model, tokenizer, sources, device, batch_size)
+    raw_preds, seconds_per_example = generate(
+        model, tokenizer, sources, device, batch_size,
+        max_source_len=max_source_len, truncation_side=truncation_side,
+    )
     preds = [extract_answer(p) for p in raw_preds]
     golds = [ex["answer"] for ex in examples]
 
     records = []
-    for ex, pred in zip(examples, preds):
+    for ex, pred, raw in zip(examples, preds, raw_preds):
         correct = _is_correct(pred, ex, task)
-        records.append(
-            {
-                "id": ex["id"],
-                "pred": pred,
-                "gold": ex["answer"],
-                "correct": correct,
-                "error_type": label_error(ex, correct),
-            }
-        )
+        rec = {
+            "id": ex["id"],
+            "pred": pred,
+            "gold": ex["answer"],
+            "correct": correct,
+            "error_type": label_error(ex, correct),
+        }
+        if is_cot:
+            rec["raw"] = raw  # full generation incl. reasoning, for chain-quality rating
+        records.append(rec)
 
     if task == "tabfact":
         n_correct = sum(r["correct"] for r in records)
