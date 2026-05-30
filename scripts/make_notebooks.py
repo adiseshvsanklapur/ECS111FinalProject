@@ -43,13 +43,40 @@ def notebook(cells: list[dict]) -> dict:
 
 
 SETUP = f"""
-# --- Setup: on Colab this clones the repo and installs deps; locally it is a no-op ---
+# --- Setup ---
+# On Colab: clone the repo and install deps INTO THE KERNEL (%pip, not !pip).
+# Locally: find the repo root and put it on sys.path. No clone, no install --
+# run this notebook with the project's .venv kernel ("ECS111 (.venv)"), which
+# already has datasets/transformers/torch. Locally this is a true no-op.
 import os
-if not os.path.isdir("src"):
+import sys
+
+try:
+    import google.colab  # noqa: F401
+
+    IN_COLAB = True
+except ImportError:
+    IN_COLAB = False
+
+if IN_COLAB:
     if not os.path.isdir("ECS111FinalProject"):
         !git clone {REPO_URL}
     os.chdir("ECS111FinalProject")
-    !pip -q install -r requirements.txt
+    %pip -q install -r requirements.txt
+else:
+    # Walk up from the notebook's directory to the repo root (the dir with src/).
+    root = os.path.abspath(os.getcwd())
+    while root != os.path.dirname(root) and not os.path.isdir(os.path.join(root, "src")):
+        root = os.path.dirname(root)
+    if not os.path.isdir(os.path.join(root, "src")):
+        raise RuntimeError(
+            "Could not find the repo root (no src/ found walking up). "
+            "Open this notebook from inside the cloned ECS111FinalProject."
+        )
+    os.chdir(root)
+    if root not in sys.path:
+        sys.path.insert(0, root)
+
 print("cwd:", os.getcwd())
 """
 
