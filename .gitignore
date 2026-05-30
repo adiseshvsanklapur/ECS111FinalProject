@@ -10,6 +10,7 @@ checkpoints/
 *.ckpt
 .cache/
 hf_cache/
+.hf_cache/
 
 # OS
 .DS_Store
