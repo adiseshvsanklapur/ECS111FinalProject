@@ -80,7 +80,7 @@ def build_token_map(results, chain_quality):
     best_c = _best_base_condition(results)
     if base_em is not None and best_c is not None:
         gap = (_em_mean(results, best_c, "flan-t5-base") - base_em) * 100
-        tm["[EM_GAP: best vs baseline]"] = f"+{gap:.1f} EM points ({best_c})"
+        tm["[EM_GAP: best vs baseline]"] = f"{gap:+.1f} EM points ({best_c})"
     else:
         tm["[EM_GAP: best vs baseline]"] = "n/a"
 
