@@ -9,6 +9,13 @@ table question answering, run entirely on **small, free-tier models** under real
 > **Core question:** When you can't afford a 100B-parameter model, which is the better lever for
 > table reasoning — prompting or fine-tuning — and where does each one break?
 
+**Build status:** code complete and verified. All `src/` modules + **155 pytest cases pass**, and the
+**full pipeline was run end-to-end on real data** (WTQ + TabFact downloaded; real fine-tune, generation,
+checkpoint round-trip, and generalization) on Apple-Silicon MPS. The 5 notebooks are thin drivers over
+`src/`. **Reported numbers still come from a Colab T4 run** (`SMOKE = False`) — the team executes those
+and fills `results/`, the report, and the slides. No results are fabricated; every number is produced by
+an actual run and labeled with its source.
+
 ---
 
 ## Table of Contents
@@ -103,7 +110,14 @@ Both load from HuggingFace `datasets` with one line — no account, API key, or 
 
 **Table serialization:** tables are flattened to text — column headers first, then each row in
 sequence — to stay within the small models' token limits, consistent with prior encoder-decoder work.
-Official train/validation/test splits, no overlap.
+
+> **Loader note (important):** `datasets >= 4.0` removed script-based datasets, so the canonical
+> `wikitablequestions` / `tab_fact` ids no longer load. We use content-identical **parquet mirrors**:
+> WTQ → [`lighteval/wikitablequestions`](https://huggingface.co/datasets/lighteval/wikitablequestions)
+> (inline tables; one 18,486-example pool from which we carve a **fixed seeded train/eval partition**
+> that never overlaps — see `src/data.py:disjoint_train_eval_indices`), and TabFact →
+> [`target-benchmark/tabfact-queries`](https://huggingface.co/datasets/target-benchmark/tabfact-queries)
+> joined to `tabfact-corpus` on `table_id`. All ids are verified by real download.
 
 ---
 
@@ -159,27 +173,33 @@ Plus deliverable completeness: 5 reproducible notebooks (fixed seeds), full writ
 
 ```
 ECS111FinalProject/
-├── README.md                  # this file
-├── Project_Proposal.pdf       # approved proposal
-├── notebooks/
-│   ├── 00_baseline.ipynb       # C0
-│   ├── 01_cot_prompting.ipynb  # CA
-│   ├── 02_finetune_answers.ipynb     # CB
-│   ├── 03_finetune_traces.ipynb      # CC
-│   └── 04_generalization.ipynb # CG
+├── README.md                       # this file
+├── Project_Proposal.pdf            # approved proposal
+├── requirements.txt                # torch, transformers, datasets, scipy, sklearn, ...
+├── notebooks/                      # thin drivers over src/ (clone→install→import→run)
+│   ├── 00_baseline.ipynb            # C0
+│   ├── 01_cot_prompting.ipynb       # CA
+│   ├── 02_finetune_answers.ipynb    # CB
+│   ├── 03_finetune_traces.ipynb     # CC
+│   └── 04_generalization.ipynb      # CG  (+ aggregation/plots)
 ├── src/
-│   ├── tableqa_core.py         # data loaders, table serialization, seed util
-│   ├── metrics.py              # EM, token-F1, classification acc
-│   ├── trainer.py              # shared fine-tune config (CB + CC)
-│   └── trace_templates.py      # rule-based reasoning-trace generator (CC)
-├── prompts/
-│   └── cot_exemplars.md        # 6–8 hand-written CoT examples, both formats
-├── results/                    # metrics JSON, tables, plots (per condition × seed)
-├── report/                     # written report
-└── slides/                     # presentation deck
+│   ├── config.py                   # seeds, model/dataset ids, hyperparams, get_device()
+│   ├── data.py                     # loaders, serialize_table, seeded disjoint split
+│   ├── prompts.py                  # baseline + CoT builders, answer extraction
+│   ├── cot_exemplars.py            # 8 + 8 hand-written exemplars (plain / structured)
+│   ├── trace_templates.py          # rule-based reasoning-trace generator (CC)
+│   ├── metrics.py                  # EM, token-F1, classification acc, McNemar, Cohen κ
+│   ├── trainer.py                  # seq2seq fine-tune + greedy generate (device-aware)
+│   ├── evaluate.py                 # predict → metrics → error labels → results JSON
+│   └── analysis.py                 # aggregate seeds, McNemar, κ, tables + plots
+├── scripts/
+│   ├── smoke_local.py              # real end-to-end pipeline check (downloads data, runs on device)
+│   └── make_notebooks.py           # regenerates the 5 notebooks
+├── tests/                          # 155 pytest cases (pure-logic: metrics, data, traces, analysis)
+├── results/                        # metrics JSON, tables, plots (per condition × seed)
+├── report/                         # written report
+└── slides/                         # presentation deck
 ```
-
-> Folders are the planned layout; they get populated as the 4-day build progresses.
 
 ---
 
@@ -242,27 +262,31 @@ Dependencies marked `→`.
 
 ## Reproducibility & Setup
 
-Each notebook runs top-to-bottom on a **fresh free Colab T4** with no manual setup.
+### On Colab (the official run target)
+Open any `notebooks/0*.ipynb`. The first cell clones this repo and runs
+`pip install -r requirements.txt` — no other setup. Each notebook has a **`SMOKE = True`**
+toggle: run it once as-is for a fast real end-to-end sanity pass (flan-t5-small, tiny slice),
+then set `SMOKE = False` and re-run for the reported numbers. Set the runtime to **GPU (T4)**.
 
-```python
-# install (first cell of every notebook)
-!pip install -q transformers datasets evaluate accelerate
-
-# load datasets — no auth needed
-from datasets import load_dataset
-wtq     = load_dataset("wikitablequestions")
-tabfact = load_dataset("tab_fact", "tab_fact")
-
-# models
-# google/flan-t5-base   (250M)
-# google/flan-t5-large  (780M)
+### Locally (development / verification — works on CPU, CUDA, or Apple-Silicon MPS)
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pytest tests/ -q          # 155 pure-logic tests
+.venv/bin/python scripts/smoke_local.py        # real data download + full pipeline on your device
 ```
+`src/config.py:get_device()` auto-selects `cuda → mps → cpu`, so the same code runs everywhere.
+This codebase was verified end-to-end on an Apple M4 Pro via the MPS backend (real fine-tune,
+generation, checkpoint round-trip, and TabFact generalization).
+
+**Models:** `google/flan-t5-base` (250M, fine-tuned + prompted), `google/flan-t5-large` (780M,
+prompting only), `google/flan-t5-small` (SMOKE only).
 
 **Reproducibility rules:**
-- All random seeds **fixed and documented**; each condition run with **2 seeds**.
-- Greedy decoding, `temperature=0` for prompting.
-- Wall-clock timer logged in each notebook (must read **< 2 hr**).
-- Checkpoints + result JSONs saved to Google Drive after every run (Colab can disconnect).
+- All random seeds **fixed** in `config.py`; each condition runs with **2 seeds** (`[13, 42]`).
+- Greedy decoding (`do_sample=False`, `num_beams=1`) — deterministic.
+- Eval is a **seeded cap** (`EVAL_N=1000`, CoT `500`) to keep each condition **< 2 hr** on a T4.
+- Fine-tune notebooks save checkpoints to `checkpoints/`; the generalization notebook reloads them.
 
 ---
 
