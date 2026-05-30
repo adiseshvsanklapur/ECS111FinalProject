@@ -4,7 +4,11 @@ ECS 111 Final Report
 
 Team: Adisesh Venkatesh, Amar Thota, Nikhil Karthikeyan, Sanjay Manivasagam, Anant Madhok
 
-> Note to the team. This is a skeleton. The words are here to get us going and to keep the voice the same across the whole thing. Anything inside square brackets like [FILL ...] is a number or a fact we drop in after the Colab runs finish. Each section says who writes it. Keep the writing plain. No dashes. Keep punctuation light. Write in active voice. Mix we and I. Read your part out loud and if it sounds like a robot wrote it then fix it.
+
+## Abstract
+
+We ask a simple practical question. If all you can run is a small free language model, what helps it answer questions about tables more, chain of thought prompting or supervised fine tuning, and where does each one break. We test two Flan T5 models, the 250M base and the 780M large. We prompt both in three ways, a plain baseline with no examples, a few shot chain of thought in a paragraph style, and a few shot chain of thought in a structured step style. We also fine tune the base model on WikiTableQuestions two ways, once with only the answer as the target and once with a short rule built reasoning chain as the target. We score everything with exact match and token F1 on WikiTableQuestions and we test the two fine tuned models on TabFact, a different task we never trained on, to see if any of this carries over. On WikiTableQuestions [FILL: headline EM winner] reached an exact match of [FILL: headline EM number] and on the TabFact transfer test the best model scored [FILL: headline TabFact number]. We report mean and spread over two seeds and we check the main gap with a McNemar test. The short version is [FILL: one line takeaway].
+
 
 ## 1. What we are doing and why
 
@@ -14,7 +18,7 @@ We wanted to know one thing. When all you can run is a small free model, what he
 
 There are two main tricks people use. One is chain of thought prompting where you show the model how to reason step by step right inside the prompt. The other is fine tuning where you actually train the model on questions and answers until it gets better. Both work in papers but those papers use giant models that cost a lot. We do not have that. So we tested both tricks on small models that anyone can run for free and we looked at which one wins and where each one falls apart.
 
-[FILL one sentence summary of the final takeaway once results are in.]
+[FILL: one sentence summary of the final takeaway once results are in.]
 
 ## 2. The problem
 
@@ -44,41 +48,59 @@ TabFact is our second one and we only use it to test, never to train. There the 
 
 One thing worth saying straight. The newer Hugging Face datasets library stopped loading the old script datasets so the plain wikitablequestions and tab_fact names do not work anymore. We swapped in parquet copies that hold the same data. For WikiTableQuestions that copy comes as one big pool so we split it ourselves into a train part and a test part with a fixed seed and we made sure the two parts never share an example. For TabFact we join the questions file to the tables file by the table id. We checked all of this by really downloading it.
 
-[FILL the exact counts we end up using, train size and eval size, once set.]
+For the official run the train pool is eight thousand examples and the eval slice is one thousand examples for the baseline, fine tune, and TabFact tests, with a smaller cap for the chain of thought tests since those prompts are much longer. The exact counts that land in the run go here. [FILL: train size and eval sizes once the run is logged.]
 
-## 5. How we set things up
+## 5. The six setups
 
 *Who writes this: Adisesh with Nikhil on the training details.*
 
-We turn every table into plain text. Headers first then each row, cells split by a bar. We keep it simple so it fits inside the small model token limit.
+Before anything else we turn every table into plain text. Headers first then each row, cells split by a bar. We keep it simple so it fits inside the small model token limit.
 
-For prompting we wrote out a handful of examples by hand with the reasoning spelled out and we stuck six of them in front of each question. We wrote each example in two styles. One reads like a normal paragraph and one reads like numbered steps. We test both to see if the style changes anything for a small model.
+We test six setups in all. Three are prompting only and run on both models. Two are fine tuning and run on the base model only. The last one reuses the two fine tuned models on a brand new task. Here is what each one is.
 
-For fine tuning we use the same training recipe everywhere so the comparison stays fair. AdamW, learning rate of three times ten to the minus four, batch of eight with four steps of accumulation so the real batch is thirty two, three passes over the data. We decode greedy with no sampling so the output is the same every time we run it. We fix the seeds and we run every setup twice with two seeds so we can report a mean and a spread.
+The baseline, our setup C0, just hands the model the question and the serialized table with no examples in front of it. This is the floor.
 
-We built all of this as a small set of python files and five notebooks, one per setup, and each notebook runs top to bottom on a free Colab GPU.
+The plain chain of thought setup puts six worked examples in front of the question and each example spells out the reasoning as a normal paragraph before giving the answer.
 
-## 6. Baseline
+The structured chain of thought setup uses the same six examples but writes the reasoning as a fixed step template instead of a free paragraph. Same content, tighter shape. We test both styles so we can see if the shape of the reasoning matters for a small model.
+
+The answers only fine tune trains the base model on WikiTableQuestions with just the final answer as the target. No reasoning in the training, only the answer. This is the normal way people fine tune.
+
+The reasoning traces fine tune uses the same data and the same recipe but swaps the target. Instead of only the answer we put a short reasoning chain that ends in the answer. We build those chains with rules, not by hand, and the rules skip an example when the steps are not clear, so a wrong chain never gets into the training set.
+
+The generalization setup is not a new training run. We take the two fine tuned models and we run them on TabFact, a task they never saw, to see what carried over.
+
+## 6. How we ran it
+
+*Who writes this: Nikhil with Adisesh on the eval details.*
+
+For prompting we wrote out a handful of examples by hand with the reasoning spelled out and we stuck six of them in front of each question, in both the paragraph style and the step style.
+
+For fine tuning we use the same training recipe everywhere so the comparison stays fair. AdamW, learning rate of three times ten to the minus four, batch of eight with four steps of accumulation so the real batch is thirty two, three passes over the data. We decode greedy with no sampling so the output is the same every time we run it. We fix the seeds and we run every setup twice, with seed thirteen and seed forty two, so we can report a mean and a spread.
+
+The models are Flan T5 base at two hundred fifty million parameters and Flan T5 large at seven hundred eighty million. We fine tune the base model only. The large one runs out of memory when you try to train it on the free Colab T4, so for the large model we only prompt. The official numbers come from a full Colab T4 run on one thousand eval examples and eight thousand train examples. We built all of this as a small set of python files and a notebook that runs top to bottom on a free Colab GPU.
+
+## 7. Baseline
 
 *Who writes this: Adisesh.*
 
 We started simple. Before any tricks we just handed the model the question and the table and nothing else and we wrote down what it got. This is our floor. Everything later has to beat this to mean anything. We ran it on both the base model and the larger one.
 
-I expected it to do poorly and mostly it did, but [FILL note any question types where the baseline was surprisingly okay]. The numbers are below.
+I expected it to do poorly and mostly it did, but [FILL: note any question types where the baseline was surprisingly okay]. The numbers are below.
 
-Baseline exact match, base model: [FILL]. Large model: [FILL]. Token F1: [FILL].
+Baseline exact match, base model: [EM: baseline base]. Large model: [EM: baseline large]. Token F1, base model: [F1: baseline base]. Large model: [F1: baseline large].
 
-## 7. Chain of thought prompting
+## 8. Chain of thought prompting
 
 *Who writes this: Amar.*
 
 Here we put six worked examples in front of the question and asked the model to reason before answering. We ran both styles, the paragraph one and the numbered steps one, on both models.
 
-We wanted to see two things. First does showing the reasoning help a small model at all. Second does the style of the reasoning matter. [FILL what we found on both.]
+We wanted to see two things. First does showing the reasoning help a small model at all. Second does the style of the reasoning matter. [FILL: what we found on both questions.]
 
-Plain style exact match: base [FILL], large [FILL]. Numbered steps exact match: base [FILL], large [FILL]. We also looked at how long the reasoning made each prompt and what that cost us in time, see the compute part later.
+Plain style exact match: base [EM: cot_plain base], large [EM: cot_plain large]. Structured step exact match: base [EM: cot_structured base], large [EM: cot_structured large]. Token F1 for the plain style: base [F1: cot_plain base], large [F1: cot_plain large]. For the structured style: base [F1: cot_structured base], large [F1: cot_structured large]. We also looked at how long the reasoning made each prompt and what that cost us in time, see the compute part later.
 
-## 8. Fine tuning on answers only
+## 9. Fine tuning on answers only
 
 *Who writes this: Nikhil.*
 
@@ -86,9 +108,9 @@ Now we trained the base model on WikiTableQuestions with just the final answer a
 
 We trained it twice with two seeds and saved both models so we can test them on TabFact later.
 
-Exact match across the two seeds: [FILL mean and spread]. Token F1: [FILL]. We compare this straight against the traces version next.
+Exact match across the two seeds: [EM: finetune_answers base]. Token F1: [F1: finetune_answers base]. We compare this straight against the traces version next.
 
-## 9. Fine tuning with reasoning traces
+## 10. Fine tuning with reasoning traces
 
 *Who writes this: Anant.*
 
@@ -96,11 +118,11 @@ This setup uses the same data and the same recipe as the answers only one. The o
 
 We did not write those chains by hand for thousands of examples. We wrote rules that build a chain only when the steps are clear and there is no guessing. When a rule is not sure it skips the example and we just use the plain answer there. We did that on purpose. A wrong chain in the training set teaches the model the wrong thing so we would rather have fewer chains than bad ones.
 
-The real question we are asking. Does training on the steps make the final answers better or does the model just learn to write more words without getting more right. [FILL the answer once we see it.]
+The real question we are asking. Does training on the steps make the final answers better or does the model just learn to write more words without getting more right. [FILL: the answer once we see it.]
 
-Exact match across two seeds: [FILL]. How many training examples actually got a chain: [FILL coverage from the trace generator].
+Exact match across two seeds: [EM: finetune_traces base]. Token F1: [F1: finetune_traces base]. How many training examples actually got a chain: [FILL: trace coverage from the trace generator].
 
-## 10. Testing on a different dataset
+## 11. Testing on a different dataset
 
 *Who writes this: Sanjay.*
 
@@ -108,9 +130,9 @@ This is the part I care about most. We took the two fine tuned models from the a
 
 If a model really learned to reason it should still do okay here. If it only memorized WikiTableQuestions it will fall flat. So this number tells us more than the main score does.
 
-TabFact accuracy, answers model: [FILL]. Traces model: [FILL]. Our target was sixty percent or better with no TabFact training and [FILL whether we hit it].
+TabFact accuracy, answers model: [TabFact acc: finetune_answers]. Traces model: [TabFact acc: finetune_traces]. Our target was sixty percent or better with no TabFact training, and once these numbers land the sixty percent question is settled one way or the other. [FILL: whether we hit the sixty percent bar.]
 
-## 11. How we measured things
+## 12. How we measured things
 
 *Who writes this: Sanjay.*
 
@@ -120,7 +142,7 @@ Exact match is the main one for WikiTableQuestions. We lowercase and strip punct
 
 We also did not stop at the top line. For every wrong answer we tagged what kind of mistake it was. A lookup mistake means it grabbed the wrong cell. An aggregation mistake means it did the wrong operation. A multi hop mistake means it failed on a question that needed two steps. Two of us also read a hundred reasoning chains each and scored them zero one or two and then we checked how much we agreed using Cohen kappa. And we logged how long each setup took per example and how much memory it used since the prompting one writes much longer inputs.
 
-## 12. Results
+## 13. Results
 
 *Who writes this: Sanjay pulls the table together, everyone checks their row.*
 
@@ -130,7 +152,7 @@ The full table lives in the results folder and the notebook builds it for us. Dr
 
 A few sentences on what jumps out. [FILL which setup won on WikiTableQuestions, whether prompting or fine tuning came out ahead, and how the large model compared to the base one.]
 
-## 13. Where the models went wrong
+## 14. Where the models went wrong
 
 *Who writes this: Sanjay.*
 
@@ -140,7 +162,7 @@ This is the interesting part. Two setups can land on the same score and still be
 
 The chain quality scores go here too. [FILL the average score and the Cohen kappa between the two of us so people know how much to trust the read.]
 
-## 14. Did the difference matter
+## 15. Did the difference matter
 
 *Who writes this: Sanjay.*
 
@@ -148,7 +170,7 @@ A gap in scores is only worth talking about if it is real and not just luck. So 
 
 [FILL the p value and one plain sentence saying whether the difference is real or could just be noise.]
 
-## 15. What we think it means
+## 16. What we think it means
 
 *Who writes this: the group, Sanjay merges.*
 
@@ -156,13 +178,13 @@ A gap in scores is only worth talking about if it is real and not just luck. So 
 
 We also want to be straight about the limits. We capped the eval size to stay under the two hour budget so these numbers are on a sample not the whole test set. We only fine tuned the base model since the large one does not fit on the free GPU for training. And our trace rules only cover the clear cases so the traces setup leans on plain answers for the rest.
 
-## 16. Conclusion
+## 17. Conclusion
 
 *Who writes this: Sanjay.*
 
 [FILL three or four sentences. The question we asked, the answer we got, and what someone on a small budget should actually pick after reading this.]
 
-## 17. Who did what
+## 18. Who did what
 
 *Who writes this: the group.*
 
