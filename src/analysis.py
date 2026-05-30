@@ -32,11 +32,17 @@ def primary_metric(result: dict) -> tuple[str, float]:
 
 
 def load_results(results_dir: Path | str = config.RESULTS_DIR) -> list[dict]:
-    """Load every *.json result file in results_dir."""
+    """Load every per-condition result JSON in results_dir.
+
+    Skips JSON files that are not per-condition results (e.g. chain_quality.json)
+    so helper files can sit next to the results without breaking aggregation.
+    """
     results_dir = Path(results_dir)
     out = []
     for path in sorted(results_dir.glob("*.json")):
-        out.append(json.loads(path.read_text()))
+        data = json.loads(path.read_text())
+        if isinstance(data, dict) and "condition" in data and "predictions" in data:
+            out.append(data)
     return out
 
 
