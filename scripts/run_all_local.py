@@ -83,9 +83,28 @@ def run_baseline(s: dict, device: str) -> None:
             log(f"baseline {model_id.split('/')[-1]} seed{seed}: {res['metrics']}")
 
 
-def run_cot(s: dict, device: str) -> None:
+def run_baseline_tabfact_floor(s: dict, device: str) -> None:
+    """Cheap OOD floor: the un-fine-tuned base on TabFact, for reference on the slides."""
+    log("=== BASELINE TabFact FLOOR ===")
+    todo = [seed for seed in s["seeds"]
+            if not results_exist("generalization_baseline", config.FINETUNE_MODEL, seed)]
+    if not todo:
+        log("generalization_baseline: all seeds done, skip")
+        return
+    tf = load_tabfact(n=s["eval_n"], seed=config.EVAL_SEED)
+    model, tok, device = load_model_and_tokenizer(config.FINETUNE_MODEL, device)
+    for seed in todo:
+        res = predict_and_evaluate(
+            model, tok, tf, build_baseline_prompt,
+            condition="generalization_baseline", model_id=config.FINETUNE_MODEL, seed=seed,
+            task="tabfact", device=device,
+        )
+        log(f"generalization_baseline seed{seed}: {res['metrics']}")
+
+
+def run_cot(s: dict, device: str, styles=("plain", "structured")) -> None:
     log("=== CHAIN OF THOUGHT ===")
-    for style in ["plain", "structured"]:
+    for style in styles:
         for model_id in s["prompt_models"]:
             todo = [seed for seed in s["seeds"] if not results_exist(f"cot_{style}", model_id, seed)]
             if not todo:
@@ -132,12 +151,13 @@ def run_finetune(s: dict, device: str, condition: str, use_traces: bool) -> None
         log(f"{condition} seed{seed}: {res['metrics']}")
 
 
-def run_generalization(s: dict, device: str) -> None:
+def run_generalization(s: dict, device: str, only=None) -> None:
     log("=== GENERALIZATION (TabFact) ===")
     from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
+    conds = only if only is not None else ["finetune_answers", "finetune_traces"]
     tf = load_tabfact(n=s["eval_n"], seed=config.EVAL_SEED)
-    for cond in ["finetune_answers", "finetune_traces"]:
+    for cond in conds:
         for seed in s["seeds"]:
             gen_cond = f"generalization_{cond}"
             if results_exist(gen_cond, config.FINETUNE_MODEL, seed):
@@ -176,18 +196,36 @@ def aggregate() -> None:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--scale", choices=["quick", "full"], default="quick")
+    ap.add_argument(
+        "--shard",
+        default="all",
+        choices=["all", "baseline", "cot_plain", "cot_structured",
+                 "finetune_answers", "finetune_traces"],
+        help="Run one slice of the work (lets teammates split the run across Colab accounts).",
+    )
     args = ap.parse_args()
 
     device = config.get_device()
     s = get_settings(args.scale)
-    log(f"device={device} scale={args.scale} settings={s}")
+    sh = args.shard
+    log(f"device={device} scale={args.scale} shard={sh} settings={s}")
     t0 = time.time()
 
-    run_baseline(s, device)
-    run_cot(s, device)
-    run_finetune(s, device, "finetune_answers", use_traces=False)
-    run_finetune(s, device, "finetune_traces", use_traces=True)
-    run_generalization(s, device)
+    # Each shard is self-contained: a fine-tune shard also runs its own TabFact
+    # generalization, so no shard depends on another shard's checkpoint.
+    if sh in ("all", "baseline"):
+        run_baseline(s, device)
+        run_baseline_tabfact_floor(s, device)
+    if sh in ("all", "cot_plain"):
+        run_cot(s, device, styles=["plain"])
+    if sh in ("all", "cot_structured"):
+        run_cot(s, device, styles=["structured"])
+    if sh in ("all", "finetune_answers"):
+        run_finetune(s, device, "finetune_answers", use_traces=False)
+        run_generalization(s, device, only=["finetune_answers"])
+    if sh in ("all", "finetune_traces"):
+        run_finetune(s, device, "finetune_traces", use_traces=True)
+        run_generalization(s, device, only=["finetune_traces"])
     aggregate()
 
     log(f"ALL DONE in {(time.time() - t0) / 60:.1f} min")
