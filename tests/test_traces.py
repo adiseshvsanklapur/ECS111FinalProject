@@ -31,7 +31,7 @@ def _make_example(question: str, header: list, rows: list, answer: str,
 class TestUniqueLookup:
 
     def test_returns_string_for_unique_cell(self):
-        """Gold appears in exactly one cell — must return a str."""
+        """Gold appears in exactly one cell, must return a str."""
         ex = _make_example(
             question="Which team is from Boston?",
             header=["Team", "City", "Sport"],
@@ -85,7 +85,7 @@ class TestUniqueLookup:
         )
 
     def test_returns_none_when_gold_appears_twice(self):
-        """Gold in two cells — ambiguous, must return None."""
+        """Gold in two cells (ambiguous), must return None."""
         ex = _make_example(
             question="Which city appears?",
             header=["Team", "City"],
@@ -102,7 +102,7 @@ class TestUniqueLookup:
         )
 
     def test_returns_none_when_gold_not_in_any_cell(self):
-        """Gold not literally present in table (computed answer) — must return None."""
+        """Gold not literally present in table (computed answer), must return None."""
         ex = _make_example(
             question="What is the total score?",
             header=["Team", "Score"],
@@ -110,7 +110,7 @@ class TestUniqueLookup:
                 ["A", "30"],
                 ["B", "40"],
             ],
-            answer="70",   # sum — not in any cell
+            answer="70",   # sum, not in any cell
             answers=["70"],
         )
         result = generate_trace(ex)
@@ -189,7 +189,7 @@ class TestCountAllRows:
         )
         result = generate_trace(ex)
         # Rule 2 should not fire because 2 != 3.
-        # Rule 1 might fire if "2" appears in exactly one cell — check that.
+        # Rule 1 might fire if "2" appears in exactly one cell, check that.
         # "2" does NOT appear in any cell (cells are "15","8","12","A","B","C").
         # So overall None.
         assert result is None, (
@@ -255,7 +255,7 @@ class TestNonDerivable:
             header=["Team", "City", "Wins"],
             rows=[
                 ["A", "NYC", "50"],
-                ["B", "NYC", "60"],   # two teams from NYC — "NYC" appears twice
+                ["B", "NYC", "60"],   # two teams from NYC, "NYC" appears twice
                 ["C", "LA",  "55"],
             ],
             answer="NYC",
@@ -300,7 +300,7 @@ class TestTraceCoverage:
                 "header": ["Value"],
                 "rows": [["1"], ["2"], ["3"]],
             },
-            "answer": "2",   # average; "2" appears in one cell — but wait,
+            "answer": "2",   # average; "2" appears in one cell, but wait,
                              # that would make Rule 1 fire!  Use "6" (sum) instead.
             "answers": ["6"],
         }

@@ -1,6 +1,6 @@
 """Rule-based reasoning-trace generator for Condition C (trace fine-tuning).
 
-Only returns a trace when the derivation is genuinely unambiguous — a wrong
+Only returns a trace when the derivation is genuinely unambiguous. A wrong
 trace used as a training target poisons the experiment, so conservative is
 correct.  When in doubt, return None.
 
@@ -61,7 +61,7 @@ def _rule_unique_lookup(example: dict) -> str | None:
     matches = _find_cell_matches(table, norm_gold)
 
     if len(matches) != 1:
-        # Zero matches (e.g. computed answer not literally in table) or >1 — ambiguous.
+        # Zero matches (e.g. computed answer not literally in table) or >1, ambiguous.
         return None
 
     _row_idx, col_idx = matches[0]

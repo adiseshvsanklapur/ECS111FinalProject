@@ -42,7 +42,7 @@ def exact_match(pred: str, gold: str) -> bool:
 
 
 def exact_match_score(preds: list[str], golds: list[str]) -> float:
-    """Mean exact_match over two equal-length lists (returns 0.0–1.0).
+    """Mean exact_match over two equal-length lists (returns 0.0 to 1.0).
 
     Raises ValueError if the lists have different lengths.
     """
@@ -94,7 +94,7 @@ def token_f1(pred: str, gold: str) -> float:
 
 
 def token_f1_score(preds: list[str], golds: list[str]) -> float:
-    """Mean token_f1 over two equal-length lists (returns 0.0–1.0).
+    """Mean token_f1 over two equal-length lists (returns 0.0 to 1.0).
 
     Raises ValueError if the lists have different lengths.
     """
