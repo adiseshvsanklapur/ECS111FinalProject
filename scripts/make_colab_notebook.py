@@ -9,7 +9,7 @@ time, the notebook always matches this repo without needing a push.
 
 Run:
     python scripts/make_colab_notebook.py
-Writes ECS111_Colab_FullRun.ipynb at the repo root.
+Writes notebooks/ECS111_Colab_FullRun.ipynb.
 """
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "ECS111_Colab_FullRun.ipynb"
+OUT = ROOT / "notebooks" / "ECS111_Colab_FullRun.ipynb"
 
 SRC_FILES = [
     "__init__.py", "config.py", "data.py", "prompts.py", "cot_exemplars.py",

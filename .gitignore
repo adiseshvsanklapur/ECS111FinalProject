@@ -17,3 +17,7 @@ hf_cache/
 
 # Keep result placeholders but ignore bulky raw dumps
 results/*.bin
+
+# Downloaded results bundles (redundant with results/ — never commit)
+*.zip
+ecs111_results*/
