@@ -1,6 +1,6 @@
-"""Map every report/slide placeholder token to a real value from results/*.json.
+"""Map every report placeholder token to a real value from results/*.json.
 
-Single source of truth so the report and the slides can never disagree, and so
+Single source of truth so the prose can never disagree with the data, and so
 every printed number traces back to a results JSON file (no hand-typed numbers).
 Pure dict math over the schema written by evaluate.py; safe to import without torch.
 """
@@ -93,7 +93,7 @@ def _best_base_condition(results):
 
 
 def build_token_map(results, chain_quality):
-    """Return {exact_token_string: formatted_value} for report + slides."""
+    """Return {exact_token_string: formatted_value} for the report."""
     tm = {}
     # Prompting conditions run on both models; fine-tuning is base only (large OOMs on a T4).
     for cond in ["baseline", "cot_plain", "cot_structured"]:
