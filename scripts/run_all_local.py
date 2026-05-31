@@ -29,6 +29,7 @@ from src.evaluate import predict_and_evaluate
 from src.prompts import (
     build_baseline_prompt,
     build_cot_prompt,
+    build_tabfact_prompt,
     build_train_source,
     build_train_target,
 )
@@ -95,7 +96,7 @@ def run_baseline_tabfact_floor(s: dict, device: str) -> None:
     model, tok, device = load_model_and_tokenizer(config.FINETUNE_MODEL, device)
     for seed in todo:
         res = predict_and_evaluate(
-            model, tok, tf, build_baseline_prompt,
+            model, tok, tf, build_tabfact_prompt,
             condition="generalization_baseline", model_id=config.FINETUNE_MODEL, seed=seed,
             task="tabfact", device=device,
         )
@@ -170,7 +171,7 @@ def run_generalization(s: dict, device: str, only=None) -> None:
             model = AutoModelForSeq2SeqLM.from_pretrained(ckpt).to(device)
             tok = AutoTokenizer.from_pretrained(ckpt)
             res = predict_and_evaluate(
-                model, tok, tf, build_baseline_prompt,
+                model, tok, tf, build_tabfact_prompt,
                 condition=f"generalization_{cond}", model_id=config.FINETUNE_MODEL, seed=seed,
                 task="tabfact", device=device,
             )
