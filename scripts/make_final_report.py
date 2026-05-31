@@ -3,16 +3,18 @@
 Writes report/FINAL_REPORT.ipynb: the ACM-structured paper (prose reused verbatim
 from report/PAPER.md) with every results table and figure computed LIVE from
 results/*.json in code cells, so the numbers in the notebook can never drift from
-the data. Run, then execute with nbconvert to embed the outputs:
+the data. It builds AND executes the notebook, so the saved file always carries its
+outputs (running the build alone would otherwise leave the cells blank).
 
-    python scripts/make_final_report.py
-    python -m nbconvert --to notebook --execute --inplace report/FINAL_REPORT.ipynb
+    python scripts/make_final_report.py            # build + execute + embed outputs
+    python scripts/make_final_report.py --no-execute   # build only (blank outputs)
 
 The prose markdown cells carry written numbers copied from PAPER.md (itself filled
 from results/); the code cells recompute the same numbers, so the two agree.
 """
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 
@@ -440,11 +442,35 @@ def build() -> dict:
     }
 
 
+def _execute(path: Path) -> int:
+    """Execute the notebook in place (cwd = its dir) and return the figure count."""
+    import nbformat
+    from nbconvert.preprocessors import ExecutePreprocessor
+
+    node = nbformat.read(path, as_version=4)
+    ExecutePreprocessor(timeout=300, kernel_name="python3").preprocess(
+        node, {"metadata": {"path": str(path.parent)}}
+    )
+    nbformat.write(node, path)
+    return sum(
+        1 for c in node.cells for o in c.get("outputs", [])
+        if o.get("output_type") == "display_data" and "image/png" in o.get("data", {})
+    )
+
+
 def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--no-execute", action="store_true",
+                    help="build the notebook but leave cell outputs blank")
+    args = ap.parse_args()
+
     nb = build()
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(nb, indent=1))
     print(f"Wrote {OUT} ({len(nb['cells'])} cells).")
+    if not args.no_execute:
+        n_img = _execute(OUT)
+        print(f"Executed in place: {n_img} figures embedded.")
 
 
 if __name__ == "__main__":
