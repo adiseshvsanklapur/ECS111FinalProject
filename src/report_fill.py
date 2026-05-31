@@ -54,11 +54,14 @@ def _best_base_condition(results):
 def build_token_map(results, chain_quality):
     """Return {exact_token_string: formatted_value} for report + slides."""
     tm = {}
-    conditions = ["baseline", "cot_plain", "cot_structured", "finetune_answers", "finetune_traces"]
-    for cond in conditions:
+    # Prompting conditions run on both models; fine-tuning is base only (large OOMs on a T4).
+    for cond in ["baseline", "cot_plain", "cot_structured"]:
         for short, model in [("base", "flan-t5-base"), ("large", "flan-t5-large")]:
             tm[f"[EM: {cond} {short}]"] = _fmt_metric(results, cond, model, "exact_match")
             tm[f"[F1: {cond} {short}]"] = _fmt_metric(results, cond, model, "token_f1")
+    for cond in ["finetune_answers", "finetune_traces"]:
+        tm[f"[EM: {cond} base]"] = _fmt_metric(results, cond, "flan-t5-base", "exact_match")
+        tm[f"[F1: {cond} base]"] = _fmt_metric(results, cond, "flan-t5-base", "token_f1")
 
     # TabFact generalization (only the two fine-tuned models are evaluated on TabFact).
     for cond in ["finetune_answers", "finetune_traces"]:

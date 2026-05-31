@@ -35,13 +35,10 @@ WikiTableQuestions, token-level F1 (mean +/- std over 2 seeds):
 Best-vs-baseline gap (success criterion 1: beat baseline by >= 5 EM points):
   [EM_GAP: best vs baseline]   best condition EM minus baseline EM, base
 
-TabFact generalization, classification accuracy (zero TabFact training):
-  [ACC: tabfact baseline base]         TabFact acc, baseline, base
-  [ACC: tabfact baseline large]        TabFact acc, baseline, large
-  [ACC: tabfact cot_plain base]        TabFact acc, CoT plain, base
-  [ACC: tabfact cot_plain large]       TabFact acc, CoT plain, large
-  [ACC: tabfact cot_structured base]   TabFact acc, CoT structured, base
-  [ACC: tabfact cot_structured large]  TabFact acc, CoT structured, large
+TabFact generalization, classification accuracy (zero TabFact training).
+Only the two fine-tuned base models transfer to TabFact; baseline base is an
+untrained floor. Large is prompt-only (fine-tuning it OOMs on a T4):
+  [ACC: tabfact baseline base]         TabFact acc, untrained base floor
   [ACC: tabfact finetune_answers base] TabFact acc, fine-tune answers-only, base
   [ACC: tabfact finetune_traces base]  TabFact acc, fine-tune with traces, base
   [ACC: tabfact best]                  best TabFact acc across conditions (vs 60% criterion)
