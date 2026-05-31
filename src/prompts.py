@@ -30,6 +30,28 @@ def build_baseline_prompt(example: dict) -> str:
     )
 
 
+TABFACT_INSTRUCTION = "Read the table and decide whether the statement is true or false."
+
+
+def build_tabfact_prompt(example: dict) -> str:
+    """Zero-shot TabFact prompt: instruction + statement + table, asking for true/false.
+
+    TabFact is true/false verification, not open QA. Feeding it through the WTQ
+    'answer the question' prompt never tells the model to output true or false,
+    so the generation is unmappable and the score collapses. This prompt asks for
+    the label directly; no TabFact training happens, so it stays a fair OOD test.
+    """
+    return "\n".join(
+        [
+            TABFACT_INSTRUCTION,
+            f"Statement: {example['question']}",
+            "Table:",
+            serialize_table(example["table"]),
+            "Answer (true or false):",
+        ]
+    )
+
+
 def build_cot_prompt(example: dict, style: str = "plain", n_shots: int = 6) -> str:
     """Few-shot CoT: n exemplars (with reasoning) then the query ending in 'Reasoning:'.
 

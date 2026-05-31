@@ -1,0 +1,664 @@
+{
+  "condition": "cot_structured",
+  "model": "google/flan-t5-large",
+  "seed": 13,
+  "task": "wtq",
+  "n": 80,
+  "metrics": {
+    "exact_match": 0.075,
+    "token_f1": 0.13062980081803335
+  },
+  "error_distribution": {
+    "lookup": 21,
+    "aggregation": 42,
+    "multi_hop": 11,
+    "correct": 6
+  },
+  "compute": {
+    "seconds_per_example": 4.301428359886631,
+    "peak_memory_mb": 3469.87890625,
+    "device": "mps"
+  },
+  "predictions": [
+    {
+      "id": "nt-101",
+      "pred": "Step 1: Rank | Nation | Gold | Silver | Bronze | Total 1: 1 | France | 1 | 3 | 0 | 4 2 | England | 1 | 2 | 1 | 4 3 | Ireland | 1 | 1 | 0 | 0 | 2 5 | Belgium | 1 | 0 | 2 | 3 6 | Hungary | 1 | 0 | 0 | 1 \u2013 | Netherlands | 1 | 0 | 0 | 0 | 1 \u2013 | Spain | 1 | 0 | 0 | 0 | 1 9 | Scotland | 0 | 1 | 0 | 0",
+      "gold": "Belgium, Hungary, Netherlands, Spain, Czechoslovakia, Italy, Denmark",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: Rank | Nation | Gold | Silver | Bronze | Total 1: 1 | France | 1 | 3 | 0 | 4 2 | England | 1 | 2 | 1 | 4 3 | Ireland | 1 | 1 | 0 | 0 | 2 5 | Belgium | 1 | 0 | 2 | 3 6 | Hungary | 1 | 0 | 0 | 1 \u2013 | Netherlands | 1 | 0 | 0 | 0 | 1 \u2013 | Spain | 1 | 0 | 0 | 0 | 1 9 | Scotland | 0 | 1 | 0 | 0"
+    },
+    {
+      "id": "nt-608",
+      "pred": "Eagle Farm Airport.",
+      "gold": "Antil Plains Aerodrome",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Answer: Eagle Farm Airport. Eagle Farm Airport is the airport at the top of the list. Answer: Eagle Farm Airport."
+    },
+    {
+      "id": "nt-1255",
+      "pred": "4",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: 4"
+    },
+    {
+      "id": "nt-1824",
+      "pred": "Dervi\u015f Erolu, 1st time | 19 July 1985 Hakk Atun",
+      "gold": "Dervi\u015f Ero\u011flu",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "Answer: Dervi\u015f Erolu, 1st time | 19 July 1985 Hakk Atun"
+    },
+    {
+      "id": "nt-2922",
+      "pred": "japonica reticulata.",
+      "gold": "Tom Knudsen",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Step 1: The plants are all named after flowers. The only plant with a deep red flower colour is the japonica reticulata. Answer: japonica reticulata."
+    },
+    {
+      "id": "nt-3024",
+      "pred": "Step 1: To answer this question, we should know that: Richard Rodgers | 1962 (17 years) | 1962 | 1960 | 1945 | 1950, Helen Hayes | 1977 (45 years) | 1953 | 1977 | 1932 | 1947, Rita Moreno | 1977 (16 years) | 1977 | 1972 | 1961 | 1975, John Gielgud | 1991 (30 years) | 1991 | 1979 | 1981 | 1961, Audrey Hepburn | 1994 (41 years) | 1993 | 1994 | 1953 | 1954, Marvin Hamlisch | 1995 (23 years) | 1995 | 1974 | 1973 | 1976",
+      "gold": "Mike Nichols",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: To answer this question, we should know that: Richard Rodgers | 1962 (17 years) | 1962 | 1960 | 1945 | 1950, Helen Hayes | 1977 (45 years) | 1953 | 1977 | 1932 | 1947, Rita Moreno | 1977 (16 years) | 1977 | 1972 | 1961 | 1975, John Gielgud | 1991 (30 years) | 1991 | 1979 | 1981 | 1961, Audrey Hepburn | 1994 (41 years) | 1993 | 1994 | 1953 | 1954, Marvin Hamlisch | 1995 (23 years) | 1995 | 1974 | 1973 | 1976"
+    },
+    {
+      "id": "nt-3504",
+      "pred": "q 5",
+      "gold": "12",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: q 5"
+    },
+    {
+      "id": "nt-4851",
+      "pred": "1",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: 1"
+    },
+    {
+      "id": "nt-5211",
+      "pred": "The Wolf of Wall Street",
+      "gold": "Captain America: The Winter Soldier",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Answer: The Wolf of Wall Street"
+    },
+    {
+      "id": "nt-5379",
+      "pred": "1967",
+      "gold": "47 years",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Answer: 1967"
+    },
+    {
+      "id": "nt-5403",
+      "pred": "To answer the question, consider the following: Rudolf | Josef | N/A | 1912 | 1921 | Waltner | Josef | 1986 | 1920 | 1923 | Rech | Karl G\u00e9za | 1956 | 1924 | 1925 | Sz\u00e9kely | Franz | N/A | 1923 | 1930 | T\u00f3th | Stefan | N/A | 1936 | 1943 |",
+      "gold": "4 years",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "To answer the question, consider the following: Rudolf | Josef | N/A | 1912 | 1921 | Waltner | Josef | 1986 | 1920 | 1923 | Rech | Karl G\u00e9za | 1956 | 1924 | 1925 | Sz\u00e9kely | Franz | N/A | 1923 | 1930 | T\u00f3th | Stefan | N/A | 1936 | 1943 |"
+    },
+    {
+      "id": "nt-5414",
+      "pred": "March 3, 1833",
+      "gold": "March 3, 1829",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Answer: March 3, 1833"
+    },
+    {
+      "id": "nt-5570",
+      "pred": "4.",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: The number of f/c's (forward/center) on the list is 4. Answer: 4."
+    },
+    {
+      "id": "nt-5757",
+      "pred": "Step 1: The number of games in which Rowaihi's team scored the same number of goals as the opposing team is 1 + 1 = 2. The number of games in which Rowaihi's team scored the same number of goals as the opposing team is 2 + 1 = 3. The answer: 2.",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: The number of games in which Rowaihi's team scored the same number of goals as the opposing team is 1 + 1 = 2. The number of games in which Rowaihi's team scored the same number of goals as the opposing team is 2 + 1 = 3. The answer: 2."
+    },
+    {
+      "id": "nt-5843",
+      "pred": "\"Rhythm Is a Dancer\"",
+      "gold": "\"Mambo No. 5\"",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "\"Rhythm Is a Dancer\""
+    },
+    {
+      "id": "nt-6051",
+      "pred": "September 29, 2006",
+      "gold": "December 7, 2012",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "Answer: September 29, 2006"
+    },
+    {
+      "id": "nt-6071",
+      "pred": "Step 1: The first time Seppo Simola broke 20m was on July 19, 1972. The second time Matti Yrj\u00f6l\u00e4 broke 20m was on August 2, 1972. The third time Bo Grahn broke 20m was on August 3, 1972. The fourth time Markku Tuokko broke 20m was on August 18, 1979. The fifth time Aulis Akonniemi broke 20m was on August 25, 1982. The sixth time Aulis Akonniemi broke 20m was on July 25, 1982. The seventh time Janne Ronkainen broke 20m",
+      "gold": "8",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: The first time Seppo Simola broke 20m was on July 19, 1972. The second time Matti Yrj\u00f6l\u00e4 broke 20m was on August 2, 1972. The third time Bo Grahn broke 20m was on August 3, 1972. The fourth time Markku Tuokko broke 20m was on August 18, 1979. The fifth time Aulis Akonniemi broke 20m was on August 25, 1982. The sixth time Aulis Akonniemi broke 20m was on July 25, 1982. The seventh time Janne Ronkainen broke 20m"
+    },
+    {
+      "id": "nt-6572",
+      "pred": "4",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "4"
+    },
+    {
+      "id": "nt-7265",
+      "pred": "To answer the above question, the relevant sentence is: Leandro Lima | Porto | Cruzeiro | Loan 18 July 2009",
+      "gold": "8 May 2009",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "To answer the above question, the relevant sentence is: Leandro Lima | Porto | Cruzeiro | Loan 18 July 2009"
+    },
+    {
+      "id": "nt-7379",
+      "pred": "Atari 2600.",
+      "gold": "Sega Master System",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Answer: Atari 800, Commodore 64, MSX, ZX Spectrum, Amstrad CPC. 1984 | Ghostbusters | Atari 2600, Apple II. Answer: Atari 2600."
+    },
+    {
+      "id": "nt-7632",
+      "pred": "Baha Tulumbo",
+      "gold": "Charles Tangus",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Baha Tulumbo"
+    },
+    {
+      "id": "nt-7703",
+      "pred": "The total number of trains destined for New Delhi is 3 trains.",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The total number of trains destined for New Delhi is 3 trains."
+    },
+    {
+      "id": "nt-8001",
+      "pred": "Iceland",
+      "gold": "Iceland",
+      "correct": true,
+      "error_type": "correct",
+      "raw": "Answer: Iceland"
+    },
+    {
+      "id": "nt-8322",
+      "pred": "17",
+      "gold": "4",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: 17"
+    },
+    {
+      "id": "nt-8339",
+      "pred": "The total score for December 26 is 2\u20135 and January 2 is 3\u20131\u20130. The answer: no.",
+      "gold": "No",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: The total score for December 26 is 2\u20135 and January 2 is 3\u20131\u20130. The answer: no."
+    },
+    {
+      "id": "nt-8791",
+      "pred": "Elena Khrustaleva Anna Lebedeva Lyubov Filimonova Marina Lebedeva",
+      "gold": "Svetlana Sleptsova, Anna Bogaliy-Titovets, Olga Medvedtseva, Olga Zaitseva",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Elena Khrustaleva Anna Lebedeva Lyubov Filimonova Marina Lebedeva"
+    },
+    {
+      "id": "nt-9226",
+      "pred": "ABC1 | HD | Australian Broadcasting Corporation | Government | ABC2 | SD | Australian Broadcasting Corporation | Government | ABC3 | SD | Australian Broadcasting Commission | Government | ABC News 24 | HD | Australian Broadcasting Commission | Government | SBS One | SD | Special Broadcasting Service | Government | 7 | SD | Seven Queensland | Private | Regional affiliate of the Seven Network in Brisbane 7Two | SD | Seven Network in Brisbane 9 | SD | WIN Television | Private | Regional affiliate of the Nine Network in Brisbane 9mate | SD | Seven Network in Brisbane 9 | SD |",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: ABC1 | HD | Australian Broadcasting Corporation | Government | ABC2 | SD | Australian Broadcasting Corporation | Government | ABC3 | SD | Australian Broadcasting Commission | Government | ABC News 24 | HD | Australian Broadcasting Commission | Government | SBS One | SD | Special Broadcasting Service | Government | 7 | SD | Seven Queensland | Private | Regional affiliate of the Seven Network in Brisbane 7Two | SD | Seven Network in Brisbane 9 | SD | WIN Television | Private | Regional affiliate of the Nine Network in Brisbane 9mate | SD | Seven Network in Brisbane 9 | SD |"
+    },
+    {
+      "id": "nt-9237",
+      "pred": "The total number of times the Suzuki SX4 WRC car was used is 3 7. The total number of times the Suzuki SX4 WRC car was used is 7:37.4",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: The total number of times the Suzuki SX4 WRC car was used is 3 7. The total number of times the Suzuki SX4 WRC car was used is 7:37.4"
+    },
+    {
+      "id": "nt-9459",
+      "pred": "Step 1: The total number of singles that the band released is 19 singles. Step 2: The total number of albums that the band released is 71 albums. Step 3: The total number of singles that the band released is 83 singles. So, the answer is 83.",
+      "gold": "8",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: The total number of singles that the band released is 19 singles. Step 2: The total number of albums that the band released is 71 albums. Step 3: The total number of singles that the band released is 83 singles. So, the answer is 83."
+    },
+    {
+      "id": "nt-9613",
+      "pred": "The score difference was the greatest on April 4, 2009",
+      "gold": "January 10, 2009",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "The score difference was the greatest on April 4, 2009"
+    },
+    {
+      "id": "nt-9668",
+      "pred": "Step 1: To answer this question, we should know that: 1 | 38 | Jason Leffler | Toyota | Braun Racing 2 | 16 | Greg Biffle | Ford | Roush Fenway Racing 3 | 99 | David Reutimann | Toyota | Michael Waltrip Racing 4 | 60 | Carl Edwards | Ford | Roush Fenway Racing 5 | 77 | Ron Hornaday | Chevrolet | Kevin Harvick Incorporated 6 | 20 | Aric Almirola | Chevrolet | Joe Gibbs Racing 7 | 29 | Scott Wimmer | Chevrolet | Richard Childress Racing 8 |",
+      "gold": "Jason Leffler",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Step 1: To answer this question, we should know that: 1 | 38 | Jason Leffler | Toyota | Braun Racing 2 | 16 | Greg Biffle | Ford | Roush Fenway Racing 3 | 99 | David Reutimann | Toyota | Michael Waltrip Racing 4 | 60 | Carl Edwards | Ford | Roush Fenway Racing 5 | 77 | Ron Hornaday | Chevrolet | Kevin Harvick Incorporated 6 | 20 | Aric Almirola | Chevrolet | Joe Gibbs Racing 7 | 29 | Scott Wimmer | Chevrolet | Richard Childress Racing 8 |"
+    },
+    {
+      "id": "nt-9676",
+      "pred": "The relevant sentence in the passage is: Ragnar Granit | Research Fellow, 1929\u20131931; Sc.D., 1971 | Physiology or Medicine | \"for their discoveries concerning the primary physiological and chemical visual processes in the eye\"",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The relevant sentence in the passage is: Ragnar Granit | Research Fellow, 1929\u20131931; Sc.D., 1971 | Physiology or Medicine | \"for their discoveries concerning the primary physiological and chemical visual processes in the eye\""
+    },
+    {
+      "id": "nt-10294",
+      "pred": "10",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: 10"
+    },
+    {
+      "id": "nt-10369",
+      "pred": "Step 1: To answer the question, consider the following: 2006 | *** | *** | *** | *** | *** | *** | *** | *** 2007 | *** | *** | *** | *** | *** | *** | *** | *** 2008 | *** | *** | *** | *** | *** | *** | *** | *** | *** 2009 | *** | *** | *** | *** | *** | *** | *** | *** | *** | *** | *** 2012",
+      "gold": "2007",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Step 1: To answer the question, consider the following: 2006 | *** | *** | *** | *** | *** | *** | *** | *** 2007 | *** | *** | *** | *** | *** | *** | *** | *** 2008 | *** | *** | *** | *** | *** | *** | *** | *** | *** 2009 | *** | *** | *** | *** | *** | *** | *** | *** | *** | *** | *** 2012"
+    },
+    {
+      "id": "nt-10384",
+      "pred": "10",
+      "gold": "10",
+      "correct": true,
+      "error_type": "correct",
+      "raw": "Answer: 10"
+    },
+    {
+      "id": "nt-10513",
+      "pred": "SGD 500,000.",
+      "gold": "SGD 900",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "Step 1: The total prize money for the 2009 Singapore Open was SGD 500,000. The total prize money for the champion was SGD 500,000. The total prize money for the runner up was SGD 500,000. The amount left over after paying the prize money to the champion and the runner up was SGD 500,000. Answer: SGD 500,000."
+    },
+    {
+      "id": "nt-10604",
+      "pred": "Note Buggy Grand Prix: Kattobi! Dai-Sakusen.",
+      "gold": "Buggy Grand Prix: Kattobi! Dai-Sakusen",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "Answer: Note Buggy Grand Prix: Kattobi! Dai-Sakusen."
+    },
+    {
+      "id": "nt-10715",
+      "pred": "4275",
+      "gold": "3",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: 4275"
+    },
+    {
+      "id": "nt-10746",
+      "pred": "The relevant information to answer the above question is: \"Coyote\" | Joni Mitchell | 23 | 14 | 6 | 21 \"Shadows and Light\" | Joni Mitchell | 24 | - | - | 22 \"Furry Sings the Blues\" | Joni Mitchell | 25 | - | - | 23 \"Dry Your Eyes\" | Neil Diamond | 26 | 13 | 7 | 25 \"Acadian Driftwood\" | The Band, Neil Young and Joni Mitchell | 29 | - | - | 24 \"Genetic Method\"/",
+      "gold": "4",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The relevant information to answer the above question is: \"Coyote\" | Joni Mitchell | 23 | 14 | 6 | 21 \"Shadows and Light\" | Joni Mitchell | 24 | - | - | 22 \"Furry Sings the Blues\" | Joni Mitchell | 25 | - | - | 23 \"Dry Your Eyes\" | Neil Diamond | 26 | 13 | 7 | 25 \"Acadian Driftwood\" | The Band, Neil Young and Joni Mitchell | 29 | - | - | 24 \"Genetic Method\"/"
+    },
+    {
+      "id": "nt-10764",
+      "pred": "2008",
+      "gold": "1994",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Answer: 2008"
+    },
+    {
+      "id": "nt-11296",
+      "pred": "The relevant information is:",
+      "gold": "13",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The relevant information is:"
+    },
+    {
+      "id": "nt-11476",
+      "pred": "1 | Dyana Calub | Australia | 1:01.77 | Q 2 | Natalie Coughlin | United States | 1:01.99 | Q 3 | Noriko Inada | Japan | 1:02.00 | Q 4 | Haley Cope | United States | 1:02.09 | Q 5 | Diana MacManus | United States | 1:02.10 | Q 6 | Courtney Shealy | United States | 1:02.28 | Q 7 | Aya Terakawa | Japan | 1:02.39 | Q 8 | Giaan Rooney | Australia | 1:02.",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: 1 | Dyana Calub | Australia | 1:01.77 | Q 2 | Natalie Coughlin | United States | 1:01.99 | Q 3 | Noriko Inada | Japan | 1:02.00 | Q 4 | Haley Cope | United States | 1:02.09 | Q 5 | Diana MacManus | United States | 1:02.10 | Q 6 | Courtney Shealy | United States | 1:02.28 | Q 7 | Aya Terakawa | Japan | 1:02.39 | Q 8 | Giaan Rooney | Australia | 1:02."
+    },
+    {
+      "id": "nt-11910",
+      "pred": "Westmeath won 3 matches in 2007. Clonkill won 1 match in 2007. Ferns St. Aiden's won 3 matches in 2007. Ardclough won 2 matches in 2006.",
+      "gold": "3",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: Westmeath won 3 matches in 2007. Clonkill won 1 match in 2007. Ferns St. Aiden's won 3 matches in 2007. Ardclough won 2 matches in 2006."
+    },
+    {
+      "id": "nt-12018",
+      "pred": "Step 1: To answer this question, we should know that: September 3, 2005 | 8:00 pm | at #25 Pittsburgh | | Heinz Field \u2022 Pittsburgh, PA | ABC | W 42-21 | 66,451 September 10, 2005 | 12:00 pm | at #3 Michigan | #23 | Michigan Stadium \u2022 Ann Arbor, MI | ABC | W 17-10 | 111,386 September 24, 2005 | 3:30 pm | at Washington | #18 | Husky Stadium \u2022 Seattle WA | ABC | W 36-17 | 71,473 October 1, 2005 | 7:45 pm | at #20 Purdue |",
+      "gold": "Win",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Step 1: To answer this question, we should know that: September 3, 2005 | 8:00 pm | at #25 Pittsburgh | | Heinz Field \u2022 Pittsburgh, PA | ABC | W 42-21 | 66,451 September 10, 2005 | 12:00 pm | at #3 Michigan | #23 | Michigan Stadium \u2022 Ann Arbor, MI | ABC | W 17-10 | 111,386 September 24, 2005 | 3:30 pm | at Washington | #18 | Husky Stadium \u2022 Seattle WA | ABC | W 36-17 | 71,473 October 1, 2005 | 7:45 pm | at #20 Purdue |"
+    },
+    {
+      "id": "nt-12076",
+      "pred": "Step 1: The first name of one of the teams is Aylesbury United. The second name of one of the teams is Burscough. The third name of one of the teams is Dover Athletic. The fourth name of one of the teams is Forest Green Roves. The fifth name of one of the teams is Halifax Town. The sixth name of one of the teams is Hayes. The seventh name of one of the teams is Tamworth. The eighth name of one of the teams is Yeovil Town. The ninth name of one of the teams is Northwich Victoria. The answer:",
+      "gold": "5 letters",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: The first name of one of the teams is Aylesbury United. The second name of one of the teams is Burscough. The third name of one of the teams is Dover Athletic. The fourth name of one of the teams is Forest Green Roves. The fifth name of one of the teams is Halifax Town. The sixth name of one of the teams is Hayes. The seventh name of one of the teams is Tamworth. The eighth name of one of the teams is Yeovil Town. The ninth name of one of the teams is Northwich Victoria. The answer:"
+    },
+    {
+      "id": "nt-12854",
+      "pred": "Bonafide",
+      "gold": "Bonafide",
+      "correct": true,
+      "error_type": "correct",
+      "raw": "Bonafide"
+    },
+    {
+      "id": "nt-130",
+      "pred": "ballet",
+      "gold": "ballet",
+      "correct": true,
+      "error_type": "correct",
+      "raw": "Answer: ballet"
+    },
+    {
+      "id": "nt-837",
+      "pred": "1/8",
+      "gold": "0.1162",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "Answer: 1/8"
+    },
+    {
+      "id": "nt-1573",
+      "pred": "Step 1: To answer this question, we should know that: Mustapha Jaafar | September 16, 1928 | November 23, 1931 | No party Abdul Hamid Yusof | November 23, 1931 | December 28, 1934 | No party Ungku Abdul Aziz Abdul Majid | April 1935 | June 1, 1947 | June 1, 1947 | May 18, 1950 | No party Onn Jaafar | June 1, 1947 | May 18, 1950 | No party Syed Abdul Kadir Mohamed | February 18, 1952 | June 5, 1955 | No party Wan Idris Ibrahim | October 1, 1955 | August 31, 1957 | No",
+      "gold": "Mohamed Mahbob",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Step 1: To answer this question, we should know that: Mustapha Jaafar | September 16, 1928 | November 23, 1931 | No party Abdul Hamid Yusof | November 23, 1931 | December 28, 1934 | No party Ungku Abdul Aziz Abdul Majid | April 1935 | June 1, 1947 | June 1, 1947 | May 18, 1950 | No party Onn Jaafar | June 1, 1947 | May 18, 1950 | No party Syed Abdul Kadir Mohamed | February 18, 1952 | June 5, 1955 | No party Wan Idris Ibrahim | October 1, 1955 | August 31, 1957 | No"
+    },
+    {
+      "id": "nt-1626",
+      "pred": "Step 1: The highest rd number is 251",
+      "gold": "25",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: The highest rd number is 251"
+    },
+    {
+      "id": "nt-3119",
+      "pred": "1",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: 1"
+    },
+    {
+      "id": "nt-3430",
+      "pred": "Subarnapur",
+      "gold": "Jagatsinghpur",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Subarnapur"
+    },
+    {
+      "id": "nt-4248",
+      "pred": "7",
+      "gold": "7",
+      "correct": true,
+      "error_type": "correct",
+      "raw": "7"
+    },
+    {
+      "id": "nt-4719",
+      "pred": "Step 1: To answer this question, we should know that: January 26, 1982 | East Germany | W | 3-1 | Paulo Isidoro, Renato, Serginho Chulapa | International Friendly March 3, 1982 | Czechoslovakia | D | 1-1 | Zico | International Friendly March 21, 1982 | West Germany | W | 1-0 | Jnior | International Friendly May 5, 1982 | Portugal | W | 3-1 | Jnior, \u00c9der, Zico | International Friendly May 19, 1982 | Switzerland | D | 1-1 | Zico | International",
+      "gold": "Brazil",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "Step 1: To answer this question, we should know that: January 26, 1982 | East Germany | W | 3-1 | Paulo Isidoro, Renato, Serginho Chulapa | International Friendly March 3, 1982 | Czechoslovakia | D | 1-1 | Zico | International Friendly March 21, 1982 | West Germany | W | 1-0 | Jnior | International Friendly May 5, 1982 | Portugal | W | 3-1 | Jnior, \u00c9der, Zico | International Friendly May 19, 1982 | Switzerland | D | 1-1 | Zico | International"
+    },
+    {
+      "id": "nt-7232",
+      "pred": "Jan",
+      "gold": "January",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "Jan"
+    },
+    {
+      "id": "nt-8226",
+      "pred": "To answer the question, consider the following: Beriah Brown",
+      "gold": "Henry A. Atkins",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "To answer the question, consider the following: Beriah Brown"
+    },
+    {
+      "id": "nt-11256",
+      "pred": "There were 14 people ranked.",
+      "gold": "12",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: There were 14 people ranked."
+    },
+    {
+      "id": "nt-12990",
+      "pred": "\u2013 | 5000 m | DNF",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: \u2013 | 5000 m | DNF"
+    },
+    {
+      "id": "nt-13822",
+      "pred": "Maldives",
+      "gold": "Maldives",
+      "correct": true,
+      "error_type": "correct",
+      "raw": "Step 1: Rank | Nation | Gold | Silver | Bronze | Total 1 | India | 102 | 58 | 37 | 197 2 | Nepal | 32 | 10 | 24 | 65 3 | Sri Lanka | 16 | 42 | 62 | 120 4 | Pakistan | 10 | 36 | 30 | 76 5 | Bangladesh | 2 | 10 | 35 | 47 6 | Bhutan | 1 | 6 | 7 | 14 7 | Maldives | 0 | 0 | 4 | 4 Answer: Maldives"
+    },
+    {
+      "id": "nt-13871",
+      "pred": "Yehuda Tamir | \"Na'ara\"",
+      "gold": "\"Na'ara\"",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Answer: Yehuda Tamir | \"Na'ara\""
+    },
+    {
+      "id": "nt-13950",
+      "pred": "Step 1: Rank | Nation | Gold | Silver | Bronze | Total 1: Cuba. Step 2: Rank | Nation | Gold | Silver | Bronze | Total: 1; Cuba. Step 3: Rank | Nation | Gold | Silver | Bronze | Total: 1; Cuba. Step 4: Rank | Nation | Gold | Silver | Bronze | Total: 1; Cuba. Step 5: Rank | Nation | Gold | Silver | Bronze | Total: 1; Cuba. Step 6: Rank | Nation | Gold | Silver | Bronze | Total: 1; Cuba. Step 7: Rank | Nation | Gold",
+      "gold": "Ecuador",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "Step 1: Rank | Nation | Gold | Silver | Bronze | Total 1: Cuba. Step 2: Rank | Nation | Gold | Silver | Bronze | Total: 1; Cuba. Step 3: Rank | Nation | Gold | Silver | Bronze | Total: 1; Cuba. Step 4: Rank | Nation | Gold | Silver | Bronze | Total: 1; Cuba. Step 5: Rank | Nation | Gold | Silver | Bronze | Total: 1; Cuba. Step 6: Rank | Nation | Gold | Silver | Bronze | Total: 1; Cuba. Step 7: Rank | Nation | Gold"
+    },
+    {
+      "id": "nu-0",
+      "pred": "Step 1: Identify the country that had the most cyclists finish within the top 10. Step 2: Then, look at the number of cyclists who finished within the top 10. Step 3: Look at the number of cyclists who finished within the top 10 in each country. Step 4: Look at the number of cyclists who finished within the top 10 in each country. Step 5: Look at the number of cyclists who finished within the top 10 in each country. Step 6: Look at the number of cyclists who finished within the top 10 in each country. Step 7: Look at the number of cyclists who",
+      "gold": "Italy",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: Identify the country that had the most cyclists finish within the top 10. Step 2: Then, look at the number of cyclists who finished within the top 10. Step 3: Look at the number of cyclists who finished within the top 10 in each country. Step 4: Look at the number of cyclists who finished within the top 10 in each country. Step 5: Look at the number of cyclists who finished within the top 10 in each country. Step 6: Look at the number of cyclists who finished within the top 10 in each country. Step 7: Look at the number of cyclists who"
+    },
+    {
+      "id": "nu-169",
+      "pred": "The round is in 10 different circuits. The total circuits are 10 circuits. The answer: 10.",
+      "gold": "10",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The round is in 10 different circuits. The total circuits are 10 circuits. The answer: 10."
+    },
+    {
+      "id": "nu-288",
+      "pred": "Step 1: The year of construction of the church is the year the parish was established. The year of construction of the church is the year the church was built. The answer: Yttery.",
+      "gold": "Bamberg Church",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Step 1: The year of construction of the church is the year the parish was established. The year of construction of the church is the year the church was built. The answer: Yttery."
+    },
+    {
+      "id": "nu-387",
+      "pred": "Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the",
+      "gold": "22",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the same time slot. Season premiere and season finale were broadcast in the"
+    },
+    {
+      "id": "nu-443",
+      "pred": "6 November 2011",
+      "gold": "25 November 1987",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "6 November 2011"
+    },
+    {
+      "id": "nu-550",
+      "pred": "Step 1: The number of schools with a number higher than 600 in 2008 is 615. The number of schools with a number lower than 600 in 2008 is 636. The number of schools with a number higher than 600 in 2008 is 615. The number of schools with a number lower than 600 in 2008 is 636. The number of schools with a number higher than 600 in 2008 is 615. The number of schools with a number higher than 600 in 2008 is 615. The number of schools with a number higher than 600 in 2008 is 636. The number of schools with",
+      "gold": "4",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: The number of schools with a number higher than 600 in 2008 is 615. The number of schools with a number lower than 600 in 2008 is 636. The number of schools with a number higher than 600 in 2008 is 615. The number of schools with a number lower than 600 in 2008 is 636. The number of schools with a number higher than 600 in 2008 is 615. The number of schools with a number higher than 600 in 2008 is 615. The number of schools with a number higher than 600 in 2008 is 636. The number of schools with "
+    },
+    {
+      "id": "nu-638",
+      "pred": "740",
+      "gold": "185",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "Answer: 740"
+    },
+    {
+      "id": "nu-913",
+      "pred": "Step 1: To answer this question, we should know that: Region | Physician (GP & specialist) | Physician : Population Ratio | Health Officer | HO : Population Ratio | All Nurses | Nurse : Population Ratio | Mid-wives | Mid Wife: Population Ratio | HEW* | HEW : Population Ratio Somalia | 71 | 1:65,817 | 12 | 1:389,415 | 314 | 1:14,882 | 45 | 1:103,844 | 1,427 | 1",
+      "gold": "Oromia",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: To answer this question, we should know that: Region | Physician (GP & specialist) | Physician : Population Ratio | Health Officer | HO : Population Ratio | All Nurses | Nurse : Population Ratio | Mid-wives | Mid Wife: Population Ratio | HEW* | HEW : Population Ratio Somalia | 71 | 1:65,817 | 12 | 1:389,415 | 314 | 1:14,882 | 45 | 1:103,844 | 1,427 | 1"
+    },
+    {
+      "id": "nu-1050",
+      "pred": "24",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "24"
+    },
+    {
+      "id": "nu-1808",
+      "pred": "7",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: 7"
+    },
+    {
+      "id": "nu-1942",
+      "pred": "1967",
+      "gold": "1964",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Step 1: The only year that the Michigan Wolverines won the NCAA Men's Ice Hockey Tournament was 1967. Answer: 1967"
+    },
+    {
+      "id": "nu-2177",
+      "pred": "Step 1: To answer this question, we should know that: Step 2: To answer this question, we should know that: Step 3: To answer this question, we should know that: Step 4: To answer this question, we should know that: Step 5: To answer this question, we should know that: Step 6: To answer this question, we should know that: Step 7: To answer this question, we should know that: Step 8: To answer this question, we should know that: Step 9: To answer this question, we should know that: Step 10: To answer this question, we should know",
+      "gold": "0",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: To answer this question, we should know that: Step 2: To answer this question, we should know that: Step 3: To answer this question, we should know that: Step 4: To answer this question, we should know that: Step 5: To answer this question, we should know that: Step 6: To answer this question, we should know that: Step 7: To answer this question, we should know that: Step 8: To answer this question, we should know that: Step 9: To answer this question, we should know that: Step 10: To answer this question, we should know"
+    },
+    {
+      "id": "nu-2985",
+      "pred": "Erasmus M. Weaver, Jr.",
+      "gold": "MG Jesse McI. Carter",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Answer: Erasmus M. Weaver, Jr."
+    },
+    {
+      "id": "nu-3268",
+      "pred": "The relevant information to answer the above question is: Green Lantern | Rond Vidar",
+      "gold": "Karate Kid II",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "The relevant information to answer the above question is: Green Lantern | Rond Vidar"
+    },
+    {
+      "id": "nu-3420",
+      "pred": "The number of rooms at Cone Health is based on the number of hospitals.",
+      "gold": "969",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The number of rooms at Cone Health is based on the number of hospitals."
+    },
+    {
+      "id": "nu-3870",
+      "pred": "The total number of stages is 17.",
+      "gold": "18",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The total number of stages is 17."
+    },
+    {
+      "id": "nu-3881",
+      "pred": "Step 1: The total number of goals scored by Aloisi, Bresciano, Thompson, Viduka, and Emerton is 5. The total number of goals scored by Milicic, Cahill, Colosimo, Culina, Griffiths, Skoko, and Zdrilic is 1. The total number of goals scored by Colosimo, Culina, Griffiths, Skoko, and Zdrilic is 2. The total number of goals scored by Elrich, Griffiths, Skoko, and Zdrilic is 3. The total number of goals scored by Skoko, Griffiths",
+      "gold": "7",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: The total number of goals scored by Aloisi, Bresciano, Thompson, Viduka, and Emerton is 5. The total number of goals scored by Milicic, Cahill, Colosimo, Culina, Griffiths, Skoko, and Zdrilic is 1. The total number of goals scored by Colosimo, Culina, Griffiths, Skoko, and Zdrilic is 2. The total number of goals scored by Elrich, Griffiths, Skoko, and Zdrilic is 3. The total number of goals scored by Skoko, Griffiths"
+    },
+    {
+      "id": "nu-4018",
+      "pred": "Step 1: The number of games the team won is 27\u20132. The number of games the team lost is 0\u20131. The answer: 27\u20132.",
+      "gold": "9",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Step 1: The number of games the team won is 27\u20132. The number of games the team lost is 0\u20131. The answer: 27\u20132."
+    },
+    {
+      "id": "nu-4343",
+      "pred": "1",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: 1"
+    }
+  ]
+}

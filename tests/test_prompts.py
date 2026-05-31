@@ -3,6 +3,7 @@
 from src.prompts import (
     build_baseline_prompt,
     build_cot_prompt,
+    build_tabfact_prompt,
     build_train_source,
     build_train_target,
     extract_answer,
@@ -21,6 +22,17 @@ def test_baseline_prompt_shape():
     assert "Question: What is Bob's score?" in p
     assert "Name | Score" in p
     assert p.rstrip().endswith("Answer:")
+
+
+def test_tabfact_prompt_asks_for_true_false():
+    statement = {"question": "Bob scored more than Alice.",
+                 "table": EXAMPLE["table"], "answer": "false"}
+    p = build_tabfact_prompt(statement)
+    assert "true or false" in p.lower()
+    assert "Statement: Bob scored more than Alice." in p
+    assert "Name | Score" in p
+    # must NOT carry the WTQ answer tag that extract_answer keys on
+    assert "Answer:" not in p
 
 
 def test_cot_prompt_has_shots_and_ends_with_reasoning():

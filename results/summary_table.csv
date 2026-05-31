@@ -1,0 +1,12 @@
+condition,model,task,metric,mean,std,n_seeds,sec_per_example
+generalization_baseline,flan-t5-base,tabfact,classification_accuracy,0.043,0.0,2,0.20793880706700008
+generalization_finetune_answers,flan-t5-base,tabfact,classification_accuracy,0.0025,0.0005,2,0.11264989501900072
+generalization_finetune_traces,flan-t5-base,tabfact,classification_accuracy,0.002,0.001,2,0.18718820096700073
+baseline,flan-t5-base,wtq,exact_match,0.17099999999999999,0.010999999999999996,2,0.12555676717550004
+baseline,flan-t5-large,wtq,exact_match,0.241,0.008999999999999994,2,0.20003452259650012
+cot_plain,flan-t5-base,wtq,exact_match,0.015,0.001,2,0.30789879764600026
+cot_plain,flan-t5-large,wtq,exact_match,0.052,0.008,2,0.714749309025
+cot_structured,flan-t5-base,wtq,exact_match,0.019,0.002999999999999999,2,0.29023114572099984
+cot_structured,flan-t5-large,wtq,exact_match,0.14700000000000002,0.015,2,0.7175321858100006
+finetune_answers,flan-t5-base,wtq,exact_match,0.157,0.0020000000000000018,2,0.09105666262850082
+finetune_traces,flan-t5-base,wtq,exact_match,0.1215,0.0085,2,0.16082969587749996

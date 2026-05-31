@@ -1,0 +1,864 @@
+{
+  "condition": "baseline",
+  "model": "google/flan-t5-base",
+  "seed": 13,
+  "task": "wtq",
+  "n": 120,
+  "metrics": {
+    "exact_match": 0.225,
+    "token_f1": 0.2449074074074074
+  },
+  "error_distribution": {
+    "lookup": 20,
+    "aggregation": 61,
+    "multi_hop": 12,
+    "correct": 27
+  },
+  "compute": {
+    "seconds_per_example": 0.13348432535033983,
+    "peak_memory_mb": 944.4345703125,
+    "device": "mps"
+  },
+  "predictions": [
+    {
+      "id": "nt-101",
+      "pred": "France",
+      "gold": "Belgium, Hungary, Netherlands, Spain, Czechoslovakia, Italy, Denmark",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-135",
+      "pred": "10,000 m",
+      "gold": "5,000 m",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-244",
+      "pred": "3",
+      "gold": "5",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-608",
+      "pred": "Eagle Farm Airport",
+      "gold": "Antil Plains Aerodrome",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-1255",
+      "pred": "7",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-1505",
+      "pred": "7 Mundelein High School has 1,200 employees.",
+      "gold": "211",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-1643",
+      "pred": "0",
+      "gold": "4",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-1650",
+      "pred": "You & Me",
+      "gold": "You & Me",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-1800",
+      "pred": "Max Biaggi",
+      "gold": "10",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-1824",
+      "pred": "Mehmet Ali Talat",
+      "gold": "Dervi\u015f Ero\u011flu",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "nt-2857",
+      "pred": "Stancor",
+      "gold": "SS Frances Massey",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "nt-2922",
+      "pred": "williamsii",
+      "gold": "Tom Knudsen",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-3024",
+      "pred": "Richard Rodgers",
+      "gold": "Mike Nichols",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-3182",
+      "pred": "76",
+      "gold": "9",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-3504",
+      "pred": "8",
+      "gold": "12",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-3817",
+      "pred": "2012",
+      "gold": "Penny Black",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-4636",
+      "pred": "Outstanding Pop Artist/Group",
+      "gold": "7",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-4851",
+      "pred": "12",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-5014",
+      "pred": "Kato Kung Lee",
+      "gold": "Negro Casas",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-5211",
+      "pred": "Frozen",
+      "gold": "Captain America: The Winter Soldier",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-5217",
+      "pred": "2002",
+      "gold": "2007",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-5379",
+      "pred": "1967",
+      "gold": "47 years",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-5403",
+      "pred": "1872\u20131856",
+      "gold": "4 years",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-5414",
+      "pred": "March 3, 1829",
+      "gold": "March 3, 1829",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-5570",
+      "pred": "2",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-5652",
+      "pred": "Dustin Johnson",
+      "gold": "Dustin Johnson",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-5757",
+      "pred": "1",
+      "gold": "1",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-5843",
+      "pred": "\"Belle\"",
+      "gold": "\"Mambo No. 5\"",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-6051",
+      "pred": "September 29, 2006",
+      "gold": "December 7, 2012",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "nt-6071",
+      "pred": "1",
+      "gold": "8",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-6572",
+      "pred": "3",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-6762",
+      "pred": "Clyde Alwood",
+      "gold": "R.C. Haas, Gordon Otto",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-6884",
+      "pred": "yes",
+      "gold": "No",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-7265",
+      "pred": "8 May 2009",
+      "gold": "8 May 2009",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-7379",
+      "pred": "Sega Master System",
+      "gold": "Sega Master System",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-7488",
+      "pred": "Croke Park, Dublin",
+      "gold": "Andorra",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-7632",
+      "pred": "Moses Tanui",
+      "gold": "Charles Tangus",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-7703",
+      "pred": "1.",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-7927",
+      "pred": "1",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-8001",
+      "pred": "Iceland",
+      "gold": "Iceland",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-8322",
+      "pred": "17",
+      "gold": "4",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-8339",
+      "pred": "no",
+      "gold": "No",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-8699",
+      "pred": "Willard Wilson",
+      "gold": "Charles Herbert Gordon",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-8791",
+      "pred": "0+1 0+2 0+3 0+0 0+0n0+0 0+0n0+0 0+0n0+0 0+0n0+0 0+2 | 0 | 4 | 5 | Norwayn Liv-Kjersti EikelandnAnn Kristin FlatlandnSolveig RogstadnTora Berger",
+      "gold": "Svetlana Sleptsova, Anna Bogaliy-Titovets, Olga Medvedtseva, Olga Zaitseva",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-9226",
+      "pred": "ABC1",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-9237",
+      "pred": "1",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-9252",
+      "pred": "Gordon's Gin Boars",
+      "gold": "Danilo Ildefonso, Brixter Encarnacion, Banjo Calpito, Henry Fernandez",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-9459",
+      "pred": "71",
+      "gold": "8",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-9613",
+      "pred": "19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130, 19\u20130,",
+      "gold": "January 10, 2009",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-9668",
+      "pred": "Jason Leffler",
+      "gold": "Jason Leffler",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-9676",
+      "pred": "4",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-9755",
+      "pred": "Peravia",
+      "gold": "Distrito Nacional",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-10294",
+      "pred": "2",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-10369",
+      "pred": "2007",
+      "gold": "2007",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-10384",
+      "pred": "10",
+      "gold": "10",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-10513",
+      "pred": "SGD 2,400",
+      "gold": "SGD 900",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "nt-10604",
+      "pred": "Buggy Grand Prix: Kattobi!",
+      "gold": "Buggy Grand Prix: Kattobi! Dai-Sakusen",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "nt-10715",
+      "pred": "117 (16.9) | 113 (16.4) | 94 (13.6) | 81 (11.8) | 114 (16.6) Tensile Modulus | ASTM D 638 | MPa (kpsi) | 8.8 (1,280) | 6.8 (990) | 14.5 (2,100) | 7.4 (1,080) | 18.6 (2,700) Tensile Elongation | ASTM D 638 | % | 2.6 | 3.3 | 1.0 | 1.9 | 0.8 Flexural Modulus | ASTM D 790 | MP",
+      "gold": "3",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-10746",
+      "pred": "Coyote\"",
+      "gold": "4",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-10764",
+      "pred": "1994",
+      "gold": "1994",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-11009",
+      "pred": "Raquel da Costa | Brazil | 24.18 | 15 | 2 | Kim Wall | Great Britain | 24.31 | 16 | 1",
+      "gold": ".22",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "nt-11296",
+      "pred": "4",
+      "gold": "13",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-11476",
+      "pred": "10",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-11910",
+      "pred": "1",
+      "gold": "3",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-12018",
+      "pred": "win",
+      "gold": "Win",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-12076",
+      "pred": "8",
+      "gold": "5 letters",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-12102",
+      "pred": "850",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-12361",
+      "pred": "2",
+      "gold": "5",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-12729",
+      "pred": "Maccabi Tel Aviv",
+      "gold": "Maccabi Tel Aviv",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-12854",
+      "pred": "Bonafide",
+      "gold": "Bonafide",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-13097",
+      "pred": "Tom Lipke",
+      "gold": "Stefan Svitek",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-13996",
+      "pred": "Loose Women",
+      "gold": "Zoo Story",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "nt-14065",
+      "pred": "Groovin' in the Midnight",
+      "gold": "\"Groovin' in the Midnight\"",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-130",
+      "pred": "opera",
+      "gold": "ballet",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-837",
+      "pred": "1/16",
+      "gold": "0.1162",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "nt-1573",
+      "pred": "Menteri Besar",
+      "gold": "Mohamed Mahbob",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nt-1626",
+      "pred": "Frank Tripucka",
+      "gold": "25",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-2159",
+      "pred": "United States",
+      "gold": "USA",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-3119",
+      "pred": "No",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-3430",
+      "pred": "Balangir",
+      "gold": "Jagatsinghpur",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-3465",
+      "pred": "2",
+      "gold": "17",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-4248",
+      "pred": "1",
+      "gold": "7",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-4719",
+      "pred": "Brazil",
+      "gold": "Brazil",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-7232",
+      "pred": "Jan",
+      "gold": "January",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "nt-8226",
+      "pred": "Henry A. Atkins",
+      "gold": "Henry A. Atkins",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-10371",
+      "pred": "Leckie Mine",
+      "gold": "Barton Mine",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-11256",
+      "pred": "12",
+      "gold": "12",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-12990",
+      "pred": "0",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-13777",
+      "pred": "Flor Alpaerts",
+      "gold": "Flor Alpaerts",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-13822",
+      "pred": "India",
+      "gold": "Maldives",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nt-13871",
+      "pred": "\"Na'ara\"",
+      "gold": "\"Na'ara\"",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nt-13950",
+      "pred": "Cuba",
+      "gold": "Ecuador",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "nu-0",
+      "pred": "France",
+      "gold": "Italy",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-169",
+      "pred": "10",
+      "gold": "10",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nu-262",
+      "pred": "Sado Kisen",
+      "gold": "JR Kyushu Jet Ferries",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nu-288",
+      "pred": "Bamberg Church",
+      "gold": "Bamberg Church",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nu-387",
+      "pred": "1",
+      "gold": "22",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-443",
+      "pred": "12 December 1959",
+      "gold": "25 November 1987",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nu-550",
+      "pred": "Woodrow Wilson High School",
+      "gold": "4",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-638",
+      "pred": "Chernobyl-1 | RBMK-1000 | shut down in 1996 | 740 | 800 Chernobyl-2 | RBMK-1000 | shut down in 1991 | 925 | 1,000 Chernobyl-3 | RBMK-1000 | shut down in 2000 | 925 | 1,000 Chernobyl-4 | RBMK-1000 | destroyed in the 1986 accident | 925 | 1,000 Chernobyl-5 | RBMK-1000 | construction cancelled in 1988 | 950 | 1,000 Chernobyl-6 | RBMK-1000 | construction cancelled in 1988",
+      "gold": "185",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "nu-913",
+      "pred": "Tigray",
+      "gold": "Oromia",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-1050",
+      "pred": "0",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-1255",
+      "pred": "Jackie Stewart",
+      "gold": "Jackie Stewart",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nu-1808",
+      "pred": "7",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-1942",
+      "pred": "1964",
+      "gold": "1964",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nu-2122",
+      "pred": "504,000",
+      "gold": "2,227,000",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-2177",
+      "pred": "1",
+      "gold": "0",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-2908",
+      "pred": "Sidney Smith",
+      "gold": "Sidney Smith",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nu-2963",
+      "pred": "3",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-2985",
+      "pred": "Robert K. Evans",
+      "gold": "MG Jesse McI. Carter",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "nu-3113",
+      "pred": "Wearhouse Music",
+      "gold": "Burn The Fire",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-3268",
+      "pred": "Green Lantern",
+      "gold": "Karate Kid II",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "nu-3420",
+      "pred": "Alamance Regional Medical Center | Burlington | 238 | 15 | 253 | Cone | Albemarle Hospital | Elizabeth City | 182 | 13 | 195 | - | Vidant | Alexander Hospital | Hickory | 25 | 3 | 28 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - |",
+      "gold": "969",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-3661",
+      "pred": "2006",
+      "gold": "2006",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "nu-3870",
+      "pred": "8",
+      "gold": "18",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-3881",
+      "pred": "3",
+      "gold": "7",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-4018",
+      "pred": "0",
+      "gold": "9",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-4053",
+      "pred": "2",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-4082",
+      "pred": "4",
+      "gold": "60",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "nu-4343",
+      "pred": "2",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation"
+    }
+  ]
+}

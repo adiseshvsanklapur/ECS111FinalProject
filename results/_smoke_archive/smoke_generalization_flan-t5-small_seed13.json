@@ -1,0 +1,74 @@
+{
+  "condition": "smoke_generalization",
+  "model": "google/flan-t5-small",
+  "seed": 13,
+  "task": "tabfact",
+  "n": 8,
+  "metrics": {
+    "classification_accuracy": 0.0
+  },
+  "error_distribution": null,
+  "compute": {
+    "seconds_per_example": 0.026632630251697265,
+    "peak_memory_mb": 756.70556640625,
+    "device": "mps"
+  },
+  "predictions": [
+    {
+      "id": "3042",
+      "pred": "pga championship",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3777",
+      "pred": "olympic gold medalist",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4243",
+      "pred": "2002",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4763",
+      "pred": "34091",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "10682",
+      "pred": "5 t2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10914",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11207",
+      "pred": "113",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11227",
+      "pred": "essendon",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    }
+  ]
+}

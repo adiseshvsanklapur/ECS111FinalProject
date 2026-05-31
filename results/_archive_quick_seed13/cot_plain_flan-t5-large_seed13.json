@@ -1,0 +1,664 @@
+{
+  "condition": "cot_plain",
+  "model": "google/flan-t5-large",
+  "seed": 13,
+  "task": "wtq",
+  "n": 80,
+  "metrics": {
+    "exact_match": 0.05,
+    "token_f1": 0.08150999819524932
+  },
+  "error_distribution": {
+    "lookup": 21,
+    "aggregation": 44,
+    "multi_hop": 11,
+    "correct": 4
+  },
+  "compute": {
+    "seconds_per_example": 3.695166567187698,
+    "peak_memory_mb": 3469.87890625,
+    "device": "mps"
+  },
+  "predictions": [
+    {
+      "id": "nt-101",
+      "pred": "I need to know the country with the least amount of silver medals. The answer: Denmark.",
+      "gold": "Belgium, Hungary, Netherlands, Spain, Czechoslovakia, Italy, Denmark",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know the country with the least amount of silver medals. The answer: Denmark."
+    },
+    {
+      "id": "nt-608",
+      "pred": "Eagle Farm Airport.",
+      "gold": "Antil Plains Aerodrome",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "The airport name at the top of the list is Eagle Farm Airport. The airport name at the top of the list is Eagle Farm Airport. Answer: Eagle Farm Airport."
+    },
+    {
+      "id": "nt-1255",
+      "pred": "The information in the table is correct. Pearl Jam performed in Canada for 11 days. The answer: 11.",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The information in the table is correct. Pearl Jam performed in Canada for 11 days. The answer: 11."
+    },
+    {
+      "id": "nt-1824",
+      "pred": "The relevant information to answer the above question is: Dervi\u015f Erolu, 1st time | 19 July 1985 | Hakk Atun | 1 January 1994 | Democratic Party (2) | Dervi\u015f Erolu, 2nd time | 16 August 1996 | 13 January 2004 | National Unity Party 4 | Mehmet Ali Talat | 13 January 2004 | 26 April 2005 | 5 May 2009 | Republican Turkish Party 5 | Ferdi Sabit Soyer | 26 April 2005 | 5 May 2009 | Republican Turkish Party (2) | Dervi\u015f Erolu, 3rd time | 5",
+      "gold": "Dervi\u015f Ero\u011flu",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "The relevant information to answer the above question is: Dervi\u015f Erolu, 1st time | 19 July 1985 | Hakk Atun | 1 January 1994 | Democratic Party (2) | Dervi\u015f Erolu, 2nd time | 16 August 1996 | 13 January 2004 | National Unity Party 4 | Mehmet Ali Talat | 13 January 2004 | 26 April 2005 | 5 May 2009 | Republican Turkish Party 5 | Ferdi Sabit Soyer | 26 April 2005 | 5 May 2009 | Republican Turkish Party (2) | Dervi\u015f Erolu, 3rd time | 5"
+    },
+    {
+      "id": "nt-2922",
+      "pred": "I need to know the parentage of the plant with the deep red flower colour. The answer: japonica  reticulata.",
+      "gold": "Tom Knudsen",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "I need to know the parentage of the plant with the deep red flower colour. The answer: japonica  reticulata."
+    },
+    {
+      "id": "nt-3024",
+      "pred": "I need to know the total number of years that Richard Rodgers took to get his egot completed. Richard Rodgers took 30 years to get his egot completed. Richard Rodgers took 30 years to get his egot completed. Audrey Hepburn took 41 years to get her egot completed.",
+      "gold": "Mike Nichols",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know the total number of years that Richard Rodgers took to get his egot completed. Richard Rodgers took 30 years to get his egot completed. Richard Rodgers took 30 years to get his egot completed. Audrey Hepburn took 41 years to get her egot completed."
+    },
+    {
+      "id": "nt-3504",
+      "pred": "I need to find the total number of cyclists who finished with the speed of at least 47.000. The answer: 17.",
+      "gold": "12",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to find the total number of cyclists who finished with the speed of at least 47.000. The answer: 17."
+    },
+    {
+      "id": "nt-4851",
+      "pred": "The number of strikes that had above 200,000 members affected is 1.",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The number of strikes that had above 200,000 members affected is 1."
+    },
+    {
+      "id": "nt-5211",
+      "pred": "Captain America: The Winter Soldier.",
+      "gold": "Captain America: The Winter Soldier",
+      "correct": true,
+      "error_type": "correct",
+      "raw": "The information in the table is correct. The top-grossing film on this list is Captain America: The Winter Soldier. Answer: Captain America: The Winter Soldier."
+    },
+    {
+      "id": "nt-5379",
+      "pred": "The relevant information to answer the above question is: Don January | United States | 1967 | 76 | 74 | 150 | +6 Jack Burke, Jr. | United States | 1956 | 75 | 75 | 150 | +6 Raymond Floyd | United States | 1969 | 77 | 74 | 151 | +7 Jay Hebert | United States | 1960 | 74 | 79 | 153 | +9 Dow Finsterwald | United States | 1958 | 79 | 74 | 153 | +9 Doug Ford | United States | 1955 | 77 | 80 | 154 | +14 Jerry Barber",
+      "gold": "47 years",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "The relevant information to answer the above question is: Don January | United States | 1967 | 76 | 74 | 150 | +6 Jack Burke, Jr. | United States | 1956 | 75 | 75 | 150 | +6 Raymond Floyd | United States | 1969 | 77 | 74 | 151 | +7 Jay Hebert | United States | 1960 | 74 | 79 | 153 | +9 Dow Finsterwald | United States | 1958 | 79 | 74 | 153 | +9 Doug Ford | United States | 1955 | 77 | 80 | 154 | +14 Jerry Barber"
+    },
+    {
+      "id": "nt-5403",
+      "pred": "To answer the question, consider the following: Rudolf | Josef | N/A | 1912 | 1921 | Waltner | Josef | 1986 | 1920 | 1923 | Rech | Karl G\u00e9za | 1956 | 1924 | 1925 | Sz\u00e9kely | Franz | N/A | 1923 | 1930 | T\u00f3th | Stefan | N/A | 1936 | 1943 |",
+      "gold": "4 years",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "To answer the question, consider the following: Rudolf | Josef | N/A | 1912 | 1921 | Waltner | Josef | 1986 | 1920 | 1923 | Rech | Karl G\u00e9za | 1956 | 1924 | 1925 | Sz\u00e9kely | Franz | N/A | 1923 | 1930 | T\u00f3th | Stefan | N/A | 1936 | 1943 |"
+    },
+    {
+      "id": "nt-5414",
+      "pred": "The information in the passage is correct. Peter Little was in office for 14 days. The answer: March 4, 1825.",
+      "gold": "March 3, 1829",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "The information in the passage is correct. Peter Little was in office for 14 days. The answer: March 4, 1825."
+    },
+    {
+      "id": "nt-5570",
+      "pred": "The number of f/c's (forward/center) on the list is 4.",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The number of f/c's (forward/center) on the list is 4."
+    },
+    {
+      "id": "nt-5757",
+      "pred": "I need to know how many games Rowaihi's team scored the same number of goals as the opposing team. The answer: 1",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know how many games Rowaihi's team scored the same number of goals as the opposing team. The answer: 1"
+    },
+    {
+      "id": "nt-5843",
+      "pred": "\"Rhythm Is a Dancer\"",
+      "gold": "\"Mambo No. 5\"",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "\"Rhythm Is a Dancer\""
+    },
+    {
+      "id": "nt-6051",
+      "pred": "The date of the game against Haiti is shown before march 24, 2013. The date of the game against Haiti is shown before march 24, 2013. The answer: September 29, 2006.",
+      "gold": "December 7, 2012",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "The date of the game against Haiti is shown before march 24, 2013. The date of the game against Haiti is shown before march 24, 2013. The answer: September 29, 2006."
+    },
+    {
+      "id": "nt-6071",
+      "pred": "The first time Seppo Simola broke 20m was on July 19, 1972. The second time Matti Yrj\u00f6l\u00e4 broke 20m was on August 2, 1972. The third time Bo Grahn broke 20m was on August 3, 1972. The fourth time Reijo Sthlberg broke 20m was on July 26, 1973. The fifth time Aulis Akonniemi broke 20m was on August 18, 1979. The sixth time Aulis Akonniemi broke 20m was on August 25, 1982. The seventh time Janne Ronkainen broke 20m was",
+      "gold": "8",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The first time Seppo Simola broke 20m was on July 19, 1972. The second time Matti Yrj\u00f6l\u00e4 broke 20m was on August 2, 1972. The third time Bo Grahn broke 20m was on August 3, 1972. The fourth time Reijo Sthlberg broke 20m was on July 26, 1973. The fifth time Aulis Akonniemi broke 20m was on August 18, 1979. The sixth time Aulis Akonniemi broke 20m was on August 25, 1982. The seventh time Janne Ronkainen broke 20m was"
+    },
+    {
+      "id": "nt-6572",
+      "pred": "4",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "4"
+    },
+    {
+      "id": "nt-7265",
+      "pred": "To answer the above question, the relevant sentence is: Leandro Lima | Porto | Cruzeiro | Loan 18 July 2009",
+      "gold": "8 May 2009",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "To answer the above question, the relevant sentence is: Leandro Lima | Porto | Cruzeiro | Loan 18 July 2009"
+    },
+    {
+      "id": "nt-7379",
+      "pred": "The relevant information to answer the above question is: 1984 | Ghostbusters | Atari 800, Commodore 64, MSX, ZX Spectrum, Amstrad CPC | Activision 1985 | Ghostbusters | Atari 2600, Apple II | Activision 1987 | Ghostbusters | Sega Master System | Activision Sega 1988 | Ghostbusters | NES | Bits Laboratory | Activision/Tokuma Shoten 1989 | The Real Ghostbusters | Commodore 64, Amiga, ZX Spectrum, Amstrad CPC, Atari ST",
+      "gold": "Sega Master System",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "The relevant information to answer the above question is: 1984 | Ghostbusters | Atari 800, Commodore 64, MSX, ZX Spectrum, Amstrad CPC | Activision 1985 | Ghostbusters | Atari 2600, Apple II | Activision 1987 | Ghostbusters | Sega Master System | Activision Sega 1988 | Ghostbusters | NES | Bits Laboratory | Activision/Tokuma Shoten 1989 | The Real Ghostbusters | Commodore 64, Amiga, ZX Spectrum, Amstrad CPC, Atari ST"
+    },
+    {
+      "id": "nt-7632",
+      "pred": "Baha Tulumbo",
+      "gold": "Charles Tangus",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Baha Tulumbo"
+    },
+    {
+      "id": "nt-7703",
+      "pred": "The total number of trains destined for New Delhi is 3 trains.",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The total number of trains destined for New Delhi is 3 trains."
+    },
+    {
+      "id": "nt-8001",
+      "pred": "I need to know the time Finland was the fastest. The answer: Finland.",
+      "gold": "Iceland",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "I need to know the time Finland was the fastest. The answer: Finland."
+    },
+    {
+      "id": "nt-8322",
+      "pred": "The number of European Cups this team has been a part of is 17.",
+      "gold": "4",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: The number of European Cups this team has been a part of is 17."
+    },
+    {
+      "id": "nt-8339",
+      "pred": "The total score for December 26 is 2\u20135. The total score for January 2 is 3\u20131. The answer is no.",
+      "gold": "No",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The total score for December 26 is 2\u20135. The total score for January 2 is 3\u20131. The answer is no."
+    },
+    {
+      "id": "nt-8791",
+      "pred": "Elena Khrustaleva Anna Lebedeva Lyubov Filimonova Marina Lebedeva",
+      "gold": "Svetlana Sleptsova, Anna Bogaliy-Titovets, Olga Medvedtseva, Olga Zaitseva",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Elena Khrustaleva Anna Lebedeva Lyubov Filimonova Marina Lebedeva"
+    },
+    {
+      "id": "nt-9226",
+      "pred": "The information in the table is correct. ABC1 is owned by the Australian Broadcasting Corporation. ABC2 is owned by the Australian Broadcasting Corporation. ABC3 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The information in the table is correct. ABC1 is owned by the Australian Broadcasting Corporation. ABC2 is owned by the Australian Broadcasting Corporation. ABC3 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by the Australian Broadcasting Commission. ABC News 24 is owned by"
+    },
+    {
+      "id": "nt-9237",
+      "pred": "I need to know the total number of times the car was used. The total number of times the car was used is 3 7. The answer: 7.",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know the total number of times the car was used. The total number of times the car was used is 3 7. The answer: 7."
+    },
+    {
+      "id": "nt-9459",
+      "pred": "I need to know the total number of singles that the band released. The total number of singles is 19 + 5 + 8 + 78 + 108 = 216. The answer: 216.",
+      "gold": "8",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know the total number of singles that the band released. The total number of singles is 19 + 5 + 8 + 78 + 108 = 216. The answer: 216."
+    },
+    {
+      "id": "nt-9613",
+      "pred": "The score difference in the game with the most attendance was the game with the greatest score difference. The game with the greatest score difference was the game with the greatest score difference on April 17, 2009. The answer is April 17 , 2009.",
+      "gold": "January 10, 2009",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "The score difference in the game with the most attendance was the game with the greatest score difference. The game with the greatest score difference was the game with the greatest score difference on April 17, 2009. The answer is April 17 , 2009."
+    },
+    {
+      "id": "nt-9668",
+      "pred": "I need to know who placed first in the race. The first place is Jason Leffler. The second place is Greg Biffle. The third place is Carl Edwards. The fourth place is Ron Hornaday. The fifth place is Kevin Harvick. The sixth place is Aric Almirola. The seventh place is Scott Wimmer. The eighth place is Kevin Hamlin. The ninth place is Mike Bliss. The tenth place is Brad Keselowski. The answer is Brad Keselowski.",
+      "gold": "Jason Leffler",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "I need to know who placed first in the race. The first place is Jason Leffler. The second place is Greg Biffle. The third place is Carl Edwards. The fourth place is Ron Hornaday. The fifth place is Kevin Harvick. The sixth place is Aric Almirola. The seventh place is Scott Wimmer. The eighth place is Kevin Hamlin. The ninth place is Mike Bliss. The tenth place is Brad Keselowski. The answer is Brad Keselowski."
+    },
+    {
+      "id": "nt-9676",
+      "pred": "The relevant sentence in the passage is: Ragnar Granit | Research Fellow, 1929\u20131931; Sc.D., 1971 | Physiology or Medicine | \"for their discoveries concerning the primary physiological and chemical visual processes in the eye\"",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The relevant sentence in the passage is: Ragnar Granit | Research Fellow, 1929\u20131931; Sc.D., 1971 | Physiology or Medicine | \"for their discoveries concerning the primary physiological and chemical visual processes in the eye\""
+    },
+    {
+      "id": "nt-10294",
+      "pred": "The number of divers in the preliminary round is 91.28. The number of divers in the final is 89.94. The number of divers in the preliminary round is 54.70. The number of divers in the final is 89.94. The answer is 54.70.",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The number of divers in the preliminary round is 91.28. The number of divers in the final is 89.94. The number of divers in the preliminary round is 54.70. The number of divers in the final is 89.94. The answer is 54.70."
+    },
+    {
+      "id": "nt-10369",
+      "pred": "The relevant sentence in the passage is: 2007 | *** | *** | *** | *** | *** | *** | *** | *** | *** 2008 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 |",
+      "gold": "2007",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "The relevant sentence in the passage is: 2007 | *** | *** | *** | *** | *** | *** | *** | *** | *** 2008 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 | 6,400 |"
+    },
+    {
+      "id": "nt-10384",
+      "pred": "I need to know the number of images on the list. The number of images is 10. The answer: 10.",
+      "gold": "10",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know the number of images on the list. The number of images is 10. The answer: 10."
+    },
+    {
+      "id": "nt-10513",
+      "pred": "I need to know the total prize money in the 2009 singapore open. The total prize money for the champion and the runner up is SGD 50,000. The answer: SGD 50,000.",
+      "gold": "SGD 900",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "I need to know the total prize money in the 2009 singapore open. The total prize money for the champion and the runner up is SGD 50,000. The answer: SGD 50,000."
+    },
+    {
+      "id": "nt-10604",
+      "pred": "The relevant information to answer the above question is: Note Buggy Grand Prix: Kattobi! Dai-Sakusen | 2003 | PlayStation 2 | N/A",
+      "gold": "Buggy Grand Prix: Kattobi! Dai-Sakusen",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "The relevant information to answer the above question is: Note Buggy Grand Prix: Kattobi! Dai-Sakusen | 2003 | PlayStation 2 | N/A"
+    },
+    {
+      "id": "nt-10715",
+      "pred": "The number of times mpa (kpsi) appears under the units column is 4275. The number of times mpa (kpsi) appears under the units column is 4301. The answer is 4275.",
+      "gold": "3",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The number of times mpa (kpsi) appears under the units column is 4275. The number of times mpa (kpsi) appears under the units column is 4301. The answer is 4275."
+    },
+    {
+      "id": "nt-10746",
+      "pred": "The relevant information to answer the above question is: \"Coyote\" | Joni Mitchell | 23 | 14 | 6 | 21 \"Shadows and Light\" | Joni Mitchell | 24 | - | - | 22 \"Furry Sings the Blues\" | Joni Mitchell | 25 | - | - | 23 \"Dry Your Eyes\" | Neil Diamond | 26 | 13 | 7 | 25 \"Acadian Driftwood\" | The Band, Neil Young and Joni Mitchell | 29 | - | - | 24 \"Genetic Method\"/",
+      "gold": "4",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The relevant information to answer the above question is: \"Coyote\" | Joni Mitchell | 23 | 14 | 6 | 21 \"Shadows and Light\" | Joni Mitchell | 24 | - | - | 22 \"Furry Sings the Blues\" | Joni Mitchell | 25 | - | - | 23 \"Dry Your Eyes\" | Neil Diamond | 26 | 13 | 7 | 25 \"Acadian Driftwood\" | The Band, Neil Young and Joni Mitchell | 29 | - | - | 24 \"Genetic Method\"/"
+    },
+    {
+      "id": "nt-10764",
+      "pred": "The information is from the article Prion Phenotype. The answer is 2008",
+      "gold": "1994",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "The information is from the article Prion Phenotype. The answer is 2008"
+    },
+    {
+      "id": "nt-11296",
+      "pred": "The relevant information is:",
+      "gold": "13",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The relevant information is:"
+    },
+    {
+      "id": "nt-11476",
+      "pred": "I need to know how many people finished the race in less than 1:02:",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know how many people finished the race in less than 1:02:"
+    },
+    {
+      "id": "nt-11910",
+      "pred": "I'm looking for a year and the answer is 2007.",
+      "gold": "3",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I'm looking for a year and the answer is 2007."
+    },
+    {
+      "id": "nt-12018",
+      "pred": "The following are the results of the games played at Notre Dame Stadium:",
+      "gold": "Win",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "The following are the results of the games played at Notre Dame Stadium:"
+    },
+    {
+      "id": "nt-12076",
+      "pred": "Northwich Victoria.",
+      "gold": "5 letters",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The first team is Aylesbury United. The second team is Burscough. The third team is Dover Athletic. The fourth team is Forest Green Roves. The fifth team is Halifax Town. The sixth team is Hayes. The seventh team is Margate. The eighth team is Yeovil Town. The ninth team is Northwich Victoria. The shortest name of one of the teams is Northwich Victoria. Answer: Northwich Victoria."
+    },
+    {
+      "id": "nt-12854",
+      "pred": "Bonafide has more songs than intentions.",
+      "gold": "Bonafide",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Bonafide has more songs than intentions."
+    },
+    {
+      "id": "nt-130",
+      "pred": "Ballet is the same as ballet.",
+      "gold": "ballet",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Ballet is the same as ballet."
+    },
+    {
+      "id": "nt-837",
+      "pred": "The first number after 0.025 is 0.0930. The second number after 0.025 is 0.0909 and the third number after 0.0909 is 0.0909 (in). The answer is 0.0909 ( in).",
+      "gold": "0.1162",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "The first number after 0.025 is 0.0930. The second number after 0.025 is 0.0909 and the third number after 0.0909 is 0.0909 (in). The answer is 0.0909 ( in)."
+    },
+    {
+      "id": "nt-1573",
+      "pred": "I need to know who was in office before Abdullah Jaafar. Jaafar Mohamed was in office before Abdullah Jaafar. Mustapha Jaafar was in office before Abdullah Jaafar. Abdul Hamid Yusof was in office before Abdullah Jaafar. Onn Jaafar was in office before Abdullah Jaafar.",
+      "gold": "Mohamed Mahbob",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "I need to know who was in office before Abdullah Jaafar. Jaafar Mohamed was in office before Abdullah Jaafar. Mustapha Jaafar was in office before Abdullah Jaafar. Abdul Hamid Yusof was in office before Abdullah Jaafar. Onn Jaafar was in office before Abdullah Jaafar."
+    },
+    {
+      "id": "nt-1626",
+      "pred": "I need to know the highest rd number. The highest rd number is 251",
+      "gold": "25",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know the highest rd number. The highest rd number is 251"
+    },
+    {
+      "id": "nt-3119",
+      "pred": "The title Ad Beatissimi Apostolorum is the first title. The title Humani Generis Redemptionem is the second title. The title Quod Iam Diu is the third title. The title Paterno Iam Diu is the fourth title. The title Annus Iam Plenus is the fifth title. The title Sacra Propediem is the sixth title. The title Dante is the seventh title. The title Fausto Appetente Die is the 12th title. The title Dante is the 12th title. The title Fausto Appe",
+      "gold": "2",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The title Ad Beatissimi Apostolorum is the first title. The title Humani Generis Redemptionem is the second title. The title Quod Iam Diu is the third title. The title Paterno Iam Diu is the fourth title. The title Annus Iam Plenus is the fifth title. The title Sacra Propediem is the sixth title. The title Dante is the seventh title. The title Fausto Appetente Die is the 12th title. The title Dante is the 12th title. The title Fausto Appe"
+    },
+    {
+      "id": "nt-3430",
+      "pred": "Subarnapur",
+      "gold": "Jagatsinghpur",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Subarnapur"
+    },
+    {
+      "id": "nt-4248",
+      "pred": "7",
+      "gold": "7",
+      "correct": true,
+      "error_type": "correct",
+      "raw": "7"
+    },
+    {
+      "id": "nt-4719",
+      "pred": "The answer is East Germany.",
+      "gold": "Brazil",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "The answer is East Germany."
+    },
+    {
+      "id": "nt-7232",
+      "pred": "no",
+      "gold": "January",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "no"
+    },
+    {
+      "id": "nt-8226",
+      "pred": "To answer the question, consider the following: Beriah Brown",
+      "gold": "Henry A. Atkins",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "To answer the question, consider the following: Beriah Brown"
+    },
+    {
+      "id": "nt-11256",
+      "pred": "I need to know the total number of people ranked. The total number of people ranked is 14.39 + 14.21 + 14.63 + 13.54 + 13.25 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 +",
+      "gold": "12",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know the total number of people ranked. The total number of people ranked is 14.39 + 14.21 + 14.63 + 13.54 + 13.25 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 + 13.09 +"
+    },
+    {
+      "id": "nt-12990",
+      "pred": "The athlete has not finished in a competition at least once.",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: The athlete has not finished in a competition at least once."
+    },
+    {
+      "id": "nt-13822",
+      "pred": "The answer: India.",
+      "gold": "Maldives",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The answer: India."
+    },
+    {
+      "id": "nt-13871",
+      "pred": "Na'ara.",
+      "gold": "\"Na'ara\"",
+      "correct": true,
+      "error_type": "correct",
+      "raw": "I need to know the first song listed on this chart. The first song listed on this chart is Na'ara. The first song listed on this chart is Na'ara. Answer: Na'ara."
+    },
+    {
+      "id": "nt-13950",
+      "pred": "I need to know the country that won the gold medal. The answer: Cuba.",
+      "gold": "Ecuador",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "I need to know the country that won the gold medal. The answer: Cuba."
+    },
+    {
+      "id": "nu-0",
+      "pred": "I need to know the country that had the most cyclists finish within the top 10. The answer: Spain.",
+      "gold": "Italy",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know the country that had the most cyclists finish within the top 10. The answer: Spain."
+    },
+    {
+      "id": "nu-169",
+      "pred": "I need to know the total number of circuits for each round. The round with the most circuits is the one with the most rounds. The round with the least circuits is the one with the least rounds. The total number of circuits is the round with the least circuits and the round with the most circuits. The round with the least circuits is the round with the least rounds. The round with the most circuits is the round with the most rounds. The round with the least circuits is the round with the least rounds. The round with the most circuits is the round with the most rounds. The",
+      "gold": "10",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know the total number of circuits for each round. The round with the most circuits is the one with the most rounds. The round with the least circuits is the one with the least rounds. The total number of circuits is the round with the least circuits and the round with the most circuits. The round with the least circuits is the round with the least rounds. The round with the most circuits is the round with the most rounds. The round with the least circuits is the round with the least rounds. The round with the most circuits is the round with the most rounds. The"
+    },
+    {
+      "id": "nu-288",
+      "pred": "I need to know the year of the church's construction. The year of the church's construction is not the name of the parish. The answer is Yttery.",
+      "gold": "Bamberg Church",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "I need to know the year of the church's construction. The year of the church's construction is not the name of the parish. The answer is Yttery."
+    },
+    {
+      "id": "nu-387",
+      "pred": "The season has 23 episodes. The season finale has 12 episodes. The season has 11 episodes. The season has 11.63 episodes. The answer is 11.63.",
+      "gold": "22",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The season has 23 episodes. The season finale has 12 episodes. The season has 11 episodes. The season has 11.63 episodes. The answer is 11.63."
+    },
+    {
+      "id": "nu-443",
+      "pred": "6 November 2011",
+      "gold": "25 November 1987",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "6 November 2011"
+    },
+    {
+      "id": "nu-550",
+      "pred": "I need to know the number of schools with a number higher than 600 in 2008: 582. The number of schools with a number higher than 600 in 2008: 585. The number of schools with a number higher than 600 in 2008: 615. The number of schools with a number higher than 600 in 2008: 636. The number of schools with a number higher than 600 in 2008: 615. The number of schools with a number higher than 600 in 2008: 636. The number of schools with a number higher than 600 in 2008: 615. The number of schools with",
+      "gold": "4",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know the number of schools with a number higher than 600 in 2008: 582. The number of schools with a number higher than 600 in 2008: 585. The number of schools with a number higher than 600 in 2008: 615. The number of schools with a number higher than 600 in 2008: 636. The number of schools with a number higher than 600 in 2008: 615. The number of schools with a number higher than 600 in 2008: 636. The number of schools with a number higher than 600 in 2008: 615. The number of schools with"
+    },
+    {
+      "id": "nu-638",
+      "pred": "The difference in net capacity between Chernobyl-1 and Chernobyl-2 is 800.",
+      "gold": "185",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "Answer: The difference in net capacity between Chernobyl-1 and Chernobyl-2 is 800."
+    },
+    {
+      "id": "nu-913",
+      "pred": "The total number of nurses in Somalia is 1,389,415, which is the highest number. The total number of nurses in Tigray is 101, which is the highest number. The answer: Tigray.",
+      "gold": "Oromia",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The total number of nurses in Somalia is 1,389,415, which is the highest number. The total number of nurses in Tigray is 101, which is the highest number. The answer: Tigray."
+    },
+    {
+      "id": "nu-1050",
+      "pred": "24",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "24"
+    },
+    {
+      "id": "nu-1808",
+      "pred": "I need to know the number of democrats in the district. The number of republicans is 7. The number of democrats is 1. The answer: 1.",
+      "gold": "1",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know the number of democrats in the district. The number of republicans is 7. The number of democrats is 1. The answer: 1."
+    },
+    {
+      "id": "nu-1942",
+      "pred": "1967",
+      "gold": "1964",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "The only year that the Michigan Wolverines won the NCAA Men's Ice Hockey Tournament was 1967. Answer: 1967"
+    },
+    {
+      "id": "nu-2177",
+      "pred": "4",
+      "gold": "0",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "Answer: 4"
+    },
+    {
+      "id": "nu-2985",
+      "pred": "Erasmus M. Weaver, Jr.",
+      "gold": "MG Jesse McI. Carter",
+      "correct": false,
+      "error_type": "lookup",
+      "raw": "Answer: Erasmus M. Weaver, Jr."
+    },
+    {
+      "id": "nu-3268",
+      "pred": "The relevant information to answer the above question is: Green Lantern | Rond Vidar",
+      "gold": "Karate Kid II",
+      "correct": false,
+      "error_type": "multi_hop",
+      "raw": "The relevant information to answer the above question is: Green Lantern | Rond Vidar"
+    },
+    {
+      "id": "nu-3420",
+      "pred": "The number of rooms at Cone Health is based on the number of hospitals.",
+      "gold": "969",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The number of rooms at Cone Health is based on the number of hospitals."
+    },
+    {
+      "id": "nu-3870",
+      "pred": "18",
+      "gold": "18",
+      "correct": true,
+      "error_type": "correct",
+      "raw": "Answer: 18"
+    },
+    {
+      "id": "nu-3881",
+      "pred": "I need to know how many goals Aloisi scored. The answer: 4.",
+      "gold": "7",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "I need to know how many goals Aloisi scored. The answer: 4."
+    },
+    {
+      "id": "nu-4018",
+      "pred": "The team won 27 games.",
+      "gold": "9",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The team won 27 games."
+    },
+    {
+      "id": "nu-4343",
+      "pred": "The total number of awards she won in 2009 is 8 awards. The total number of awards she won in 2007 is 7 awards. The answer: 7.",
+      "gold": "6",
+      "correct": false,
+      "error_type": "aggregation",
+      "raw": "The total number of awards she won in 2009 is 8 awards. The total number of awards she won in 2007 is 7 awards. The answer: 7."
+    }
+  ]
+}

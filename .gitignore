@@ -10,9 +10,14 @@ checkpoints/
 *.ckpt
 .cache/
 hf_cache/
+.hf_cache/
 
 # OS
 .DS_Store
 
 # Keep result placeholders but ignore bulky raw dumps
 results/*.bin
+
+# Downloaded results bundles (redundant with results/ — never commit)
+*.zip
+ecs111_results*/

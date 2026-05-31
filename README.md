@@ -9,31 +9,37 @@ table question answering, run entirely on **small, free-tier models** under real
 > **Core question:** When you can't afford a 100B-parameter model, which is the better lever for
 > table reasoning — prompting or fine-tuning — and where does each one break?
 
-**Build status:** code complete and verified. All `src/` modules + **155 pytest cases pass**, and the
-**full pipeline was run end-to-end on real data** (WTQ + TabFact downloaded; real fine-tune, generation,
-checkpoint round-trip, and generalization) on Apple-Silicon MPS. The 5 notebooks are thin drivers over
-`src/`. **Reported numbers still come from a Colab T4 run** (`SMOKE = False`) — the team executes those
-and fills `results/`, the report, and the slides. No results are fabricated; every number is produced by
-an actual run and labeled with its source.
+**Status: complete.** The full study ran end-to-end on a Colab T4 (2 seeds, 1000 eval / 500 CoT,
+8000 train); `results/`, the report, and the slides are filled from those runs, and **161 pytest
+cases pass**. Every reported number is produced by an actual run and traced to a file in `results/` —
+none are hand-typed (`scripts/finalize_report.py` exits non-zero if any number is left unmapped).
+
+**Headline result — a negative one.** No method we tried beat the plain zero-shot baseline. Flan-T5-large
+with no examples scored highest on WikiTableQuestions (**EM 0.241**); chain-of-thought prompting *more
+than halved* exact match, light fine-tuning landed *below* the baseline, and the WTQ-fine-tuned models
+did **not** transfer to TabFact — their outputs collapsed to a non-true/false format. The full read is
+in [`report/REPORT.md`](report/REPORT.md); the numbers are in
+[`results/summary_table.md`](results/summary_table.md).
 
 ---
 
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Motivation & Goals](#motivation--goals)
-3. [Problem Statement](#problem-statement)
-4. [Novelty](#novelty)
-5. [Datasets](#datasets)
-6. [Methodology — The 5 Conditions](#methodology--the-5-conditions)
-7. [Evaluation Plan](#evaluation-plan)
-8. [Definition of Done (Success Criteria)](#definition-of-done-success-criteria)
-9. [Repository Structure](#repository-structure)
-10. [Team & Task Division](#team--task-division)
-11. [4-Day Execution Timeline](#4-day-execution-timeline)
-12. [Reproducibility & Setup](#reproducibility--setup)
-13. [Risks & Mitigations](#risks--mitigations)
-14. [References](#references)
+2. [Results](#results)
+3. [Motivation & Goals](#motivation--goals)
+4. [Problem Statement](#problem-statement)
+5. [Novelty](#novelty)
+6. [Datasets](#datasets)
+7. [Methodology — The 5 Conditions](#methodology--the-5-conditions)
+8. [Evaluation Plan](#evaluation-plan)
+9. [Outcome vs. Success Criteria](#outcome-vs-success-criteria)
+10. [Repository Structure](#repository-structure)
+11. [Team & Task Division](#team--task-division)
+12. [How We Ran It](#how-we-ran-it)
+13. [Reproducibility & Setup](#reproducibility--setup)
+14. [Risks & Mitigations](#risks--mitigations)
+15. [References](#references)
 
 ---
 
@@ -51,6 +57,39 @@ Almost all published evidence for these uses very large, expensive models. **Thi
 under-explored regime: both methods applied to small models that run for free.** We run a controlled
 comparison on **Flan-T5-base (250M)** and **Flan-T5-large (780M)** over **WikiTableQuestions** and
 **TabFact**, with a cross-dataset generalization test and a full error-type breakdown.
+
+---
+
+## Results
+
+Full run: Flan-T5-base (250M) and -large (780M), 2 seeds (13, 42), 1000-example eval
+(500 for CoT), 8000-example fine-tune. Every figure traces to a file in `results/`.
+
+**WikiTableQuestions — exact match (mean ± std over 2 seeds):**
+
+| Condition | Flan-T5-base | Flan-T5-large |
+|---|---|---|
+| Baseline (zero-shot) | 0.171 ± 0.011 | **0.241 ± 0.009** |
+| CoT, plain | 0.015 ± 0.001 | 0.052 ± 0.008 |
+| CoT, structured | 0.019 ± 0.003 | 0.147 ± 0.015 |
+| Fine-tune, answers only | 0.157 ± 0.002 | — (OOMs on T4) |
+| Fine-tune, + reasoning traces | 0.121 ± 0.009 | — |
+
+**TabFact — out-of-distribution transfer (zero TabFact training, n=1000).** The majority-class
+floor is **0.551**. The models almost never emit a gradeable true/false answer, so these are
+output-format-collapse numbers, not reasoning scores — which is why accuracy carries its
+mappable-output count:
+
+| Model | Accuracy | Mappable outputs | Accuracy when mappable |
+|---|---|---|---|
+| Untrained base (floor) | 0.043 | 170 / 2000 | 0.506 (≈ chance) |
+| Fine-tune, answers | 0.003 | 11 / 2000 | 0.455 (n=11) |
+| Fine-tune, traces | 0.002 | 13 / 2000 | 0.308 (n=13) |
+
+**What it means:** on a small free model the plain baseline won. CoT hurt strict exact match (the
+model reasons in prose instead of naming the cell); light fine-tuning didn't beat the baseline and
+didn't transfer. Error analysis, McNemar, and chain-quality κ (0.784) are in
+[`report/REPORT.md`](report/REPORT.md).
 
 ---
 
@@ -157,15 +196,22 @@ comparison validated with **McNemar's test** on paired per-example predictions.
 
 ---
 
-## Definition of Done (Success Criteria)
+## Outcome vs. Success Criteria
 
-The project is successful **iff all three hold**:
+The proposal set three bars. Two were **not** met — and that is the finding, not a failure of the
+experiment:
 
-1. ✅ **≥ 1 condition beats the baseline by ≥ 5 Exact-Match points** on WikiTableQuestions.
-2. ✅ **≥ 1 condition reaches ≥ 60% on TabFact** with zero TabFact training.
-3. ✅ **Every condition completes in < 2 hours** on a free Colab T4.
+1. ❌ **A condition beats the baseline by ≥ 5 EM points** on WikiTableQuestions — **not met.** No
+   condition beat the baseline at all; the best non-baseline result (fine-tune answers, 0.157)
+   trailed the base baseline (0.171), and every method trailed the large baseline (0.241).
+2. ❌ **A condition reaches ≥ 60% on TabFact** with zero TabFact training — **not met.** Best raw
+   accuracy was 0.043, below the 0.551 majority-class floor; transfer collapsed at the output-format
+   level (the fine-tuned models stopped emitting true/false).
+3. ✅ **Every condition completes in < 2 hours** on a free Colab T4 — **met** (per-example times in
+   `results/summary_table.md`).
 
-Plus deliverable completeness: 5 reproducible notebooks (fixed seeds), full written report, slides.
+Deliverables complete: 5 condition notebooks + a self-contained full-run notebook (fixed seeds), the
+written report (`report/`), and slides (`slides/`). A clean, fully reproducible negative result.
 
 ---
 
@@ -176,29 +222,38 @@ ECS111FinalProject/
 ├── README.md                       # this file
 ├── Project_Proposal.pdf            # approved proposal
 ├── requirements.txt                # torch, transformers, datasets, scipy, sklearn, ...
-├── notebooks/                      # thin drivers over src/ (clone→install→import→run)
+├── notebooks/                      # Colab drivers (clone → install → import → run)
 │   ├── 00_baseline.ipynb            # C0
 │   ├── 01_cot_prompting.ipynb       # CA
 │   ├── 02_finetune_answers.ipynb    # CB
 │   ├── 03_finetune_traces.ipynb     # CC
-│   └── 04_generalization.ipynb      # CG  (+ aggregation/plots)
-├── src/
+│   ├── 04_generalization.ipynb      # CG  (+ aggregation/plots)
+│   └── ECS111_Colab_FullRun.ipynb   # self-contained full run, shardable across 5 accounts
+├── src/                            # pure library (metrics/data import without torch)
 │   ├── config.py                   # seeds, model/dataset ids, hyperparams, get_device()
 │   ├── data.py                     # loaders, serialize_table, seeded disjoint split
-│   ├── prompts.py                  # baseline + CoT builders, answer extraction
-│   ├── cot_exemplars.py            # 8 + 8 hand-written exemplars (plain / structured)
+│   ├── prompts.py                  # baseline + CoT + TabFact builders, answer extraction
+│   ├── cot_exemplars.py            # hand-written exemplars (plain / structured)
 │   ├── trace_templates.py          # rule-based reasoning-trace generator (CC)
-│   ├── metrics.py                  # EM, token-F1, classification acc, McNemar, Cohen κ
+│   ├── metrics.py                  # EM, token-F1, TabFact verbalizer + acc, McNemar, Cohen κ
 │   ├── trainer.py                  # seq2seq fine-tune + greedy generate (device-aware)
 │   ├── evaluate.py                 # predict → metrics → error labels → results JSON
-│   └── analysis.py                 # aggregate seeds, McNemar, κ, tables + plots
+│   ├── analysis.py                 # aggregate seeds, McNemar, κ, tables + plots
+│   └── report_fill.py              # map results JSON → every report/slide number (single source)
 ├── scripts/
-│   ├── smoke_local.py              # real end-to-end pipeline check (downloads data, runs on device)
-│   └── make_notebooks.py           # regenerates the 5 notebooks
-├── tests/                          # 155 pytest cases (pure-logic: metrics, data, traces, analysis)
-├── results/                        # metrics JSON, tables, plots (per condition × seed)
-├── report/                         # written report
-└── slides/                         # presentation deck
+│   ├── run_all_local.py            # run every condition for real (--scale quick|full, --shard)
+│   ├── make_colab_notebook.py      # regenerate the self-contained full-run notebook
+│   ├── make_notebooks.py           # regenerate the 5 condition notebooks
+│   ├── rate_chains.py              # two-rubric chain-quality rating → Cohen κ
+│   ├── finalize_report.py          # fill report numeric tokens from results (fails loud)
+│   ├── make_slides.py              # build the slide deck from the same token map
+│   ├── export_chains.py            # dump sampled CoT chains for rating
+│   ├── resume_finetune_local.py    # resume a hung run (skip completed conditions)
+│   └── smoke_local.py              # tiny real end-to-end pipeline check
+├── tests/                          # 161 pytest cases (metrics, data, traces, analysis, report_fill)
+├── results/                        # per-condition×seed JSON + summary_table.{md,csv} + plots + chain_quality.json
+├── report/REPORT.md                # final report (numbers auto-filled; prose in negative-result frame)
+└── slides/ECS111_slides.pptx       # generated deck
 ```
 
 ---
@@ -227,9 +282,10 @@ parallelizes across accounts.
 
 ---
 
-## 4-Day Execution Timeline
+## How We Ran It
 
-Dependencies marked `→`.
+The project ran on a 4-day plan (below); dependencies marked `→`. Reported numbers come from the
+final full Colab T4 run, not the day-by-day smoke passes.
 
 ### Day 1 — Foundation + parallel starts
 - **Adisesh:** shared core + metrics (TOP PRIORITY — unblocks everyone). Push by midday.
@@ -272,7 +328,7 @@ then set `SMOKE = False` and re-run for the reported numbers. Set the runtime to
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python -m pytest tests/ -q          # 155 pure-logic tests
+.venv/bin/python -m pytest tests/ -q          # 161 pure-logic tests
 .venv/bin/python scripts/smoke_local.py        # real data download + full pipeline on your device
 ```
 `src/config.py:get_device()` auto-selects `cuda → mps → cpu`, so the same code runs everywhere.
