@@ -85,7 +85,7 @@ def run_baseline(s: dict, device: str) -> None:
 
 
 def run_baseline_tabfact_floor(s: dict, device: str) -> None:
-    """Cheap OOD floor: the un-fine-tuned base on TabFact, for reference on the slides."""
+    """Cheap OOD floor: the un-fine-tuned base on TabFact, for reference."""
     log("=== BASELINE TabFact FLOOR ===")
     todo = [seed for seed in s["seeds"]
             if not results_exist("generalization_baseline", config.FINETUNE_MODEL, seed)]

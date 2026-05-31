@@ -356,17 +356,7 @@ EXEMPLARS_STRUCTURED: list[dict] = [
 # ---------------------------------------------------------------------------
 
 def get_exemplars(style: str) -> list[dict]:
-    """Return the exemplar list for the given style.
-
-    Parameters
-    ----------
-    style : {"plain", "structured"}
-
-    Returns
-    -------
-    list[dict]
-        The matching exemplar list.
-    """
+    """Return the exemplar list for the given style ("plain" or "structured")."""
     if style == "plain":
         return EXEMPLARS_PLAIN
     if style == "structured":
@@ -375,24 +365,10 @@ def get_exemplars(style: str) -> list[dict]:
 
 
 def format_exemplar(ex: dict, style: str) -> str:  # noqa: ARG001  (style is informational)
-    """Format a single exemplar as a demonstration string.
+    """Format one exemplar as a demonstration string ending in "Answer: <answer>".
 
-    The *style* parameter is informational only; the exemplar already carries
-    the correct reasoning text for its list.
-
-    The returned string always ends with the line ``Answer: <answer>``.
-
-    Parameters
-    ----------
-    ex : dict
-        A single exemplar dict with keys question, table, reasoning, answer.
-    style : str
-        One of "plain" or "structured" (informational, not used for rendering).
-
-    Returns
-    -------
-    str
-        A formatted demonstration string.
+    style is informational only; each exemplar already carries the reasoning
+    text for its list, so it is not used to render.
     """
     serialized = serialize_table(ex["table"])
     lines = [

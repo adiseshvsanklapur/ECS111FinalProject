@@ -1,7 +1,7 @@
 """Tests for src/report_fill.build_token_map.
 
 Builds a synthetic but full result set (every condition, both seeds) and checks
-that each report/slide token resolves to a sensible real value. No GPU, no
+that each report token resolves to a sensible real value. No GPU, no
 download -- pure dict math over the results schema written by evaluate.py.
 """
 from src.report_fill import build_token_map

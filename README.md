@@ -10,7 +10,7 @@ table question answering, run entirely on **small, free-tier models** under real
 > reasoning, prompting or fine-tuning, and where does each one break?
 
 **Status: complete.** The full study ran end-to-end on a Colab T4 (2 seeds, 1000 eval / 500 CoT,
-8000 train). `results/`, the report, and the slides are filled from those runs, and **161 pytest
+8000 train). `results/` and the report are filled from those runs, and **161 pytest
 cases pass**. Every reported number comes from an actual run and traces to a file in `results/`,
 none are hand-typed (`scripts/finalize_report.py` exits non-zero if any number is left unmapped).
 
@@ -211,8 +211,8 @@ experiment:
 3. ✅ **Every condition completes in < 2 hours** on a free Colab T4: **met** (per-example times in
    `results/summary_table.md`).
 
-Deliverables complete: 5 condition notebooks plus a self-contained full-run notebook (fixed seeds),
-the written report (`report/`), and the slides (`slides/`). A clean, fully reproducible negative result.
+Deliverables complete: 5 condition notebooks plus a self-contained full-run notebook (fixed seeds)
+and the written report (`report/`). A clean, fully reproducible negative result.
 
 ---
 
@@ -240,21 +240,19 @@ ECS111FinalProject/
 │   ├── trainer.py                  # seq2seq fine-tune + greedy generate (device-aware)
 │   ├── evaluate.py                 # predict, score, label errors, write results JSON
 │   ├── analysis.py                 # aggregate seeds, McNemar, κ, tables + plots
-│   └── report_fill.py              # map results JSON to every report/slide number (single source)
+│   └── report_fill.py              # map results JSON to every report number (single source)
 ├── scripts/
 │   ├── run_all_local.py            # run every condition for real (--scale quick|full, --shard)
 │   ├── make_colab_notebook.py      # regenerate the self-contained full-run notebook
 │   ├── make_notebooks.py           # regenerate the 5 condition notebooks
 │   ├── rate_chains.py              # two-rubric chain-quality rating, Cohen κ
 │   ├── finalize_report.py          # fill report numeric tokens from results (fails loud)
-│   ├── make_slides.py              # build the slide deck from the same token map
 │   ├── export_chains.py            # dump sampled CoT chains for rating
 │   ├── resume_finetune_local.py    # resume a hung run (skip completed conditions)
 │   └── smoke_local.py              # tiny real end-to-end pipeline check
 ├── tests/                          # 161 pytest cases (metrics, data, traces, analysis, report_fill)
 ├── results/                        # per-condition×seed JSON + summary_table.{md,csv} + plots + chain_quality.json
-├── report/REPORT.md                # final report (numbers auto-filled; prose in negative-result frame)
-└── slides/ECS111_slides.pptx       # generated deck
+└── report/REPORT.md                # final report (numbers auto-filled; prose in negative-result frame)
 ```
 
 ---

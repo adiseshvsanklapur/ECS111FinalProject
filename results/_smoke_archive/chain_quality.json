@@ -1,7 +1,0 @@
-{
-  "source": "cot_structured_flan-t5-base_seed13.json",
-  "n": 80,
-  "mean_a": 0.0875,
-  "mean_b": 0.1375,
-  "kappa": 0.6952380952380952
-}
