@@ -2,15 +2,10 @@
 
 Only returns a trace when the derivation is genuinely unambiguous. A wrong
 trace used as a training target poisons the experiment, so conservative is
-correct.  When in doubt, return None.
+correct. When in doubt, return None.
 
-Public API
-----------
-generate_trace(example: dict) -> str | None
-    Returns a short reasoning-chain string ending in "Answer: <gold>", or None.
-
-trace_coverage(examples: list[dict]) -> dict
-    Returns {"total": N, "with_trace": k, "coverage": k/N}.
+generate_trace(example) gives back a short chain ending in "Answer: <gold>",
+or None. trace_coverage(examples) reports how many examples got a trace.
 """
 
 from __future__ import annotations
@@ -113,45 +108,24 @@ def _rule_count_all_rows(example: dict) -> str | None:
 def generate_trace(example: dict) -> str | None:
     """Return a verifiable reasoning trace, or None if no rule applies.
 
-    Rules are tried in priority order; the first that fires wins.
-
-    Parameters
-    ----------
-    example : dict
-        A unified WTQ example dict (see src/data.py for schema).
-
-    Returns
-    -------
-    str
-        A short reasoning chain ending in "Answer: <gold>".
-    None
-        When no rule yields an unambiguous derivation.
+    Rules are tried in priority order and the first that fires wins. example is
+    a unified WTQ dict (schema in src/data.py); the trace ends in "Answer: <gold>".
     """
-    # Rule 1: unique single-cell lookup
     trace = _rule_unique_lookup(example)
     if trace is not None:
         return trace
 
-    # Rule 2: count-all rows
     trace = _rule_count_all_rows(example)
     if trace is not None:
         return trace
 
-    # No rule fired.
     return None
 
 
 def trace_coverage(examples: list[dict]) -> dict:
     """Report what fraction of examples received a trace.
 
-    Parameters
-    ----------
-    examples : list[dict]
-        A list of unified example dicts.
-
-    Returns
-    -------
-    dict with keys "total", "with_trace", "coverage".
+    Returns a dict with keys "total", "with_trace", and "coverage".
     """
     total = len(examples)
     with_trace = sum(1 for ex in examples if generate_trace(ex) is not None)

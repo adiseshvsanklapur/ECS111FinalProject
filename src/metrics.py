@@ -25,9 +25,7 @@ def normalize_answer(s: str) -> str:
     Articles are intentionally kept (not removed).
     """
     s = s.lower()
-    # Remove all punctuation characters
     s = s.translate(str.maketrans("", "", string.punctuation))
-    # Collapse any run of whitespace to a single space and strip ends
     s = " ".join(s.split())
     return s
 
