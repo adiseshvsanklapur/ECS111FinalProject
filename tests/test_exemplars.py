@@ -175,7 +175,7 @@ class TestAnswerCorrectnessSpotCheck:
         assert str(max_temp) == ex["answer"]
 
     def test_lions_vs_tigers_comparison(self):
-        # Ex 6: comparison — Lions wins > Tigers wins => answer "yes"
+        # Ex 6: comparison, Lions wins > Tigers wins => answer "yes"
         ex = EXEMPLARS_PLAIN[5]
         lions_wins = int([r[1] for r in ex["table"]["rows"] if r[0] == "Lions"][0])
         tigers_wins = int([r[1] for r in ex["table"]["rows"] if r[0] == "Tigers"][0])
@@ -189,7 +189,7 @@ class TestAnswerCorrectnessSpotCheck:
         assert min_row[0] == ex["answer"]
 
     def test_cheapest_product_rating(self):
-        # Ex 8: multi-hop — cheapest product's rating
+        # Ex 8: multi-hop, cheapest product's rating
         ex = EXEMPLARS_PLAIN[7]
         cheapest = min(ex["table"]["rows"], key=lambda r: float(r[1]))
         assert cheapest[2] == ex["answer"]

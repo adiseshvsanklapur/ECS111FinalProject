@@ -105,7 +105,7 @@ def add_title_slide(prs):
     cp = cb.text_frame.paragraphs[0]
     cp.alignment = PP_ALIGN.CENTER
     cr = cp.add_run()
-    cr.text = "ECS 111 — Final Project"
+    cr.text = "ECS 111 Final Project"
     _set_run(cr, 20, bold=True, color=BODY)
 
     # Team line.
@@ -138,7 +138,7 @@ def add_content_slide(prs, title, bullets):
         p = tf.paragraphs[0] if first else tf.add_paragraph()
         first = False
         p.level = level
-        prefix = "• " if level == 0 else "– "
+        prefix = "• " if level == 0 else "- "
         r = p.add_run()
         r.text = prefix + text
         _set_run(r, 18 if level == 0 else 16, color=BODY)
@@ -203,7 +203,7 @@ def build(prs):
             ("Understand the question, locate the right cells, pick the operation, format the answer.", 1),
             ("A failure at any step yields a confident wrong answer.", 1),
             ("Most published evidence for prompting and fine-tuning uses very large, expensive models.", 0),
-            ("We study the under-explored regime: small models that run for free on Colab.", 0),
+            ("We look at the case most studies skip: small models that run for free on Colab.", 0),
         ],
     )
 

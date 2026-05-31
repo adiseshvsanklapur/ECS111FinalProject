@@ -26,13 +26,13 @@ SRC_FILES = [
 ]
 SCRIPT_FILES = ["run_all_local.py"]
 
-INTRO = """# ECS111 Final Project — Full Run on Colab (T4 GPU), self-contained
+INTRO = """# ECS111 Final Project: Full Run on Colab (T4 GPU), self-contained
 
 **No git clone needed.** This notebook carries all the project code inside it.
 
 1. Runtime -> Change runtime type -> **T4 GPU**.
 2. (Optional) set `SHARD` in the next code cell to split the work with teammates.
-3. Runtime -> **Run all**. If Colab disconnects, just Run all again — the runner
+3. Runtime -> **Run all**. If Colab disconnects, just Run all again. The runner
    resumes and skips finished work.
 
 `SHARD` options (one teammate each for a ~30-min run, or leave `all` for one
@@ -76,7 +76,7 @@ path = "results/summary_table.md"
 if os.path.exists(path):
     print(open(path).read())
 else:
-    print("results/summary_table.md not found yet — the run may be partial.")
+    print("results/summary_table.md not found yet. The run may be partial.")
 '''
 
 DOWNLOAD_CELL = '''import shutil
