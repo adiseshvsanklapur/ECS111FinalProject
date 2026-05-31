@@ -108,7 +108,7 @@ else:
 
 def build_baseline() -> dict:
     cells = [
-        md("# Condition C0 — Baseline (no examples)\n\n"
+        md("# Condition C0: Baseline (no examples)\n\n"
            "Flan-T5 base + large, question + serialized table only. Sets the floor "
            "for every other condition. Metric: Exact-Match + token-F1 on WikiTableQuestions."),
         code(SETUP), code(SMOKE), code(COMMON_CONFIG),
@@ -138,7 +138,7 @@ rows
 
 def build_cot() -> dict:
     cells = [
-        md("# Condition A — Chain-of-Thought Prompting\n\n"
+        md("# Condition A: Chain-of-Thought Prompting\n\n"
            "6 hand-written exemplars prepended to each prompt. Two chain formats tested: "
            "`plain` (natural language) vs `structured` (numbered steps). No training. "
            "Base + large. Metric: EM + token-F1 on WTQ."),
@@ -214,7 +214,7 @@ rows
 def build_finetune_answers() -> dict:
     return notebook(_finetune_cells(
         "finetune_answers", use_traces=False,
-        title_md=("# Condition B — Fine-tune (answers only)\n\n"
+        title_md=("# Condition B: Fine-tune (answers only)\n\n"
                   "Fine-tune Flan-T5-base on WTQ; target = final answer. 2 seeds. "
                   "Saves checkpoints for the generalization test. Expected to give the "
                   "highest WTQ accuracy."),
@@ -224,7 +224,7 @@ def build_finetune_answers() -> dict:
 def build_finetune_traces() -> dict:
     return notebook(_finetune_cells(
         "finetune_traces", use_traces=True,
-        title_md=("# Condition C — Fine-tune (reasoning traces)\n\n"
+        title_md=("# Condition C: Fine-tune (reasoning traces)\n\n"
                   "Same data + setup as Condition B, but the target is a rule-based "
                   "reasoning chain ending in the answer (where the derivation is "
                   "unambiguous; otherwise answer only). Tests whether supervising on "
@@ -234,7 +234,7 @@ def build_finetune_traces() -> dict:
 
 def build_generalization() -> dict:
     cells = [
-        md("# Generalization Test — fine-tuned models on TabFact (zero TabFact training)\n\n"
+        md("# Generalization Test: fine-tuned models on TabFact (zero TabFact training)\n\n"
            "Loads the Condition B and C checkpoints and evaluates them on TabFact. "
            "Strong TabFact accuracy with no TabFact training = real transfer, not "
            "memorization. Ends with the aggregated summary table + plots."),
