@@ -206,7 +206,7 @@ We asked whether prompting or fine tuning helps a small free model read tables, 
 
 We split the work so everyone carried about the same load.
 
-Adisesh built the shared core and the baseline and wrote the data and setup parts. Amar ran the chain of thought setup in both styles and led the hand written examples and put the slides together. Nikhil built the training code and ran the answers only fine tuning. Anant built the rule based trace generator and ran the traces fine tuning. Sanjay led and coordinated the project as lead author, and ran the generalization test, the error analysis, and the statistics, and pulled the report together. Two of us, [FILL: the two chain raters' names], scored the reasoning chains.
+Adisesh built the shared core and the baseline and wrote the data and setup parts. Amar ran the chain of thought setup in both styles and led the hand written examples and put the slides together. Nikhil built the training code and ran the answers only fine tuning. Anant built the rule based trace generator and ran the traces fine tuning. Sanjay led and coordinated the project as lead author, and ran the generalization test, the error analysis, and the statistics, and pulled the report together. Two of us, Adisesh and Nikhil, scored the reasoning chains.
 
 ## References
 
