@@ -20,13 +20,19 @@ def _wtq(condition, model, seed, em, f1, errs):
 
 
 def _tabfact(condition, seed, acc):
+    # ~4/10 preds are unmappable ("0"), gold is 6 false / 4 true -> floor 0.6,
+    # so the honest decomposition (coverage, unmappable rate, acc|mappable, floor)
+    # is exercised with non-trivial values.
+    preds = ["0" if i % 3 == 0 else "true" for i in range(10)]
+    golds = ["false" if i < 6 else "true" for i in range(10)]
     return {
         "condition": condition, "model": "google/flan-t5-base", "seed": seed,
         "task": "tabfact", "n": 1000,
         "metrics": {"classification_accuracy": acc}, "error_distribution": None,
         "compute": {"seconds_per_example": 0.1, "peak_memory_mb": 4000.0, "device": "cuda"},
-        "predictions": [{"id": str(i), "pred": "true", "gold": "true",
-                         "correct": i < int(acc * 10), "error_type": "correct"} for i in range(10)],
+        "predictions": [{"id": str(i), "pred": preds[i], "gold": golds[i],
+                         "correct": (preds[i] != "0") and (i < int(acc * 10)),
+                         "error_type": "correct"} for i in range(10)],
     }
 
 
@@ -45,6 +51,7 @@ def _full_results():
             _wtq("cot_structured", "flan-t5-large", seed, 0.26, 0.31, ERRS),
             _wtq("finetune_answers", "flan-t5-base", seed, 0.31, 0.36, ERRS),
             _wtq("finetune_traces", "flan-t5-base", seed, 0.30, 0.35, ERRS),
+            _tabfact("generalization_baseline", seed, 0.05),
             _tabfact("generalization_finetune_answers", seed, 0.58),
             _tabfact("generalization_finetune_traces", seed, 0.62),
         ]
@@ -57,7 +64,15 @@ def test_numeric_tokens_resolve():
     assert "±" in tm["[EM: baseline base]"]                       # mean ± std form
     assert tm["[ACC: tabfact finetune_traces base]"].startswith("0.62")
     assert tm["[TabFact acc: finetune_traces]"].startswith("0.62")
+    assert tm["[TabFact acc: baseline]"].startswith("0.05")
+    # Honest TabFact decomposition: 4/10 preds unmappable, 12 of 20 mappable, floor 0.6.
+    assert tm["[TabFact unmappable: finetune_answers]"] == "0.400"
+    assert tm["[TabFact coverage_n: finetune_answers]"] == "12 of 20"
+    assert tm["[TabFact acc|mappable: finetune_answers]"] == "0.500 (n=12)"
+    assert tm["[TabFact floor]"] == "0.600"
     assert tm["[KAPPA: chain quality]"].startswith("0.71")
+    assert tm["[KAPPA: rater a mean]"] == "1.30"
+    assert tm["[KAPPA: rater b mean]"] == "1.20"
     assert tm["[EM_GAP: best vs baseline]"].startswith("+")       # best base EM - baseline base EM
     for share in ("[ERR: lookup]", "[ERR: aggregation]", "[ERR: multihop]"):
         assert tm[share].endswith("%")

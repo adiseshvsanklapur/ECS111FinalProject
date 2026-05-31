@@ -7,6 +7,7 @@ Pure dict math over the schema written by evaluate.py; safe to import without to
 from __future__ import annotations
 
 from .analysis import mcnemar_between
+from .metrics import map_tabfact_label
 
 
 def _pick(results, condition, model_short=None, task="wtq"):
@@ -44,6 +45,46 @@ def _tabfact(results, gen_condition):
     return f"{m:.3f} ± {s:.3f}"
 
 
+def _tabfact_decomp(results, gen_condition):
+    """Honest TabFact decomposition, pooled over seeds from the saved predictions.
+
+    The model's raw generation lives in each prediction's "pred" field, so the
+    mappable rate recomputes directly (no re-inference). Returns None if the
+    condition has no results, else a dict with the four reporting quantities.
+    """
+    rs = _pick(results, gen_condition, "flan-t5-base", task="tabfact")
+    recs = [rec for r in rs for rec in r["predictions"]]
+    n = len(recs)
+    if n == 0:
+        return None
+    # Restrict the accuracy numerator to mappable outputs so acc_given_mappable
+    # is self-enforcing, not reliant on evaluate.py marking unmappable preds wrong.
+    mappable = [rec for rec in recs if map_tabfact_label(rec["pred"]) is not None]
+    coverage_n = len(mappable)
+    correct = sum(bool(rec["correct"]) for rec in mappable)
+    return {
+        "n": n,
+        "coverage_n": coverage_n,
+        "unmappable_rate": (n - coverage_n) / n,
+        "acc_given_mappable": (correct / coverage_n) if coverage_n else None,
+    }
+
+
+def _tabfact_floor(results):
+    """Majority-class floor on the TabFact eval slice, from the gold labels.
+
+    The eval slice is seeded-fixed across conditions, so any TabFact result's
+    golds give the same floor (no hand-typed 55.1%)."""
+    rs = [r for r in results if r["task"] == "tabfact"]
+    if not rs:
+        return None
+    golds = [rec["gold"] for rec in rs[0]["predictions"]]
+    n = len(golds)
+    if n == 0:
+        return None
+    return max(sum(g == "true" for g in golds), sum(g == "false" for g in golds)) / n
+
+
 def _best_base_condition(results):
     cands = ["cot_plain", "cot_structured", "finetune_answers", "finetune_traces"]
     scored = [(c, _em_mean(results, c, "flan-t5-base")) for c in cands]
@@ -70,6 +111,28 @@ def build_token_map(results, chain_quality):
         tm[f"[TabFact acc: {cond}]"] = acc
     # Optional baseline floor on TabFact, only if it was actually run.
     tm["[ACC: tabfact baseline base]"] = _tabfact(results, "generalization_baseline")
+    tm["[TabFact acc: baseline]"] = _tabfact(results, "generalization_baseline")
+
+    # Honest TabFact decomposition: raw acc stays (above); add coverage, the
+    # accuracy AMONG mappable outputs (carrying its n so a junk denominator can't
+    # masquerade as a rate), and the majority-class floor. The near-zero raw acc
+    # is an output-format collapse under shift, not a reasoning score -- these
+    # tokens let the prose say that with the numbers behind it.
+    for cond in ["baseline", "finetune_answers", "finetune_traces"]:
+        d = _tabfact_decomp(results, f"generalization_{cond}")
+        if d is None:
+            tm[f"[TabFact unmappable: {cond}]"] = "n/a"
+            tm[f"[TabFact coverage_n: {cond}]"] = "n/a"
+            tm[f"[TabFact acc|mappable: {cond}]"] = "n/a"
+            continue
+        tm[f"[TabFact unmappable: {cond}]"] = f"{d['unmappable_rate']:.3f}"
+        tm[f"[TabFact coverage_n: {cond}]"] = f"{d['coverage_n']} of {d['n']}"
+        tm[f"[TabFact acc|mappable: {cond}]"] = (
+            f"{d['acc_given_mappable']:.3f} (n={d['coverage_n']})"
+            if d["acc_given_mappable"] is not None else "n/a (n=0)"
+        )
+    floor = _tabfact_floor(results)
+    tm["[TabFact floor]"] = f"{floor:.3f}" if floor is not None else "n/a"
 
     # Best TabFact across the conditions we have.
     flat = []
@@ -114,6 +177,8 @@ def build_token_map(results, chain_quality):
 
     # Chain quality (from scripts/rate_chains.py output).
     tm["[KAPPA: chain quality]"] = f"{chain_quality['kappa']:.3f}"
+    tm["[KAPPA: rater a mean]"] = f"{chain_quality.get('mean_a', 0.0):.2f}"
+    tm["[KAPPA: rater b mean]"] = f"{chain_quality.get('mean_b', 0.0):.2f}"
 
     # Per-condition wall-clock ceiling (max sec/example * n over conditions), minutes.
     per = [r["compute"]["seconds_per_example"] * r["n"] for r in results]

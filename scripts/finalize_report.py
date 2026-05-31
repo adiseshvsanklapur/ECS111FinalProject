@@ -21,7 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from src import analysis, report_fill
 
 REPORT = Path("report/REPORT.md")
-NUMERIC_TOKEN = re.compile(r"\[(?:EM|F1|ACC|TabFact acc|ERR|MCNEMAR|KAPPA|EM_GAP|TIME)[^\]]*\]")
+NUMERIC_TOKEN = re.compile(r"\[(?:EM|F1|ACC|TabFact|ERR|MCNEMAR|KAPPA|EM_GAP|TIME)[^\]]*\]")
 PROSE_TOKEN = re.compile(r"\[FILL[^\]]*\]")
 
 

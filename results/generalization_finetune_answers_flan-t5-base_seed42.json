@@ -1,0 +1,7018 @@
+{
+  "condition": "generalization_finetune_answers",
+  "model": "google/flan-t5-base",
+  "seed": 42,
+  "task": "tabfact",
+  "n": 1000,
+  "metrics": {
+    "classification_accuracy": 0.003
+  },
+  "error_distribution": null,
+  "compute": {
+    "seconds_per_example": 0.14748417701100153,
+    "peak_memory_mb": 14182.17529296875,
+    "device": "cuda"
+  },
+  "predictions": [
+    {
+      "id": "8",
+      "pred": "pga Championship",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11",
+      "pred": "2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "14",
+      "pred": "mie emrick",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "19",
+      "pred": "mie emrick",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "31",
+      "pred": "nicol\u00e1s jh\u00e1sz",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "33",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "35",
+      "pred": "mbark bssufa",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "48",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "52",
+      "pred": "68",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "60",
+      "pred": "santana",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "67",
+      "pred": "faia",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "80",
+      "pred": "dr hxter 's Hent 's Hent 's Henr 's Henr 's Henr 's Henr 's Henr 's Henr 's Henr 's Henr 's Henr 's Henr 's Henr 's Henr 's Henr 's Henr 's Henr 's Hent 's Hent 's Henr",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "90",
+      "pred": "8422",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "93",
+      "pred": "17781",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "106",
+      "pred": "emi wtanabe",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "131",
+      "pred": "edi rama",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "157",
+      "pred": "adenomadae",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "175",
+      "pred": "adenomadae, adnadae, hpesvae, hpesahedal, hpesahedal, hpesahedal, hpesahedal, hpesahedal, hpesahedal, hpesahedal, hpesahedal, hpesahedal, hpesahedal, hpesahedal, h",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "184",
+      "pred": "mia oleksanda k",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "189",
+      "pred": "rome to gia",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "208",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "218",
+      "pred": "a ( j2000)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "235",
+      "pred": "ioa City",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "236",
+      "pred": "ioa City",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "250",
+      "pred": "0 - 2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "255",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "256",
+      "pred": "tgart",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "272",
+      "pred": "joanne arer",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "282",
+      "pred": "mcmichael ( - 4)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "294",
+      "pred": "58 - 20",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "295",
+      "pred": "58 - 20",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "315",
+      "pred": "3",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "333",
+      "pred": "w221y",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "334",
+      "pred": "w221y",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "339",
+      "pred": "sf",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "352",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "360",
+      "pred": "a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "376",
+      "pred": "ray lindwall",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "426",
+      "pred": "rh - 202 acon",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "429",
+      "pred": "vcc",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "440",
+      "pred": "lelais - yale",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "442",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "448",
+      "pred": "w269ae",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "449",
+      "pred": "w269ax",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "463",
+      "pred": "piaia (iri)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "476",
+      "pred": "i i ado",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "479",
+      "pred": "i i a a a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "491",
+      "pred": "bher",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "498",
+      "pred": "koota",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "520",
+      "pred": "stom emslie",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "546",
+      "pred": "enugu aoda",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "560",
+      "pred": "22575",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "582",
+      "pred": "79.36 m",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "586",
+      "pred": "adenst kilda",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "607",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "623",
+      "pred": "dan",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "624",
+      "pred": "71",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "633",
+      "pred": "71",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "636",
+      "pred": "otsuua",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "639",
+      "pred": "0 - 7",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "668",
+      "pred": "zakspeed s4 t / c",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "682",
+      "pred": "so paulo",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "697",
+      "pred": "/",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "698",
+      "pred": "/",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "707",
+      "pred": "a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "710",
+      "pred": "a",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "713",
+      "pred": "rheinker (4 - 4)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "732",
+      "pred": "2.2 / 7",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "747",
+      "pred": "j j anderson",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "752",
+      "pred": "j j anderson",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "767",
+      "pred": "adai taipans",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "769",
+      "pred": "maaaia taipans",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "770",
+      "pred": "106.08",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "775",
+      "pred": "a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "805",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "806",
+      "pred": "grizly",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "807",
+      "pred": "w 105 - 79 (ot)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "822",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "832",
+      "pred": "3",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "848",
+      "pred": "garnae 's , swansea",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "851",
+      "pred": "hengen (14 - 9)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "853",
+      "pred": "3 - 2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "861",
+      "pred": "twickdale , ettrick & lauderdale",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "877",
+      "pred": "stik stik",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "885",
+      "pred": "23830",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "888",
+      "pred": "june 1975",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "907",
+      "pred": "4",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "910",
+      "pred": "arden Street Oast",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "914",
+      "pred": "awthorn",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "925",
+      "pred": "koonii, koonii, koonii, koonii, koonii, koonii, koonii, koonii, koonii, koonii, koonii, koonii, koonii, koonii, koonii, koonii, koonii, koonii, k",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "927",
+      "pred": "3",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "928",
+      "pred": "zeki akioma",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "933",
+      "pred": "nadaaaaassasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasa",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "981",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "998",
+      "pred": "aaron pyor jr",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1004",
+      "pred": "octob 11 , 1984",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1056",
+      "pred": "awthorn",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1058",
+      "pred": "melbourne",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1077",
+      "pred": "gnn edo",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1080",
+      "pred": "0:48",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1092",
+      "pred": "ay",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1096",
+      "pred": "hd",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1104",
+      "pred": "1.39%",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1112",
+      "pred": "0 - 0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1123",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1132",
+      "pred": "w109.015",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1152",
+      "pred": "aas",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1156",
+      "pred": "greg Norman",
+      "gold": "false",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "1160",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1165",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1200",
+      "pred": "hengen (sox)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1217",
+      "pred": "w 26 - 7",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1238",
+      "pred": "gia zaina",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1268",
+      "pred": "octob 11 octob 2010",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1269",
+      "pred": "eda krstaji",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1273",
+      "pred": "clal bons",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1301",
+      "pred": "ottawa",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1309",
+      "pred": "Phila",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1317",
+      "pred": "uefa uefa a",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1321",
+      "pred": "harvie ward (a)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1333",
+      "pred": "joonas natsin",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1347",
+      "pred": "stlois",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1384",
+      "pred": "fe schofield",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1391",
+      "pred": "more",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1409",
+      "pred": "0 - 2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1421",
+      "pred": "roger fer",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1423",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1445",
+      "pred": "t3",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1459",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1469",
+      "pred": "sadio sadio , siag , chil",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1489",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1499",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1518",
+      "pred": "em raasasa & jossa khar",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1521",
+      "pred": "2003 - 2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1539",
+      "pred": "omana nicosia",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1551",
+      "pred": "saso jordd yamaha",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1580",
+      "pred": "bity",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1588",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1632",
+      "pred": "anna - karin kobsen",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1641",
+      "pred": "ir",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1644",
+      "pred": "ir",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1656",
+      "pred": "2004 - 3 - 31",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1685",
+      "pred": "san fan 49ers",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1686",
+      "pred": "kansas City City",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1690",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1694",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1709",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1711",
+      "pred": "jj lohto",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1726",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1750",
+      "pred": "2 years",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1752",
+      "pred": "apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 apr 1944 ap",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1755",
+      "pred": "2 apal 1994",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1792",
+      "pred": "juio c\u00e9sar ortegon",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1793",
+      "pred": "thiry marie",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1824",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1833",
+      "pred": "22507",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1839",
+      "pred": "edo",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1849",
+      "pred": "sampras",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1862",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "1890",
+      "pred": "scotty hopson",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1907",
+      "pred": "ac omia",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1918",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1922",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1943",
+      "pred": "2006",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "1956",
+      "pred": "gondo",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "1990",
+      "pred": "ottaaano sco",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2001",
+      "pred": "84 - 93",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2007",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2018",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2041",
+      "pred": "olga tsarbopopoou, olga tsarbopoou, olga tsarbopoou, olga tsarbopoou, olga tsarbopoou, olga tsarbopoou, olga tsarbopoou, olga tsarbopoo",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2046",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2052",
+      "pred": "105",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2053",
+      "pred": "4",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2058",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2069",
+      "pred": "neil yawy",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2072",
+      "pred": "ken mlay",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2093",
+      "pred": "brookyn Dodgers",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2101",
+      "pred": "lisbon",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2106",
+      "pred": "lisbon",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2119",
+      "pred": "egypt",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2133",
+      "pred": "hay",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2142",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2147",
+      "pred": "yes",
+      "gold": "true",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "2164",
+      "pred": "hampton",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2177",
+      "pred": "South melbourne",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2184",
+      "pred": "25845",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2187",
+      "pred": "h68",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2188",
+      "pred": "faulkor (floilla ado)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2209",
+      "pred": "tama Bay Buccaneers",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2241",
+      "pred": "nivalter santos",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2244",
+      "pred": "nivalter santos",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2247",
+      "pred": "doah ah",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2266",
+      "pred": "kardinia park",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2267",
+      "pred": "maia mia",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2280",
+      "pred": "hse",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2285",
+      "pred": "afdx",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2291",
+      "pred": "tira tiii",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2298",
+      "pred": "ian ferguson",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2321",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2322",
+      "pred": "yarne",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2337",
+      "pred": "vtoria saia",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2342",
+      "pred": "vtoria sata",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2349",
+      "pred": "hanne",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2388",
+      "pred": "United States, United States, Australia, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa, South Africa,",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2398",
+      "pred": "swena",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2403",
+      "pred": "Austria, Austria, Italy",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2411",
+      "pred": "ethnikos aek arna",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2419",
+      "pred": "jris walsh",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2424",
+      "pred": "jrii walsh",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2430",
+      "pred": "hk , uk",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2432",
+      "pred": "karsen stich",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2441",
+      "pred": "geelda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2449",
+      "pred": "2010, 2010",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2450",
+      "pred": "a",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2453",
+      "pred": "a",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2471",
+      "pred": "0.230 ppm (80 g / m cubic)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2474",
+      "pred": "0.5 ppm (300 g / m cubic)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2516",
+      "pred": "dris mccord",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2518",
+      "pred": "yes",
+      "gold": "true",
+      "correct": true,
+      "error_type": "correct"
+    },
+    {
+      "id": "2526",
+      "pred": "edmonton eskim",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2531",
+      "pred": "admonton eskim",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2540",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2542",
+      "pred": "awthorn",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2547",
+      "pred": "kendrick (11 - 8)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2560",
+      "pred": "polis akademisi",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2565",
+      "pred": "u h a a a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2573",
+      "pred": "2010 / 11",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2606",
+      "pred": "tidai (2 - 4)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2617",
+      "pred": "nan",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2618",
+      "pred": "october 26 , 2003",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2620",
+      "pred": "nan",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2621",
+      "pred": "october 26 , 2003",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2630",
+      "pred": "ston",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2632",
+      "pred": "ad feerty",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2694",
+      "pred": "China",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2719",
+      "pred": "katsuho nakajii",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2727",
+      "pred": "doas University",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2730",
+      "pred": "nebraska nebraska sylan University",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2736",
+      "pred": "tuff puppy",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2741",
+      "pred": "tfapa",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2760",
+      "pred": "san eags",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2767",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2774",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2778",
+      "pred": "2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2854",
+      "pred": "w 12 - 0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2873",
+      "pred": "os x, gnu / loiae, nx os ae, nx os ae, nx os ae, nx os ae, nx os ae, nx os ae, nx os ae, nx os ae, nx os ae, nx os ae, nx os ae",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2882",
+      "pred": "ae",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2893",
+      "pred": "ersan yasova",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2902",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2909",
+      "pred": "94 g",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2919",
+      "pred": "ehiog",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2923",
+      "pred": "st kilda, mcg",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2928",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "2939",
+      "pred": "gervai dragulescu ( ro )",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "2941",
+      "pred": "fabian dragulescu ( ro )",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "2984",
+      "pred": "fa",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3034",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3037",
+      "pred": "yevgeny kafnikov",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3042",
+      "pred": "pga Championship",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3069",
+      "pred": "errol hian, cyril cyril cian, cyril cyril cian, cyril cyril cian, cyril cian, cyril cian, cyril cian, cyril cian, cyril cian, cyril cian, cyril cian, cyril",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3087",
+      "pred": "h43",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3119",
+      "pred": "orlando",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3120",
+      "pred": "i ahon",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3124",
+      "pred": "eria abose",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3134",
+      "pred": "jean - Marie Jarier",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3145",
+      "pred": "faag (0 - 4)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3160",
+      "pred": "evan mccarthy & nathmedl (nh)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3168",
+      "pred": "evan mccarthy & erik sathmedl (nh)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3176",
+      "pred": "apl 3 - 2 (9)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3180",
+      "pred": "ji mhu",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3186",
+      "pred": "me mcnulty",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3195",
+      "pred": "arden Street Ool , mcg, aaa, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda,",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3234",
+      "pred": "15848",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3311",
+      "pred": "3.6m",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3319",
+      "pred": "savd, savd, savd, savd, savd, savd, savd, savd, savd, savd, savd, savd, savd, savd, savd, savd, savd, savd, savd, savd, savd, s",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3326",
+      "pred": "mscin",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3334",
+      "pred": "msci",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3339",
+      "pred": "wu pg",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3352",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3365",
+      "pred": "ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed e",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3369",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3375",
+      "pred": "scottish",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3379",
+      "pred": "aalbk",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3382",
+      "pred": "ag",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3395",
+      "pred": "18 - 8 May 17",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3403",
+      "pred": "stan van Gundy",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3413",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3430",
+      "pred": "bj Lacy",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3442",
+      "pred": "w 97 - 89",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3468",
+      "pred": "gornik zbrzz",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3469",
+      "pred": "tal\u00e9tico",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3479",
+      "pred": "above",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3502",
+      "pred": "sf",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3504",
+      "pred": "Australian Open",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3511",
+      "pred": "prsto pi",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3525",
+      "pred": "0 - 4 - 2t",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3530",
+      "pred": "August 10 , 2010",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3565",
+      "pred": "san san san san mia",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3576",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3598",
+      "pred": "jimo mkeny",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3600",
+      "pred": "jimah harris",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3611",
+      "pred": "haas i'm",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3633",
+      "pred": "turn",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3654",
+      "pred": "b - 17 , b - 24",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3684",
+      "pred": "pga Championship",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3689",
+      "pred": "a (srj)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3695",
+      "pred": "United States",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3698",
+      "pred": "West Germany",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3708",
+      "pred": "gadalajara",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3712",
+      "pred": "so paulo",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3726",
+      "pred": "hk - Macau - Macau - hk",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3777",
+      "pred": "els yaii ( cz )",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3791",
+      "pred": "jiad edd, add edds, mie ads, mie ads, me ads, me ads, me ads, me ads, me ads, me ads, me ads, me ads, me ads, me ads, me ads, m",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3823",
+      "pred": "pga Championship",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3834",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3852",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3857",
+      "pred": "robbie ned avo",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3861",
+      "pred": "nat borchers",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3862",
+      "pred": "robbie ned avo",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3893",
+      "pred": "2008",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3896",
+      "pred": "1997 - 98",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3911",
+      "pred": "yanes",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3925",
+      "pred": "ji jin",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3939",
+      "pred": "aas las lasebastia",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3950",
+      "pred": "2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "3951",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3959",
+      "pred": "twickenham , london",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3970",
+      "pred": "koeda giada giada agia agia agia agia agia agia agia agia agia agia agia agia agia agia agia agia agia agia agia ah groenela giaa",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "3992",
+      "pred": "lomo - ska",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "3994",
+      "pred": "naftan",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4001",
+      "pred": "auren boutonnat , bertrand chtenet",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4009",
+      "pred": "moie sagueneens (ohl)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4023",
+      "pred": "1:0.48",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4024",
+      "pred": "1:3:48",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4035",
+      "pred": "l 98 - 109 (ot)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4051",
+      "pred": "a",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4065",
+      "pred": "3",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4072",
+      "pred": "'liii's' class",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4102",
+      "pred": "ed r alph chase",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4116",
+      "pred": "j huston",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4150",
+      "pred": "giasep mcgath",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4156",
+      "pred": "2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4168",
+      "pred": "taylor",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4187",
+      "pred": "2 - 2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4205",
+      "pred": "elio daai",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4213",
+      "pred": "niki lauda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4217",
+      "pred": "c3",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4232",
+      "pred": "kodo odo tamara sartz",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4233",
+      "pred": "rr",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4236",
+      "pred": "koada yakhu",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4243",
+      "pred": "chen gang",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4272",
+      "pred": "j dthie",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4283",
+      "pred": "tanja kolbe / sassasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasask",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4288",
+      "pred": "twp, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hudson, hu",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4296",
+      "pred": "2012 - 13",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4299",
+      "pred": "oymiacos",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4307",
+      "pred": "melbourne",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4326",
+      "pred": "b bir",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4327",
+      "pred": "3",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4386",
+      "pred": "ryan dalziel",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4404",
+      "pred": "saa",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4406",
+      "pred": "koadi , fiadi , fied",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4441",
+      "pred": "robert harvey",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4444",
+      "pred": "robert harvey",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4471",
+      "pred": "nick Falcondo",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4515",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4519",
+      "pred": "lii gan",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4526",
+      "pred": "119",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4539",
+      "pred": "yra soo",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4589",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4590",
+      "pred": "sedn (se)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4595",
+      "pred": "yanes",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4610",
+      "pred": "2 - 0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4613",
+      "pred": "aalbosa bk",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4635",
+      "pred": "a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4644",
+      "pred": "a sado adadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadadaadasadadadadada",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4672",
+      "pred": "China",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4696",
+      "pred": "srio",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4697",
+      "pred": "aa so bano",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4708",
+      "pred": "Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany, Germany,",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4711",
+      "pred": "ukraine",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4742",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4758",
+      "pred": "came hrdia giiek",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4763",
+      "pred": "37071",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4766",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4781",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4788",
+      "pred": "w 96 - 87 (ot)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4805",
+      "pred": "bernhard Langr , o'ma , o'ma , o'ma , o'ma , o'ma , o'ma , o'ma , o'ma , o'ma , o'ma , o'ma , o'ma , o'ma , o'ma , o'ma , o'ma , o'ma ,",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4826",
+      "pred": "st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, s",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4827",
+      "pred": "arden Street Ool",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4830",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4838",
+      "pred": "84 61",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4841",
+      "pred": "Montrealal Canadas",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4858",
+      "pred": "scott mccarron",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4873",
+      "pred": "17639",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4880",
+      "pred": "edmonton oilers",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4884",
+      "pred": "3",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4903",
+      "pred": "nigel piquet",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4907",
+      "pred": "sain johansson",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "4913",
+      "pred": "ukraine",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4917",
+      "pred": "swen, Spain",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4930",
+      "pred": "coafs harbour",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "4935",
+      "pred": "adam nelson",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4939",
+      "pred": "elon",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4947",
+      "pred": "ashton - arena ashton - ashton lane",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4970",
+      "pred": "2006",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "4994",
+      "pred": "stai",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5003",
+      "pred": "ohio ohio rio rio ohio rio ohio rio ohio rio ohio rio ohio rio ohio rio ohio rio ohio rio ohio rio ohio rio ohio rio ohio rio o",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5009",
+      "pred": "aa",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5010",
+      "pred": "aa",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5019",
+      "pred": "sct015",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5034",
+      "pred": "est kilda",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5045",
+      "pred": "2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5053",
+      "pred": "b saders",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5059",
+      "pred": "3",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5088",
+      "pred": "jim iii",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5134",
+      "pred": "kknid",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5140",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5150",
+      "pred": "5967",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5153",
+      "pred": "faaa eags",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5182",
+      "pred": "st jasse 's shio",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5192",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5237",
+      "pred": "hiroi",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5287",
+      "pred": "mauer shen",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5293",
+      "pred": "l 82 - 84 (ot)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5318",
+      "pred": "hudsfield Town",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5363",
+      "pred": "vantonio liuzzi",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5378",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5381",
+      "pred": "auland ace, ota volts",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5385",
+      "pred": "0 - 0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5408",
+      "pred": "juy 1961 melbourne",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5434",
+      "pred": "df",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5438",
+      "pred": "df",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5453",
+      "pred": "w 45 - 3",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5466",
+      "pred": "gil morgan",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5467",
+      "pred": "gil morgan",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5484",
+      "pred": "2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5541",
+      "pred": "anne , anne , anne , anne , anne , elaa ii , elaa ii , elaa ii , elaa ii , elaa ii , elaa ii , elaa ii , elaa ii , elaa ii , ela ii , elaa ii",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5567",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5569",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5573",
+      "pred": "elko",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5586",
+      "pred": "khaig sardar, hmad haaini",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5592",
+      "pred": "n181",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5620",
+      "pred": "trie ellis - erik",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5648",
+      "pred": "greec",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5650",
+      "pred": "mcg",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5652",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5668",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5695",
+      "pred": "sehnsoa",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5699",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5712",
+      "pred": "1.3 mbit / s",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5717",
+      "pred": "05.0 mbit / s",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5728",
+      "pred": "105 - 109",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5744",
+      "pred": "nick fo",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5747",
+      "pred": "ian baker - fa",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5751",
+      "pred": "84 - 105",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5774",
+      "pred": "danel ac\u00e1cio",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5825",
+      "pred": "chan - yuen , tuen - tuen , aii - tuen , aii - tuen , aii - tuen , aii - tuen , aii - tuen , aii - tuen , aii - tuen , aii - tuen , aii - tuen",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5828",
+      "pred": "tsui yee - tuen , faii - tuen , faii - tuen , faii - tuen , zda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5836",
+      "pred": "trickon",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5837",
+      "pred": "bnard mceveety",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5838",
+      "pred": "541",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5847",
+      "pred": "7",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "5887",
+      "pred": "eeepc 0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5915",
+      "pred": "eags , ohio",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5935",
+      "pred": "osaka , kya",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5956",
+      "pred": "esso ( - 3)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5967",
+      "pred": "neel jani",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "5974",
+      "pred": "hak",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "5977",
+      "pred": "san Lus Potos-",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6003",
+      "pred": "merrill mose",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6007",
+      "pred": "merrill mose, merrill hudn, mam wor, adm wor, adm wor, adm wor, adm wor, adm wor, adm wor, adm wor, adm wor, adm wor, adm wor, adm wor, adm wor, adm",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6038",
+      "pred": "taababos",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6045",
+      "pred": "san dego chargers",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6059",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6074",
+      "pred": "frank Scarabino",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6080",
+      "pred": "h / a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6089",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6105",
+      "pred": "bnp",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6140",
+      "pred": "mcg",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6143",
+      "pred": "16545",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6148",
+      "pred": "1969",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6153",
+      "pred": "owen Racing Organisation",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6163",
+      "pred": "n / a",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6168",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6218",
+      "pred": "n daa l'osse ii",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6244",
+      "pred": "63075927",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6255",
+      "pred": "dan po",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6284",
+      "pred": "rokaya - haii",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6295",
+      "pred": "ken riesen",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6334",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6351",
+      "pred": "2 - 3",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6359",
+      "pred": "san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san s",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6362",
+      "pred": "san san san san doadas",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6382",
+      "pred": "ottahhi",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6384",
+      "pred": "ottawa hl",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6391",
+      "pred": "hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel hoel ho",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6402",
+      "pred": "tyson gay",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6440",
+      "pred": "Australia",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6443",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6451",
+      "pred": "2nd",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6484",
+      "pred": "rob pyant",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6497",
+      "pred": "culver",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6514",
+      "pred": "diasa brock",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6522",
+      "pred": "gilia anderson",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6541",
+      "pred": "san antonio",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6546",
+      "pred": "7:30",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6549",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6556",
+      "pred": "g",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6558",
+      "pred": "st kilda",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6569",
+      "pred": "Japan (jpn)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6587",
+      "pred": "ydrnas ilgaskas",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6600",
+      "pred": "aaa",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6647",
+      "pred": "kentuy",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6659",
+      "pred": "kila kiloa ejeson",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6685",
+      "pred": "levski uefa",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6704",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6707",
+      "pred": "21.3",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6721",
+      "pred": "koh",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6725",
+      "pred": "no",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6774",
+      "pred": "t3",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6777",
+      "pred": "bernhard Langr",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6780",
+      "pred": "t2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6787",
+      "pred": "doii",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6791",
+      "pred": "doit",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6818",
+      "pred": "daii",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6827",
+      "pred": "chennai ai kodi",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6838",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6843",
+      "pred": "tai kai uen",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6882",
+      "pred": "kardinia park",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6904",
+      "pred": "dota lions",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6907",
+      "pred": "69278",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6915",
+      "pred": "3",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6923",
+      "pred": "san eago",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6929",
+      "pred": "san eago",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6933",
+      "pred": "rashad evans",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6943",
+      "pred": "4.4",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6951",
+      "pred": "4.4",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6952",
+      "pred": "brooks robinson",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6956",
+      "pred": "dai lua",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6960",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "6969",
+      "pred": "Argentinea, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecuador, ecu",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6970",
+      "pred": "ecuor",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "6987",
+      "pred": "hf, tayon hf, tayon hf, tayon hf, tayon hf, tayon hf, tayon hf, tayon hf, tayon hf, tayon hf, tayon hf, tayon hf, tayon hf, tayon hf, tayon h",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "6999",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7001",
+      "pred": "a",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7010",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7011",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7019",
+      "pred": "dan pada",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7021",
+      "pred": "jge lenzo",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7029",
+      "pred": "he irwin",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7031",
+      "pred": "gil morgan",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7038",
+      "pred": "arnaud cl\u00e9on",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7039",
+      "pred": "arnaud cl\u00e9on",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7041",
+      "pred": "arnaud cl\u00e9on",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7042",
+      "pred": "xaver",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7051",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7065",
+      "pred": "mcg",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7068",
+      "pred": "mcg",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7071",
+      "pred": "melbourne",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7081",
+      "pred": "1988",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7114",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7117",
+      "pred": "adoasea",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7118",
+      "pred": "67228",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7126",
+      "pred": "3rd",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7148",
+      "pred": "nick hie tayl",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7155",
+      "pred": "teitur or svarsson snfl",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7167",
+      "pred": "l\u00e1szlo szabo",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7202",
+      "pred": "ji adie sahs",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7205",
+      "pred": "aco",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7215",
+      "pred": "Germany",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7216",
+      "pred": "United States, United States",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7217",
+      "pred": "Germany",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7222",
+      "pred": "gangzhou",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7233",
+      "pred": "20279",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7239",
+      "pred": "yanes",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7243",
+      "pred": "elgin",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7248",
+      "pred": "elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, elgin, e",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7264",
+      "pred": "ko (pudg)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7281",
+      "pred": "September",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7292",
+      "pred": "huan",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7313",
+      "pred": "tanana",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7332",
+      "pred": "antonio pizonia",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7335",
+      "pred": "no",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7342",
+      "pred": "asterdy f kennedy",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7346",
+      "pred": "h h hphrey",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7362",
+      "pred": "a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7364",
+      "pred": "h / a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7375",
+      "pred": "2006 - 11 - 22 , 20:45",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7387",
+      "pred": "7",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7390",
+      "pred": "hamilton swans",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7392",
+      "pred": "ottawa swans",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7393",
+      "pred": "ottawa swans, eticoke kangaroos",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7411",
+      "pred": "ekahua - ekahua - ekahua",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7427",
+      "pred": "giia giimo, ken giims, kaasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasas",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7494",
+      "pred": "3",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7519",
+      "pred": "london broncos",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7527",
+      "pred": "london bos",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7547",
+      "pred": "e t2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7554",
+      "pred": "ed dle",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7558",
+      "pred": "ed dle",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7568",
+      "pred": "kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7588",
+      "pred": "rio jano",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7596",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7602",
+      "pred": "nath lane",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7625",
+      "pred": "ba hma",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7644",
+      "pred": "alas , alas -",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7647",
+      "pred": "bertram, alas , alas , alas -",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7658",
+      "pred": "cd",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7661",
+      "pred": "mael sumacher",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7698",
+      "pred": "nissan Stadium , yoha",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7717",
+      "pred": "tas a&m University",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7720",
+      "pred": "niman Shakirov",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7739",
+      "pred": "048",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7756",
+      "pred": "hudsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield hdrsfield h",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7769",
+      "pred": "miot engel",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7798",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7800",
+      "pred": "es tevi mlu",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7825",
+      "pred": "sael sdao",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7833",
+      "pred": "United States (USA)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7837",
+      "pred": "chile (chi)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7846",
+      "pred": "london irh nic json",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7864",
+      "pred": "gerd tweraser",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7868",
+      "pred": "opc",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7876",
+      "pred": "sa so soba",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7888",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7896",
+      "pred": "Graham rah",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "7897",
+      "pred": "aln h / l Racing",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7930",
+      "pred": "6.6 (2)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7962",
+      "pred": "97",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "7970",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7975",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "7977",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8014",
+      "pred": "lue lue lue strker",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8021",
+      "pred": "143 iabora",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8027",
+      "pred": "tu\u00e1",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8042",
+      "pred": "jrey acua",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8057",
+      "pred": "ayrton senna",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8066",
+      "pred": "bhiwani - kanpur - kasgad",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8077",
+      "pred": "st vcans (mjhl)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8093",
+      "pred": "faaaaa eags",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8125",
+      "pred": "tia & tamera mowry / ll ll",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8132",
+      "pred": "tyrek evans",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8135",
+      "pred": "- 26",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8140",
+      "pred": "hi hl",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8141",
+      "pred": "taiyuan",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8159",
+      "pred": "a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8172",
+      "pred": "94",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8179",
+      "pred": "amannoni , vii , galtarossa , tarossa , ari",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8182",
+      "pred": "0:36.21",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8203",
+      "pred": "gf30a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8204",
+      "pred": "gf25 u25b",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8214",
+      "pred": "yauheni htc - cloa",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8255",
+      "pred": "6335",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8257",
+      "pred": "tama Bay Buccaneer",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8266",
+      "pred": "looa ba batt University",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8330",
+      "pred": "na",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8356",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8381",
+      "pred": "syrasuse raymond irvin",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8393",
+      "pred": "Macedonia",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8395",
+      "pred": "Spain",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8409",
+      "pred": "3",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8439",
+      "pred": "cias",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8465",
+      "pred": "o'connl Center",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8500",
+      "pred": "2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8507",
+      "pred": "3",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8517",
+      "pred": "avn",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8524",
+      "pred": "b 6000",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8525",
+      "pred": "0 g / km",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8527",
+      "pred": "3.6l (3605c) v6",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8535",
+      "pred": "paa",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8542",
+      "pred": "aranxa s\u00e1nz vario",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8552",
+      "pred": "boby wilson",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8563",
+      "pred": "rsson",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8574",
+      "pred": "ob oden",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8587",
+      "pred": "a - camping - a - a - camping - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8595",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8596",
+      "pred": "29821",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8617",
+      "pred": "garan",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8623",
+      "pred": "2005",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8627",
+      "pred": "anna khiot",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8634",
+      "pred": "sana iiyot",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8635",
+      "pred": "yena iaia",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8638",
+      "pred": "l 97 - 105 (ot)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8651",
+      "pred": "uab",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8689",
+      "pred": "hadi krio afiaayi samantha lint",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8698",
+      "pred": "dr tom lman",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8705",
+      "pred": "esdon",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8710",
+      "pred": "kansas City City",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8719",
+      "pred": "cyl ral",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8722",
+      "pred": "kh",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8728",
+      "pred": "tiaaas & tias",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8742",
+      "pred": "9432",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8746",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8760",
+      "pred": "rwturrington",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8766",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8781",
+      "pred": "atana",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "8785",
+      "pred": "clon - 107",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8788",
+      "pred": "March 15",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8793",
+      "pred": "lanny o'maa",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8814",
+      "pred": "February 13",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8901",
+      "pred": "fma ia 58 Pucar",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8930",
+      "pred": "rikardo Rodrguez",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8935",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8937",
+      "pred": "sal adford",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "8958",
+      "pred": "shambre",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "8963",
+      "pred": "harry lane englebd",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9006",
+      "pred": "gstaad , swerland",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9011",
+      "pred": "cyril ffak",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9014",
+      "pred": "cyril fad",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9038",
+      "pred": "kansas das o 'sulvan",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9060",
+      "pred": "juy 18 , 2008",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9076",
+      "pred": "2010",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9080",
+      "pred": "gilia anderson",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "9086",
+      "pred": "robert bauman (r) 77.1% thoamas j",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9087",
+      "pred": "robert bauman",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9095",
+      "pred": "robert bauman",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9097",
+      "pred": "robert bauman (r) 77.1% thoam j",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9098",
+      "pred": "robert bauman (r) 77.1% thoam j",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9112",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9142",
+      "pred": "ji saders",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "9148",
+      "pred": "san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san san s",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9171",
+      "pred": "mael o 'shon",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9176",
+      "pred": "3.5",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9177",
+      "pred": "3.6",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9199",
+      "pred": "662",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9227",
+      "pred": "na",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9231",
+      "pred": "sanda harvey and linsay simson",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9240",
+      "pred": "ida mo",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9242",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9243",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9257",
+      "pred": "vtoria park",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9262",
+      "pred": "june 16",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9263",
+      "pred": "widlias smital",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9264",
+      "pred": "0 - 2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9298",
+      "pred": "eddie",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9329",
+      "pred": "adams",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9337",
+      "pred": "vp8 ( vp9 ( vp)",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9356",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9358",
+      "pred": "a - apse",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9360",
+      "pred": "a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a - a -",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9365",
+      "pred": "62 mph",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9369",
+      "pred": "oem oem am - t2330",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9370",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9386",
+      "pred": "tyce dioro",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9392",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "9401",
+      "pred": "naoyuki ko (puch)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9426",
+      "pred": "Canada",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9429",
+      "pred": "oscar heao",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9456",
+      "pred": "7 juy 2010",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9470",
+      "pred": "eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy eddy ed",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9471",
+      "pred": "dai smai & rakel",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9473",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9485",
+      "pred": "Prince edd Island",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9493",
+      "pred": "2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9501",
+      "pred": "henry hyd",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9505",
+      "pred": "ko gaio",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9517",
+      "pred": "roberto khristenko  Russia",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9552",
+      "pred": "jim a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9554",
+      "pred": "1037193",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "9556",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9588",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9614",
+      "pred": "ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud ehud eh",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9633",
+      "pred": "mrs mrs dias",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9648",
+      "pred": "odsal Stadium",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9678",
+      "pred": "piada",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9686",
+      "pred": "sri lama samarawene",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9700",
+      "pred": "remma do ira",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9729",
+      "pred": "jir mir mir tsr2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9733",
+      "pred": "swi",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9743",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9750",
+      "pred": "yale University / yale University",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9751",
+      "pred": "yale University / Colmia University",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9753",
+      "pred": "yale University / yale University",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9773",
+      "pred": "jergen r\u00f6ber",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9785",
+      "pred": "2007",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9810",
+      "pred": "jmanm doe",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9818",
+      "pred": "62",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9827",
+      "pred": "2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "9834",
+      "pred": "c\u00e9sar evora",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "9860",
+      "pred": "hoas tas tas Stadium",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9864",
+      "pred": "jimy iggins",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9883",
+      "pred": "agustina loajara",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9887",
+      "pred": "guadalajara",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9891",
+      "pred": "avii",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9920",
+      "pred": "29.0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "9922",
+      "pred": "hra psrtc",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "9962",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9963",
+      "pred": "0 - 0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9968",
+      "pred": "l l rondo",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "9995",
+      "pred": "ayrton senna",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10013",
+      "pred": "7",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "10026",
+      "pred": "edee",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10029",
+      "pred": "edas",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10048",
+      "pred": "3 - 3",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10090",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "10109",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "10112",
+      "pred": "24885",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "10129",
+      "pred": "'ya (ya) 'ya (ya) 'ya (ya) 'ya (ya) 'ya (ya) 'ya (ya) 'ya (ya) 'ya (ya) 'ya (ya) 'ya (ya) 'ya (ya) 'ya (ya) 'ya (ya) 'ya (ya) 'ya (ya) 'ya (y",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10134",
+      "pred": "faeni eags",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10143",
+      "pred": "",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10148",
+      "pred": "58.65",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10167",
+      "pred": "98 - 105",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10173",
+      "pred": "h",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10193",
+      "pred": "lanny sutton",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10232",
+      "pred": "2:29.59.6",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10238",
+      "pred": "po gi villoesi",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10279",
+      "pred": "h6 - 44",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "10288",
+      "pred": "22785",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "10302",
+      "pred": "otta Bay Lightning",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10303",
+      "pred": "tama Bay Lightning",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "10304",
+      "pred": "2 - 3",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "10306",
+      "pred": "3 - 2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "10321",
+      "pred": "gilberto goy fo",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "10330",
+      "pred": "69",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10337",
+      "pred": "el34 0 vh4",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10356",
+      "pred": "nigel adkins",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "10383",
+      "pred": "0 - 0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10425",
+      "pred": "mcg",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10463",
+      "pred": "rick hawkins",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10470",
+      "pred": "narbonne",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10472",
+      "pred": "narbonne",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "10497",
+      "pred": "dan Fritsch",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10501",
+      "pred": "nyr",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10506",
+      "pred": "py y",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10513",
+      "pred": "adnito cheng",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10543",
+      "pred": "348",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10569",
+      "pred": "cig zoler",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10631",
+      "pred": "j h wyman & ethro",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10633",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "10641",
+      "pred": "rlwc bryin v Australia",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10655",
+      "pred": "san dego chargers",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "10669",
+      "pred": "2 - 2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10682",
+      "pred": "stetta elkington",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10697",
+      "pred": "erik sulvan",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "10704",
+      "pred": "1.0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "10735",
+      "pred": "faaai",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10749",
+      "pred": "0 February 1997",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "10761",
+      "pred": "wab79",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10804",
+      "pred": "faaais aions University",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10849",
+      "pred": "rob andrews",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10851",
+      "pred": "rob andrews",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10883",
+      "pred": "240",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10913",
+      "pred": "kevin las",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10914",
+      "pred": "kevin las",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "10921",
+      "pred": "october 23 , 1994",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10931",
+      "pred": "tyron clins",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10952",
+      "pred": "m.17172 / np.766502.1",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10969",
+      "pred": "robert wickens",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "10989",
+      "pred": "2006",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "10993",
+      "pred": "lus Galvo teles",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11015",
+      "pred": "2009 apertu",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11027",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11047",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11069",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11089",
+      "pred": "ramesandro stelba",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11096",
+      "pred": "no henry",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11159",
+      "pred": "279",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11163",
+      "pred": "lalo",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11167",
+      "pred": "kirk dwae",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11192",
+      "pred": "91",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11198",
+      "pred": "joanna kerns",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11200",
+      "pred": "August 26 , 2011",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11207",
+      "pred": "63",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11209",
+      "pred": "el davis",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11226",
+      "pred": "robin Haase",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11227",
+      "pred": "est kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda, st kilda,",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11257",
+      "pred": "eu ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia a ia a ia a ia a ia a ia a ia a ia a ia a ia a ia a ia a ia a ia a",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11296",
+      "pred": "187 - 92 - 2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11298",
+      "pred": "raph fagg",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11320",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11326",
+      "pred": "China",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11339",
+      "pred": "223",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11349",
+      "pred": "llandidod rfc",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11389",
+      "pred": "jarrad Grant",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11392",
+      "pred": "jarrad Grant",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11409",
+      "pred": "sa vga , f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f\u00f6r f",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11423",
+      "pred": "Germany f13",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11430",
+      "pred": "olbia",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11438",
+      "pred": "draughtsman artie, mr thomas, mr thomas, mr thomas, mr thomas, mr thomas, mr thomas, mr thomas, mr thomas, mr thomas, mr thomas, mr thomas, mr thomas, mr thomas, mr thomas, mr tho",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11439",
+      "pred": "draughtsman artie",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11452",
+      "pred": "thr 25 ag",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11455",
+      "pred": "thr 25 ag",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11477",
+      "pred": "ryan azf - r",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11478",
+      "pred": "yamaha yzf - r",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11482",
+      "pred": "ian hutchinson",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11494",
+      "pred": "henrieta nayov\u00e1",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11498",
+      "pred": "2010",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11506",
+      "pred": "ny",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11532",
+      "pred": "41434",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11540",
+      "pred": "oymi games",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11555",
+      "pred": "2",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11557",
+      "pred": "pood",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11568",
+      "pred": "March 8 , 2010",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11570",
+      "pred": "ji st",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11613",
+      "pred": "ahd hlaf",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11630",
+      "pred": "utah",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11647",
+      "pred": "dan riba and dwayne mcduffie",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11648",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11673",
+      "pred": "201a 4b",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11679",
+      "pred": "sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sydy sy",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11682",
+      "pred": "1997",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11683",
+      "pred": "sydy scorps sydy sydy a",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11699",
+      "pred": "yvon bilodeau",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11701",
+      "pred": "yvon bilodeau",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11708",
+      "pred": "birmingham City",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11719",
+      "pred": "psv yiv",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11724",
+      "pred": "elda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11731",
+      "pred": "beri fota aaslan",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11733",
+      "pred": "sah! sah! ri fo aal",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11738",
+      "pred": "tito edgar",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11739",
+      "pred": "103 - 94",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11749",
+      "pred": "roberto sgambellu",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11769",
+      "pred": "san dt",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11778",
+      "pred": "t pirih , zman , k pirih",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11788",
+      "pred": "15248",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11792",
+      "pred": "ehc erkersreuth",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11800",
+      "pred": "steti jon",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11806",
+      "pred": "hale irwin",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11810",
+      "pred": "stia el",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11826",
+      "pred": "haron bluff aasia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia ia",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11837",
+      "pred": "san jeronio",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11840",
+      "pred": "0.27",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11846",
+      "pred": "clonni rahan",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11854",
+      "pred": "october 9 , 1960",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11862",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11873",
+      "pred": "dan mcmano",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11898",
+      "pred": "63",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11910",
+      "pred": "eag",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11922",
+      "pred": "73",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "11943",
+      "pred": "tambeia",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "11975",
+      "pred": "ios",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11980",
+      "pred": "ios",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11989",
+      "pred": "ai sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui sui",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11992",
+      "pred": "ai suyama",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "11993",
+      "pred": "3 - 3",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12011",
+      "pred": "october 26 , 1997",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "12026",
+      "pred": "mwm - tca - Euro iii (tca - Euro iii) (tca - tca - Euro iii) (tca - tca - Euro iii) (tca - tca - Euro iii) (tca - tca - Euro iii) (tca - tca - Euro iii) (tca - tca - Euro iii)",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "12044",
+      "pred": "ii ecoaki",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "12047",
+      "pred": "w 0 - 4",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12062",
+      "pred": "san fan fan fan alos",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12076",
+      "pred": "henson vs dson",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12092",
+      "pred": "poenie - tucson - tucson - tucson - tucson - tucson - tucson - tucson - tucson - tucson - tucson - tucson - tucson - tucson - tucson - tucson - tucson - tucson -",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12097",
+      "pred": "a a",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12118",
+      "pred": "2 - 0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12126",
+      "pred": "Princes Park",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12133",
+      "pred": "sk brann",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12158",
+      "pred": "n / a",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "12166",
+      "pred": "r",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12176",
+      "pred": "29698",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12177",
+      "pred": "29698",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12183",
+      "pred": "alington hsaas 's alington alington",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12196",
+      "pred": "haias lions",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12201",
+      "pred": "san san san 49er",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12211",
+      "pred": "ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed e",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12227",
+      "pred": "zolder",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12234",
+      "pred": "jim mcmanu ral ramritraj",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12261",
+      "pred": "f18 inf18 f18 inf18",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12281",
+      "pred": "39018",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12283",
+      "pred": "johannesburg",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12286",
+      "pred": "scott apurro and kirsty gallacher",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12293",
+      "pred": "2 - 4",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12301",
+      "pred": "- anne",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12303",
+      "pred": "78",
+      "gold": "true",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "12305",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "12308",
+      "pred": "2006",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12313",
+      "pred": "edgar edgar eremin",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12330",
+      "pred": "22,248",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12354",
+      "pred": "tfck - 08798 United States",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12369",
+      "pred": "0 - 0 ot",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12382",
+      "pred": "saturn 's saturn",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12421",
+      "pred": "st kilda",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12448",
+      "pred": "eiear inn",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12451",
+      "pred": "tast mcne & lorraine nn",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12482",
+      "pred": "m",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12484",
+      "pred": "m",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12508",
+      "pred": "mervyn koasen",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12517",
+      "pred": "2011",
+      "gold": "true",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12521",
+      "pred": "17881",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12533",
+      "pred": "adam - 2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "aggregation"
+    },
+    {
+      "id": "12545",
+      "pred": "barra dohs",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12554",
+      "pred": "tama , Floridada",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12571",
+      "pred": "julia schultz",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12605",
+      "pred": "00 88.9 fm",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12611",
+      "pred": "cbtk - fm",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12612",
+      "pred": "ko - fm",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12613",
+      "pred": "cbtk - fm",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12623",
+      "pred": "kely baiy rae",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12626",
+      "pred": "kely baiy rae",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12633",
+      "pred": "77",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12639",
+      "pred": "j atta Mills",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12663",
+      "pred": "m47tu2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12678",
+      "pred": "94.3",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12694",
+      "pred": "klm aia",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12698",
+      "pred": "klm",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12704",
+      "pred": "tsao huaa hua - yang",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12728",
+      "pred": "st kilda",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12748",
+      "pred": "danel lincn ( ua )",
+      "gold": "false",
+      "correct": false,
+      "error_type": "lookup"
+    },
+    {
+      "id": "12757",
+      "pred": "0",
+      "gold": "false",
+      "correct": false,
+      "error_type": "multi_hop"
+    },
+    {
+      "id": "12767",
+      "pred": "0",
+      "gold": "true",
+      "correct": false,
+      "error_type": "lookup"
+    }
+  ]
+}
