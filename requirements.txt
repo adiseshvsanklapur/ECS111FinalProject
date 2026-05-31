@@ -9,3 +9,7 @@ matplotlib>=3.8
 tabulate>=0.9
 # slide generation
 python-pptx>=1.0
+# final report notebook (generate + execute)
+nbformat>=5.9
+nbconvert>=7
+ipykernel>=6
