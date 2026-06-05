@@ -281,40 +281,6 @@ parallelizes across accounts.
 
 ---
 
-## How We Ran It
-
-The project ran on a 4-day plan (below). Reported numbers come from the final full Colab T4 run, not
-the day-by-day smoke passes.
-
-### Day 1: Foundation and parallel starts
-- **Adisesh:** shared core + metrics (top priority, unblocks everyone). Push by midday.
-- **Nikhil:** trainer harness (uses core). Kick off CB run by evening.
-- **Amar + Adisesh + Anant:** write all CoT exemplars (both formats).
-- **Anant:** build reasoning-trace template generator.
-- **Sanjay:** scaffold eval/analysis notebook against the metrics module.
-- **Gate:** shared core + trainer working; baseline runs by end of day.
-
-### Day 2: Run conditions (parallel Colab)
-- **Adisesh:** finish baseline (base + large), log compute.
-- **Amar:** run CA, both chain formats, base + large (needs Day-1 exemplars).
-- **Nikhil:** CB fine-tune answers-only, **both seeds**, start early.
-- **Anant:** CC fine-tune + traces, **both seeds**, start early.
-- **Sanjay:** lock error-label rubric + compute logging; evaluate C0 + CA as they land.
-
-### Day 3: Generalization, evaluation, stats
-- **Sanjay:** generalization test (B + C on TabFact), check the 60% threshold; then error breakdown,
-  McNemar, mean/std, compute summary, tables + plots.
-- **Adisesh + Nikhil:** chain-quality rating (100 chains each, independent), Cohen's kappa.
-- **Everyone:** re-run any condition failing a threshold or over 2 hr.
-- **Gate:** all 3 success criteria checked; evening buffer for triage.
-
-### Day 4: Write and present
-- **All:** report sections, Sanjay merges and proofs.
-- **Amar:** assemble slide deck.
-- **All:** rehearse; final reproducibility pass on a fresh Colab runtime.
-
----
-
 ## Reproducibility & Setup
 
 ### On Colab (the official run target)
